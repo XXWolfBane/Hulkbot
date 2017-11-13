@@ -35,5 +35,11 @@ bot.on("message", message => {
    }
 });
 
+bot.on("message", message => {
+   if (message.content == prefix + "joinserver") {
+      message.reply(" Use this to join the help server: https://discord.gg/XvMA2rJ")
+   }
+})
+
 bot.login(process.env.botToken);
 
