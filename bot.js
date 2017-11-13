@@ -4,7 +4,7 @@ const prefix = "h!"
 const owner = "FreakingHulk Gaming#6545"
 
 // Gather commands
-bot.commands = new Discord.Collection();
+bot.commands = new discord.Collection();
 
 require('fs').readdir("./commands/", (err, files) => {
 	console.log("Loading commands...")
@@ -46,8 +46,8 @@ bot.on("message", message => {
   let args = mArray.slice(1);
 
   let cmd = commands.get(mArray[0].slice(prefix.length));
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return
+   if(message.author.bot) return;
+   if(message.channel.type === "dm") return
     
   if(cmd) {
     cmd.run(bot, message, args);
