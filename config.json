@@ -1,11 +1,8 @@
 {
-
-  "token": "PRIVATE",
-
   "prefix": "h!",
   "creatorid": "242734840829575169",
   "adminrole": "Admin",
   "ownerrole": "Hulk",
   "availibleroles": ["Hulk's Citizens", "Loyal People"],
-  "statues": ["Hulkbot", "I WILL TAKE OVER THE WORLD", "Serving my master", "Kicking Random People"]
+  "status": ["Hulkbot", "I WILL TAKE OVER THE WORLD", "Serving my master", "Kicking Random People"]
 }
