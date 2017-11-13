@@ -2,6 +2,7 @@ const discord = require('discord.js')
 const bot = new discord.Client()
 const prefix = "h!"
 const owner = "FreakingHulk Gaming#6545"
+const dev2 = "RHG#0822"
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -18,9 +19,9 @@ bot.on("ready", () => {
  console.log("Bot is started. Get ready for some sweet commands!") 
  console.log("Bot name: " + bot.user.username + "bot")
  console.log("Bot owner: " + owner)
- bot.user.setGame(`h!help | Hulk Bot`)
-	
-let status = ["Taking over the world", "Pizza is better"]
+ console.log("Bot Dev 1: " + owner)
+ console.log("Bot Dev 2:" + dev2)
+	let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
 // Status Rotator
   gameval = 0
   setInterval(() => {
