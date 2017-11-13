@@ -26,7 +26,6 @@ bot.on("message", message => {
     message.reply("I can't use invite links. :frowning2: Here's an OAuth2 link instead! https://discordapp.com/oauth2/authorize?&client_id=294194506113220608&scope=bot&permissions=0")
     console.log(message.author.username + " used the invite command.") 
     }
-bot.on("message", message => {
    if (message.content == prefix + "joinserver") {
       message.reply(" Use this to join the help server: https://discord.gg/XvMA2rJ")
    }
