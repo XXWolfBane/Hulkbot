@@ -35,7 +35,7 @@ bot.on("message", message => {
       message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
         }).catch(() => {
       message.channel.send("Access Denied");
-     )}
+     });
 })
 
 bot.login(process.env.botToken);
