@@ -4,7 +4,7 @@ const prefix = "h!"
 
 bot.on("ready", () => {
  console.log("Bot is started. Get ready for some sweet commands!") 
- bot.user.setGame("h!help")
+ bot.user.setGame("h!help | Hulkbot Beta")
 });
 
 bot.on("message", message => {
