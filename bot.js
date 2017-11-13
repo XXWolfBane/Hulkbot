@@ -97,7 +97,7 @@ bot.on("message", (message) => {
             message.channel.send(":wave: " + member.displayName + " has been successfully banned! :point_right: ");
         }).catch(() => {
              // Failmessage
-            message.channel.send("No permissions :sob:");
+            message.channel.send("GIVE ME ALL YOUR PERMISSIONS BOI");
         });
 }
 });
