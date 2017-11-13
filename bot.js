@@ -25,7 +25,10 @@ bot.on("ready", () => {
  console.log("Bot Dev 2: " + dev2)
  console.log(`${bot.guilds.array().length} Guilds`)
 bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
-	
+
+bot.guilds.forEach(async(guild, id) => {
+     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
+  });
 let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
 // Status Rotator
   gameval = 0
