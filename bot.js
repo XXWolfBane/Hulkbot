@@ -23,7 +23,7 @@ bot.on("message", message => {
    console.log(message.author.username + " used the perms command.")
     }
     if (message.content == prefix + "invite") {
-    message.reply("I can't use invite links. :frowning2: Here's an OAuth2 link instead! https://discordapp.com/oauth2/authorize?&client_id=294194506113220608&scope=bot&permissions=0")
+    message.channel.send("I can't use invite links. :frowning2: Here's an OAuth2 link instead! https://discordapp.com/oauth2/authorize?&client_id=294194506113220608&scope=bot&permissions=0")
     console.log(message.author.username + " used the invite command.") 
     }
    if (message.content == prefix + "joinserver") {
