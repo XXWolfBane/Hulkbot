@@ -6,9 +6,6 @@
   "creatorid": "242734840829575169",
   "adminrole": "Admin",
   "ownerrole": "Hulk",
-  "avaibleroles": ["Hulk's Citizens", "Loyal People"],
-
-  "whitelistedServers": ["304402108059484161", "331998474545528833", "286910367668502528", "321102622700470272"],
-
+  "availibleroles": ["Hulk's Citizens", "Loyal People"],
   "statues": ["Hulkbot", "I WILL TAKE OVER THE WORLD", "Serving my master", "Kicking Random People"]
 }
