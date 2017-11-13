@@ -7,3 +7,5 @@ bot.on((message), message => {
       message.reply("pong!")
     } 
 });
+
+bot.login('Mjk0MTk0NTA2MTEzMjIwNjA4.DOa3Zg.yLil3kJG0FmDE3x47YyA5Bk_nJU')
