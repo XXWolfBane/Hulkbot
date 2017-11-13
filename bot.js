@@ -4,7 +4,7 @@ const prefix = "h!"
 
 bot.on("ready", () => {
  console.log("Bot is started. Get ready for some sweet commands!") 
- bot.user.setGame("h!help | Hulkbot Beta")
+ bot.user.setGame("h!help | Kick command is now active")
 });
 
 bot.on("message", message => {
@@ -15,7 +15,7 @@ bot.on("message", message => {
     if (message.content == prefix + "help") {
     message.channel.send({embed: {
   color: 3447003,
-  description: "ping(owner only for now :wink:), help, perms"}})
+  description: "ping, help, perms, kick"}})
    console.log(message.author.username + " used the help command.")
     }
     if (message.content == prefix + "perms") {
