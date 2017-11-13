@@ -113,7 +113,7 @@ bot.on("message", message => {
 	if (message.content.startsWith(prefix + "unmute")) {
 	let member = message.mentions.members.first();
 	let role = message.guild.roles.find("name", "Muted")
-	member.removeRole(role).catch(message.channel.send("Couldn't unmute" + member.username + " for reasons of no permissions."))
+	member.removeRole(role).catch(console.error)
 		console.log(message.author.username + " used the mute command, and muted " + member.username + "!")
 	}
 })
