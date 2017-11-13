@@ -21,7 +21,9 @@ bot.on("ready", () => {
  console.log("Bot owner: " + owner)
  console.log("Bot Dev 1: " + owner)
  console.log("Bot Dev 2:" + dev2)
-	let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
+bot.user.setGame(`h!help | Hulk Bot`)
+	
+let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
 // Status Rotator
   gameval = 0
   setInterval(() => {
@@ -35,14 +37,6 @@ bot.on("ready", () => {
 });
 
 bot.on("message", message => {
-    if (message.content == prefix + "ping") {
-      message.channel.send("PONG! :ping_pong: My ping is " + bot.ping + "ms!")
-     console.log(message.author.username + " used the ping command.")
-    } 
-    if (message.content == prefix + "help") {
-       message.reply("commands are: ```ping, help, perms, kick```")
-   console.log(message.author.username + " used the help command.")
-    }
     if (message.content == prefix + "perms") {
      message.author.send("No permissions yet. Contact FreakingHulk Gaming#6545 for details.")
    console.log(message.author.username + " used the perms command.")
@@ -64,6 +58,7 @@ bot.on("message", message => {
     
   if(cmd) {
     cmd.run(bot, message, args);
+    console.log(message.author.username + " used the "+ message.content.split(" ")[0] +" command.");
    }
 })
 
