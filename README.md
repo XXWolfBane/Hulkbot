@@ -1,0 +1,2 @@
+# JSHulkbot
+My Discord Bot.
