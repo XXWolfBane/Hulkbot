@@ -106,7 +106,7 @@ bot.on("message", message => {
    if (message.content.startsWith(prefix + "mute")) {
       let member = message.mentions.members.first();
       let role = message.guild.roles.find("name", "Muted");
-      member.addRole(role).catch(message.channel.send("Couldn't mute" + member.username + " for reasons of no permissions."));
+      member.addRole(role).catch(console.error);
       message.channel.send("Sucessfully muted " + member + "!")
 	   console.log(message.author.username + " used the mute command, and muted " + member.username + "!");
    }
