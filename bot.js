@@ -45,7 +45,7 @@ bot.on("message", message => {
   let mArray = message.content.split(" ");
   let args = mArray.slice(1);
 
-  let cmd = commands.get(mArray[0].slice(prefix.length));
+  let cmd = bot.commands.get(mArray[0].slice(prefix.length));
    if(message.author.bot) return;
    if(message.channel.type === "dm") return
     
