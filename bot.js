@@ -5,7 +5,7 @@ const owner = "FreakingHulk Gaming#6545"
 
 bot.on("ready", () => {
  console.log("Bot is started. Get ready for some sweet commands!") 
- bot.user.setGame("h!help | Kick command is now active")
+ bot.user.setGame("h!help | PIZZA IS BETTER")
  console.log("Bot name: " + bot.user.username + "bot")
  console.log("Bot owner: " + owner)
 });
