@@ -15,9 +15,9 @@ bot.on("message", message => {
     if (message.content == prefix + "help") {
     message.channel.send({embed: {
   color: 3447003,
-  description: "ping(owner only for now :wink:), help, perms"
+  description: "ping(owner only for now :wink:), help, perms"}})
    console.log(message.author.username + " used the help command.")
-    }})
+    }
     if (message.content == prefix + "perms") {
      message.author.send("No permissions yet. Contact FreakingHulk Gaming#6545 for details.")
    console.log(message.author.username + " used the perms command.")
