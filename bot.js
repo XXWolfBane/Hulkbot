@@ -13,9 +13,7 @@ bot.on("message", message => {
      console.log(message.author.username + " used the ping command.")
     } 
     if (message.content == prefix + "help") {
-    message.channel.send({embed: {
-  color: 3447003,
-  description: "ping, help, perms, kick"}})
+       message.reply("```commands are: ping, help, perms, kick```")
    console.log(message.author.username + " used the help command.")
     }
     if (message.content == prefix + "perms") {
@@ -27,7 +25,7 @@ bot.on("message", message => {
     console.log(message.author.username + " used the invite command.") 
     }
    if (message.content == prefix + "joinserver") {
-      message.reply(" Use this to join the help server: https://discord.gg/XvMA2rJ")
+      message.reply("use this to join the help server: https://discord.gg/XvMA2rJ")
    }
 })
 
