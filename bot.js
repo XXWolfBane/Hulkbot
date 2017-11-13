@@ -29,6 +29,12 @@ bot.on("message", message => {
    if (message.content == prefix + "joinserver") {
       message.reply(" Use this to join the help server: https://discord.gg/XvMA2rJ")
    }
+    if (message.content.startsWith(prefix + "kick")) {
+     const member = message.mentions.members.first();
+     member.kick().then((member) => {
+      message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+        }).catch(() => {
+      message.channel.send("Access Denied");
 })
 
 bot.login(process.env.botToken);
