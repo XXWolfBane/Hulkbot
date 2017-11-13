@@ -97,10 +97,18 @@ bot.on("message", (message) => {
             message.channel.send(":wave: " + member.displayName + " has been successfully banned! :point_right: ");
         }).catch(() => {
              // Failmessage
-            message.channel.send("GIVE ME ALL YOUR PERMISSIONS BOI");
+            message.channel.send("I can't ban without permissions, noob!");
         });
 }
 });
+
+bot.on("message", message => {
+   if (message.content == prefix + "mute") {
+      let member = message.mentions.members.first();
+      let role = message.guild.roles.find("name", "Muted");
+      member.addRole(role).catch(console.error);
+   }
+})
 
 bot.login(process.env.botToken);
 
