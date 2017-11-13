@@ -23,7 +23,7 @@ bot.on("ready", () => {
  console.log("Bot owner: " + owner)
  console.log("Bot Dev 1: " + owner)
  console.log("Bot Dev 2: " + dev2)
- console.log(`${bot.guilds.array().length} guilds`)
+ console.log(`${bot.guilds.array().length} Guilds`)
 bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
 	
 let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
