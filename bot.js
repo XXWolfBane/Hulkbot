@@ -18,7 +18,9 @@ bot.on("ready", () => {
  console.log("Bot is started. Get ready for some sweet commands!") 
  console.log("Bot name: " + bot.user.username + "bot")
  console.log("Bot owner: " + owner)
-	let status = ["Taking over the world", "Pizza is better"]
+ bot.user.setGame(`h!help | Hulk Bot`)
+	
+let status = ["Taking over the world", "Pizza is better"]
 // Status Rotator
   gameval = 0
   setInterval(() => {
