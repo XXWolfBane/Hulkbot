@@ -1,6 +1,5 @@
 const discord = require('discord.js')
 const bot = new discord.Client()
-const commando = require('discord.js-commando')
 const prefix = "h!"
 
 bot.on("ready", () => {
