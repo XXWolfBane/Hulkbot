@@ -103,14 +103,14 @@ bot.on("message", (message) => {
 });
 
 bot.on("message", message => {
-   if (message.content == prefix + "mute") {
+   if (message.content.startsWith(prefix + "mute")) {
       let member = message.mentions.members.first();
       let role = message.guild.roles.find("name", "Muted");
       member.addRole(role).catch(message.channel.send("Couldn't mute" + member.username + " for reasons of no permissions."));
       message.channel.send("Sucessfully muted " + member + "!")
 	   console.log(message.author.username + " used the mute command, and muted " + member.username + "!");
    }
-	if (message.content == prefix + "unmute") {
+	if (message.content.startsWith(prefix + "unmute")) {
 	let member = message.mentions.members.first();
 	let role = message.guild.roles.find("name", "Muted")
 	member.removeRole(role).catch(message.channel.send("Couldn't unmute" + member.username + " for reasons of no permissions."))
