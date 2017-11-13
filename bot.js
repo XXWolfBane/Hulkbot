@@ -88,6 +88,18 @@ bot.on("message", (message) => {
             message.channel.send("Access Denied");
         });
     }
+	if (message.content.startsWith(prefix + "ban")) {
+        // Easy way to get member object though mentions.
+        var member= message.mentions.members.first();
+        // Kick
+        member.ban().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + " has been successfully banned! :point_right: ");
+        }).catch(() => {
+             // Failmessage
+            message.channel.send("Access Denied");
+        });
+}
 });
 
 bot.login(process.env.botToken);
