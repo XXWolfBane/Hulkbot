@@ -40,7 +40,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
 bot.on("message", message => {
     if (!message.content.startsWith(prefix)) return;
     if (message.content == prefix + "perms") {
-     message.author.send("No permissions yet. Contact FreakingHulk Gaming#6545 for details.")
+     message.author.send("No permissions yet. Contact <@242734840829575169> for details.")
    console.log(message.author.username + " used the perms command.")
     }
     if (message.content == prefix + "invite") {
