@@ -25,5 +25,13 @@ bot.on("message", message => {
   }
 });
 
+bot.on("message", message => {
+   if (message.content == prefix + "ids" and message.author.id == '242734840829575169') {
+      message.author.sendMessage("Your ID is" + message.author.id)
+    else
+     console.log("User not owner, canceled command.")
+   }
+});
+
 bot.login(process.env.botToken);
 
