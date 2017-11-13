@@ -15,7 +15,13 @@ bot.on("message", message => {
 
 bot.on("message", message => {
   if (message.content == prefix + "help") {
-    message.reply("Only a pong command for now, but there'll be more soon! :wink:")
+    message.reply("ping(owner only for now :wink:), help, perms")
+  }
+});
+
+bot.on("message", message => {
+  if (message.content == prefix + "perms") {
+     message.author.sendMessage("No permissions yet. Contact FreakingHulk Gaming#6545 for details.")
   }
 });
 
