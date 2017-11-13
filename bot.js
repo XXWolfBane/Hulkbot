@@ -12,10 +12,7 @@ bot.on("message", message => {
       message.reply("pong!")
      console.log(message.author.username + " used the ping command.")
     } 
-});
-
-bot.on("message", message => {
-  if (message.content == prefix + "help") {
+    if (message.content == prefix + "help") {
     message.channel.send({embed: {
   color: 3447003,
   description: "ping(owner only for now :wink:), help, perms"
