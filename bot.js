@@ -17,7 +17,7 @@ bot.on("message", message => {
   color: 3447003,
   description: "ping(owner only for now :wink:), help, perms"
    console.log(message.author.username + " used the help command.")
-    }}
+    }})
     if (message.content == prefix + "perms") {
      message.author.send("No permissions yet. Contact FreakingHulk Gaming#6545 for details.")
    console.log(message.author.username + " used the perms command.")
