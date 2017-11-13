@@ -23,6 +23,7 @@ bot.on("ready", () => {
  console.log("Bot owner: " + owner)
  console.log("Bot Dev 1: " + owner)
  console.log("Bot Dev 2: " + dev2)
+ console.log("Number of Guilds: " + ${bot.guilds.array().length} guilds)
 bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
 	
 let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
@@ -33,7 +34,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
       gameval = 0
     }
     var game = status[gameval]
-    bot.user.setGame(`h!help | ${game}`)
+    bot.user.setGame(`h!help | ${bot.guilds.array().length} guilds | ${game}`)
     gameval++
   }, 60000) // One min
 });
@@ -56,6 +57,7 @@ bot.on("message", message => {
   setTimeout(function() {
     process.exit(666);
   }, 10010)
+		console.log("Someone used the shutdown command.")
 	}
  
   let mArray = message.content.split(" ");
