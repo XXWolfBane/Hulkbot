@@ -107,8 +107,17 @@ bot.on("message", message => {
       let member = message.mentions.members.first();
       let role = message.guild.roles.find("name", "Muted");
       member.addRole(role).catch(console.error);
+      message.channel.send("Sucessfully muted " + member + "!")
+	   console.log(message.author.username + " used the mute command, and muted " + member.username + "!");
    }
+	if (message.content == prefix + "unmute") {
+	let member = message.mentions.members.first();
+	let role = message.guild.roles.find("name", "Muted")
+	member.removeRole(role).catch(console.error)
+		console.log(message.author.username + " used the mute command, and muted " + member.username + "!")
+	}
 })
+
 
 bot.login(process.env.botToken);
 
