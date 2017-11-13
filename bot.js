@@ -51,6 +51,12 @@ bot.on("message", message => {
    if (message.content == prefix + "joinserver") {
       message.reply("use this to join the help server: https://discord.gg/XvMA2rJ")
    }
+	if (message.content == prefix + "shutdown") {
+	   message.channel.send(":wave: Hulkbot will now shutdown.").then(m => m.delete(9999))
+  setTimeout(function() {
+    process.exit(666);
+  }, 10010)
+	}
  
   let mArray = message.content.split(" ");
   let args = mArray.slice(1);
