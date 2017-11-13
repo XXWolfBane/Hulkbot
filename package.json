@@ -6,7 +6,7 @@
   "author": "FHGDev",
   "license": "ISC",
   "scripts": {
-    "bot.js": "node bot.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "discord.js": "^11.1.0"
