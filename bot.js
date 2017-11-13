@@ -16,7 +16,10 @@ bot.on("message", message => {
 
 bot.on("message", message => {
   if (message.content == prefix + "help") {
-    message.reply("ping(owner only for now :wink:), help, perms")
+    message.channel.send({embed: {
+  color: 3447003,
+  description: "ping(owner only for now :wink:), help, perms"
+}});
    console.log(message.author.username + " used the help command.")
   }
 });
