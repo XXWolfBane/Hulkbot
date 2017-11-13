@@ -16,9 +16,19 @@ require('fs').readdir("./commands/", (err, files) => {
 
 bot.on("ready", () => {
  console.log("Bot is started. Get ready for some sweet commands!") 
- bot.user.setGame("h!help | PIZZA IS BETTER")
  console.log("Bot name: " + bot.user.username + "bot")
  console.log("Bot owner: " + owner)
+	let status = ["Taking over the world", "Pizza is better"]
+// Status Rotator
+  gameval = 0
+  setInterval(() => {
+    if (gameval == status.length) {
+      gameval = 0
+    }
+    var game = status[gameval]
+    bot.user.setGame(`h!help | ${game}`)
+    gameval++
+  }, 60000) // One min
 });
 
 bot.on("message", message => {
