@@ -25,13 +25,5 @@ bot.on("message", message => {
   }
 });
 
-bot.on("message", message => {
-   if (message.content == prefix + "myid") {
-      message.author.sendMessage("Your ID is" + message.author.id)
-    else
-     console.log("User not owner, canceled command.")
-   }
-});
-
 bot.login(process.env.botToken);
 
