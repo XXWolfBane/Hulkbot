@@ -13,5 +13,11 @@ bot.on("message", message => {
     } 
 });
 
+bot.on("message", message => {
+  if (message.content == prefix + "help") {
+    message.reply("Only a pong command for now, but there'll be more soon! :wink:")
+  }
+});
+
 bot.login(process.env.botToken);
 
