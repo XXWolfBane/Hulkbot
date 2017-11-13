@@ -9,7 +9,7 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
     if (message.content == prefix + "ping") {
-      message.reply(bot.ping + " pong!")
+      message.reply("PONG! :ping_pong: My uptime is " + bot.ping)
      console.log(message.author.username + " used the ping command.")
     } 
     if (message.content == prefix + "help") {
