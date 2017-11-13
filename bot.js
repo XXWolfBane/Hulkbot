@@ -23,10 +23,9 @@ bot.on("message", message => {
 
 bot.on("message", message => {
   if (message.content == prefix + "perms") {
-   bot.startTyping();
      message.author.sendMessage("No permissions yet. Contact FreakingHulk Gaming#6545 for details.")
    console.log(message.author.username)
-   bot.stopTyping();  }
+    }
 });
 
 bot.login(process.env.botToken);
