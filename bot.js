@@ -13,7 +13,7 @@ bot.on("message", message => {
      console.log(message.author.username + " used the ping command.")
     } 
     if (message.content == prefix + "help") {
-       message.reply("```commands are: ping, help, perms, kick```")
+       message.reply("commands are: ```ping, help, perms, kick```")
    console.log(message.author.username + " used the help command.")
     }
     if (message.content == prefix + "perms") {
