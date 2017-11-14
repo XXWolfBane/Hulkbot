@@ -1,5 +1,33 @@
 module.exports.run = (bot, message, args) => {
-  message.channel.send("Commands are: ```ping, help, perms, kick, ban, mute. More soon!``` :wink:")
+  message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "Help",
+    url: "https://discord.gg/XvMA2rJ",
+    description: "You asked for help, here it is.",
+    fields: [{
+        name: "Utility :tools:",
+        value: "Mute, Kick, Ban."
+      },
+      {
+        name: "Bot Status :robot:",
+        value: "Uptime, Ping, ChangeGame."
+      },
+      {
+        name: "Fun",
+        value: "Coming soon"
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: ""
+    }
+  }
+});
 }
 
 module.exports.help = {
