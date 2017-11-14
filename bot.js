@@ -125,11 +125,13 @@ bot.on("message", message => {
 	member.removeRole(role).catch(console.error)
 		console.log(message.author.username + " used the mute command, and muted " + member.username + "!")
 	}
-	if (message.content == prefix + "changegame h!help") {
+	if (message.content == prefix + "changegame 'h!help'") {
 	bot.user.setGame("h!help")
+	message.channel.send(":ok_hand: Okay, I will set my playing status to 'h!help'!") 
 	}
 	if (message.content == prefix + "changegame Nothing") {
 	bot.user.setGame("Nothing")
+	message.channel.send(":ok_hand: Okay, I will set my playing status to 'nothing'.")
 	}
 })
 
