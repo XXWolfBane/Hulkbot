@@ -23,7 +23,7 @@ module.exports.run = (bot, message, args) => {
     ],
     timestamp: new Date(),
     footer: {
-      icon_url: client.user.avatarURL,
+      icon_url: bot.user.avatarURL,
       text: ""
     }
   }
