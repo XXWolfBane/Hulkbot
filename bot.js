@@ -47,7 +47,7 @@ bot.on("message", message => {
     for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
         console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
-        message.channel.send(`<@${message.author.id}>, Please do not use profanity in this server!`).then(m => m.delete(10000))
+        message.channel.send(`<@${message.author.id}>, LANGUAGE!`).then(m => m.delete(10000))
         message.delete(500)
         return;
       };
