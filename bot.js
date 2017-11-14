@@ -1,5 +1,6 @@
 const discord = require('discord.js')
 const config = require('./config.json')
+const profanities = require("../profanities.json")
 const bot = new discord.Client()
 const prefix = "h!"
 const owner = "FreakingHulk Gaming#6545"
@@ -43,6 +44,14 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
 });
 
 bot.on("message", message => {
+    for (x = 0; x < profanities.length; x++) {
+      if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
+        console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
+        message.channel.send(`<@${message.author.id}>, Please do not use profanity in this server!`).then(m => m.delete(10000))
+        message.delete(500)
+        return;
+      };
+    };
     if (!message.content.startsWith(prefix)) return;
     if (message.content == prefix + "perms") {
      message.author.send("No permissions yet. Contact <@242734840829575169> for details.")
