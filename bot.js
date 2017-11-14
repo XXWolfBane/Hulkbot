@@ -1,6 +1,6 @@
 const discord = require('discord.js')
 const config = require('./config.json')
-const profanities = require("../profanities.json")
+const profanities = require("./profanities.json")
 const bot = new discord.Client()
 const prefix = "h!"
 const owner = "FreakingHulk Gaming#6545"
