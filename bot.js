@@ -24,7 +24,7 @@ bot.on("ready", () => {
  console.log("Bot owner: " + owner)
  console.log("Bot Dev 1: " + owner)
  console.log("Bot Dev 2: " + dev2)
- console.log(`${bot.guilds.array().length} Guilds`)
+ console.log(`${bot.guilds.array().length} Servers`)
 bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
 
 bot.guilds.forEach(async(guild, id) => {
@@ -38,7 +38,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
       gameval = 0
     }
     var game = status[gameval]
-    bot.user.setGame(`h!help | ${bot.guilds.array().length} guilds | ${game}`)
+    bot.user.setGame(`h!help | ${bot.guilds.array().length} servers | ${game}`)
     gameval++
   }, 25000) // One min
 });
