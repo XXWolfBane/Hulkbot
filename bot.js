@@ -110,8 +110,8 @@ bot.on("message", (message) => {
         });
 }
 	if (message.content.startsWith(prefix + "giverole")) {
-		let member= message.mentions.member.second();
-		let role = message.mentions.member.first();
+		let member= message.mentions.member.first();
+		let role = message.mentions.roles.first();
 		member.addRole(role).then(console.log(member.username + " was given " + role))
 		message.channel.send("User was given role.")
 	}
