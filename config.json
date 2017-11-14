@@ -1,5 +1,5 @@
 {
   "prefix": "h!"
   
-  "token": process.env.botToken
+  "token": "process.env.botToken"
 }
