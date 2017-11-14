@@ -2,8 +2,8 @@ module.exports.run = (bot, message, args) => {
   message.channel.send({embed: {
     color: 3447003,
     author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
     },
     title: "Help",
     url: "https://discord.gg/XvMA2rJ",
