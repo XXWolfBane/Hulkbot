@@ -39,7 +39,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
     var game = status[gameval]
     bot.user.setGame(`h!help | ${bot.guilds.array().length} guilds | ${game}`)
     gameval++
-  }, 60000) // One min
+  }, 25000) // One min
 });
 
 bot.on("message", message => {
