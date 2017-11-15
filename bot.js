@@ -45,7 +45,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
 });
 
 bot.on("message", message => {
-if (filteron = true) {    
+if (filteron == true) {    
 for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
         console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
@@ -125,11 +125,11 @@ bot.on("message", (message) => {
 		
 	}
 	if (message.content == prefix + "filteroff") {
-	   filteron = false
+	   filteron == false
 		message.channel.send("Okay, I turned my filters off!")
 	}
 	if (message.content == prefix + "filteron") {
-	   filteron = true
+	   filteron == true
 		message.channel.send("Okay, I turned my filters back on!")
 	}
 });
