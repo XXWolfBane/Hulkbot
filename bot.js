@@ -115,10 +115,10 @@ bot.on("message", (message) => {
 		member.addRole(role).then(console.log(member.displayName + " was given " + role))
 		message.channel.send("User was given role.")
 	}
-	if (message.content == prefix + "bork") {
+	if (message.content.startsWith(prefix + "bork")) {
 		let member = message.mentions.members.first();
-		message.channel.send("BORKKKK")
-		member.send(message.author.username + " borked you!")
+		member.sendMessage(message.author.username + " borked you!")
+		message.channel.send("Borked " + member.displayName + "!")
 		console.log(message.author.username + " used the bork command!")
 		
 	}
