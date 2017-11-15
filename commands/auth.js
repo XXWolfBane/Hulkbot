@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
 		.setThumbnail(message.author.displayAvatarURL)
 		.setColor(`#FF0000`)
 		.setTimestamp()
-		.setURL("https://github.com/CrawlingArc33/Authbot")
+		.setURL("https://github.com/FreakingHulk-Gaming/JSHulkbot")
 		.setFooter('Already authorized!');
 		
 		message.channel.send({embed: em});
@@ -33,7 +33,7 @@ module.exports.run = (bot, message, args) => {
 			.setThumbnail(message.author.displayAvatarURL)
 			.setColor(`#FF0000`)
 			.setTimestamp()
-			.setURL("https://github.com/CrawlingArc33/Authbot")
+			.setURL("https://github.com/FreakingHulk-Gaming/JSHulkbot")
 			.setFooter('ERROR');
 
 			message.channel.send({embed: em});
@@ -46,7 +46,7 @@ module.exports.run = (bot, message, args) => {
 			.setThumbnail(message.author.displayAvatarURL)
 			.setColor(`#00FF00`)
 			.setFooter(`Now authorized on ${message.guild.name}`)
-			.setURL("https://github.com/CrawlingArc33/Authbot")
+			.setURL("https://github.com/FreakingHulk-Gaming/JSHulkbot")
 			.setTimestamp();
 	
 			message.channel.send({embed: em});
@@ -54,7 +54,7 @@ module.exports.run = (bot, message, args) => {
 		});
 	}
 	if (!message.guild.roles.find('name', "Authorized")){
-		console.log("Unabled to create role!")
+		console.log("Unable to create role!")
 		return;
 	};
 	if (message.guild.roles.find('name', 'Authorized').comparePositionTo(message.guild.me.highestRole) > 0) {
@@ -65,7 +65,7 @@ module.exports.run = (bot, message, args) => {
 		.setThumbnail(message.author.displayAvatarURL)
 		.setColor(`#FF0000`)
 		.setTimestamp()
-		.setURL("https://github.com/CrawlingArc33/Authbot")
+		.setURL("https://github.com/FreakingHulk-Gaming/JSHulkbot")
 		.setFooter('ERROR');
 		
 		message.channel.send({embed: em});
@@ -78,7 +78,7 @@ module.exports.run = (bot, message, args) => {
 		.setThumbnail(message.author.displayAvatarURL)
     		.setColor(`#00FF00`)
 		.setFooter(`Now authorized on ${message.guild.name}`)
-		.setURL("https://github.com/CrawlingArc33/Authbot")
+		.setURL("https://github.com/FreakingHulk-Gaming/JSHulkbot")
 		.setTimestamp();
 	
 	message.channel.send({embed: em});
