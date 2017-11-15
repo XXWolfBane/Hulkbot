@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args) => {
       },
       {
         name: "Bot Status :robot:",
-        value: "Uptime, Ping, ChangeGame."
+        value: "Uptime, Ping, Changegame."
       },
       {
         name: "Fun",
