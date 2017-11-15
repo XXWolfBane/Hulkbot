@@ -124,11 +124,11 @@ bot.on("message", (message) => {
 		console.log(message.author.username + " used the bork command!");
 		
 	}
-	if (message.content == prefix + "filter off") {
+	if (message.content == prefix + "filteroff") {
 	   filteron = false
 		message.channel.send("Okay, I turned my filters off!")
 	}
-	if (message.content == prefix + "filter on") {
+	if (message.content == prefix + "filteron") {
 	   filteron = true
 		message.channel.send("Okay, I turned my filters back on!")
 	}
