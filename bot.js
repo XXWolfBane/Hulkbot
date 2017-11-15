@@ -6,6 +6,7 @@ const prefix = "h!"
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "0.1.1"
+var filteron = true
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -44,7 +45,8 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
 });
 
 bot.on("message", message => {
-    for (x = 0; x < profanities.length; x++) {
+if filteron = true    
+for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
         console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
         message.channel.send(`<@${message.author.id}>, LANGUAGE!`).then(m => m.delete(10000))
@@ -121,6 +123,12 @@ bot.on("message", (message) => {
 		
 		console.log(message.author.username + " used the bork command!");
 		
+	}
+	if (message.content == prefix + "filter off") {
+	   var filteron = false
+	}
+	if (message.content == prefix + "filter on") {
+	   var filteron = true
 	}
 });
 
