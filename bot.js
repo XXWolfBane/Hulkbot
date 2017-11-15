@@ -127,10 +127,12 @@ bot.on("message", (message) => {
 	if (message.content == prefix + "filteroff") {
 	   filteron == false
 		message.channel.send("Okay, I turned my filters off!")
+		console.log("Filters on = " + filteron)
 	}
 	if (message.content == prefix + "filteron") {
 	   filteron == true
 		message.channel.send("Okay, I turned my filters back on!")
+		console.log("Filters on = " + filteron)
 	}
 });
 
