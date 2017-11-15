@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
     description: "You asked for help, here it is.",
     fields: [{
         name: "Utility :tools:",
-        value: "Mute, Kick, Ban."
+        value: "Mute, Kick, Ban, Auth."
       },
       {
         name: "Bot Status :robot:",
