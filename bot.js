@@ -45,7 +45,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
 });
 
 bot.on("message", message => {
-if filteron = true    
+if (filteron = true) {    
 for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
         console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
@@ -53,7 +53,7 @@ for (x = 0; x < profanities.length; x++) {
         message.delete(500)
         return;
       };
-    };
+}};
     if (!message.content.startsWith(prefix)) return;
     if (message.content == prefix + "perms") {
      message.author.send("No permissions yet. Contact <@242734840829575169> for details.")
@@ -125,10 +125,10 @@ bot.on("message", (message) => {
 		
 	}
 	if (message.content == prefix + "filter off") {
-	   var filteron = false
+	   filteron = false
 	}
 	if (message.content == prefix + "filter on") {
-	   var filteron = true
+	   filteron = true
 	}
 });
 
