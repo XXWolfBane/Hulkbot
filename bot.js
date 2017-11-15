@@ -115,6 +115,10 @@ bot.on("message", (message) => {
 		member.addRole(role).then(console.log(member.username + " was given " + role))
 		message.channel.send("User was given role.")
 	}
+	if (message.content == prefix + "bork") {
+		message.channel.send("BORKKKK")
+		console.log(message.author.username + " used the bork command!")
+	}
 });
 
 bot.login(process.env.botToken);
