@@ -117,8 +117,8 @@ bot.on("message", (message) => {
 	}
 	if (message.content.startsWith(prefix + "bork")) {
 		let member = message.mentions.members.first();
-		member.sendMessage(message.author.username + " borked you!")
 		message.channel.send("Borked " + member.displayName + "!")
+		
 		console.log(message.author.username + " used the bork command!")
 		
 	}
