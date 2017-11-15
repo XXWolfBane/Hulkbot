@@ -6,7 +6,7 @@ const prefix = "h!"
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "0.1.1"
-var filteron = true
+const filteron = true
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -126,9 +126,11 @@ bot.on("message", (message) => {
 	}
 	if (message.content == prefix + "filter off") {
 	   filteron = false
+		message.channel.send("Okay, I turned my filters off!")
 	}
 	if (message.content == prefix + "filter on") {
 	   filteron = true
+		message.channel.send("Okay, I turned my filters back on!")
 	}
 });
 
