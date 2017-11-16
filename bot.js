@@ -36,7 +36,7 @@ let status = ["Taking over the world", "Pizza is better", "Serving my owner", "Y
   gameval = 0
   setInterval(() => {
     if (gameval == status.length) {
-      gameval = 0 
+      gameval = 0
     }
     var game = status[gameval]
     bot.user.setGame(`h!help | ${bot.guilds.array().length} servers | ${game}`)
