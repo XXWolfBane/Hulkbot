@@ -16,7 +16,7 @@ module.exports.run = (bot, message, args) => {
 		message.channel.send({embed: em});
 		return
 	}
-	if (!message.guild.me.hasPermission("MANAGE_ROLES") || !message.guild.me.hasPermission("ADMINISTRATOR")) {message.channel.send('Unable to create role due to "No Permission" needs MANAGE_ROLES!'); return;}
+	if (!message.guild.me.hasPermission("MANAGE_ROLES")) {message.channel.send('Unable to create role due to "No Permission" needs MANAGE_ROLES!'); return;}
 	if (!message.guild.roles.find('name', "Authorized")){
 		
 		message.guild.createRole({
