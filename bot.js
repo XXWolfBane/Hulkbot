@@ -6,6 +6,10 @@ const prefix = process.env.prefix
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "0.1.1"
+var cb = require('cleverbot-node')
+var clbot = new cb;
+cb.configure({botapi: "IAMKEY"})
+
 let filteron = true
 
 // Gather commands
@@ -133,6 +137,15 @@ bot.on("message", (message) => {
 	   filteron = true
 		message.channel.send("Okay, I turned my filters back on!")
 		console.log(message.author.username + " turned the filters to = " + filteron)
+	}
+	if (message.channel.type == "dm") {
+		clbot.write(message.content, (response) => {
+			message.channel.startTyping();
+			setTimeout(() => {
+				message.channel.send(response.output).catch(console.error);
+			
+			}, Math.random() * (1 - 3) + 1 * 1000);
+		})
 	}
 });
 
