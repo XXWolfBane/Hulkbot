@@ -142,9 +142,8 @@ bot.on("message", (message) => {
 		clbot.write(message.content, (response) => {
 			message.channel.startTyping();
 			setTimeout(() => {
-				message.channel.send("What do you want?");
+				message.channel.send(Math.random("What do you want?", "Hi!", "LOL TROLLED"));
 				message.channel.stopTyping();
-			}
 		})
 	}
 });
