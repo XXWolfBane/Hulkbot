@@ -9,7 +9,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "cleverbot": "^0.3.11",
+    "cleverbot-node": "^0.3.11",
     "discord.js": "^11.1.0",
     "cheerio": "^1.0.0-rc.2",
     "ms": "^2.0.0",
