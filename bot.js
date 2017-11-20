@@ -8,7 +8,7 @@ const dev2 = "RHG#0822"
 const version = "0.1.1"
 var cb = require('cleverbot-node')
 var clbot = new cb;
-cb.configure({botapi: "IAMKEY"})
+cb.configure({botapi: process.env.botToken})
 
 let filteron = true
 
