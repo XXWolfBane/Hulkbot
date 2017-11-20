@@ -143,7 +143,8 @@ bot.on("message", (message) => {
 			message.channel.startTyping();
 			setTimeout(() => {
 				message.channel.send("What do you want?");
-				message.channel.stopTyping();}
+				message.channel.stopTyping();
+			}
 		})
 	}
 });
