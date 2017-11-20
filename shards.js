@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
-const main = require(./package.json/main)
+const pckgjson = require(./package.json)
+const main = pckgjson.main
 const Manager = new Discord.ShardingManager(main);
 Manager.spawn(2); // This example will spawn 2 shards (5,000 guilds);
