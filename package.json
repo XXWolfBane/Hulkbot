@@ -7,6 +7,7 @@
   "license": "ISC",
   "scripts": {
     "start": "node bot.js"
+    "clbot": "npm install cleverbot-node"
   },
   "dependencies": {
     "discord.js": "^11.1.0",
@@ -17,6 +18,5 @@
     "querystring": "^0.2.0",
     "request": "^2.83.0",
     "snekfetch": "^3.5.3"
-    "cleverbot-node": "0.3.11"
   }
 }
