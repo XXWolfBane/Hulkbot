@@ -142,7 +142,7 @@ bot.on("message", (message) => {
 		clbot.write(message.content, (response) => {
 			message.channel.startTyping();
 			setTimeout(() => {
-				message.channel.send(response.output).catch(console.error);
+				message.channel.send("What do you want?");
 			
 			}, Math.random() * (1 - 3) + 1 * 1000);
 		})
