@@ -144,7 +144,8 @@ bot.on("message", (message) => {
 			setTimeout(() => {
 				message.channel.send(Math.random("What do you want?", "Hi!", "LOL TROLLED"));
 				message.channel.stopTyping();
-		})
+	    })
+	 })
 	}
 });
 
