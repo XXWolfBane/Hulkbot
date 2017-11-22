@@ -58,6 +58,16 @@ for (x = 0; x < profanities.length; x++) {
         return;
       };
 }};
+	if (message.channel.type === "dm") {
+    if(message.cleanContent.toLowerCase() == "cleardm") {
+      message.channel.fetchMessages({limit: 100}).then(m => {
+        m.forEach(async(msg) => {
+          if (msg.author.id == bot.user.id) {
+            msg.delete()
+          };
+        });
+      });
+    }
     if (!message.content.startsWith(prefix)) return;
     if (message.content == prefix + "perms") {
      message.author.send("No permissions yet. Contact <@242734840829575169> for details.")
