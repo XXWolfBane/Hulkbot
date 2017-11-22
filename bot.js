@@ -148,15 +148,7 @@ bot.on("message", (message) => {
     message.channel.send("Okay, I turned my filters back on!")
     console.log(message.author.username + " turned the filters to = " + filteron)
   }
-  if (message.channel.type == "dm") {
-    clbot.write(message.content, (response) => {
-      message.channel.startTyping();
-      setTimeout(() => {
-        message.channel.send("What do you want?", "Hi!", "LOL TROLLED");
-        message.channel.stopTyping();
-      })
-    })
-  }
+ 
 });
 
 bot.login(process.env.botToken);
