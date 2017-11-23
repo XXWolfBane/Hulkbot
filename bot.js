@@ -6,11 +6,6 @@ const prefix = process.env.prefix
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "0.1.1"
-var cb = require('cleverbot-node')
-var clbot = new cb;
-clbot.configure({
-  botapi: process.env.botToken
-})
 
 let filteron = true
 
@@ -130,7 +125,7 @@ bot.on("message", (message) => {
   if (message.content.startsWith(prefix + "giverole")) {
     let member = message.mentions.member.first();
     let role = message.mentions.roles.first();
-    member.addRole(role).then(console.log(member.displayName + " was given " + role))
+    member.addRole(role).then(console.log(member.displayName + " was given " + role).catch(message.reply("I can't assign roles without permissions. Please move the Hulkbot role above all other roles. Thanks! :grin:")))
     message.channel.send("User was given role.")
   }
   if (message.content.startsWith(prefix + "bork")) {
