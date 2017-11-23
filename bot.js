@@ -1,4 +1,5 @@
 const discord = require('discord.js')
+const name = ("robert")
 const config = require('./config.json')
 const profanities = require("./profanities.json")
 const bot = new discord.Client()
@@ -26,6 +27,7 @@ require('fs').readdir("./commands/", (err, files) => {
 })
 
 bot.on("ready", () => {
+  console.log(name)
   console.log("Bot is started. Get ready for some sweet commands!")
   console.log("Bot name: " + bot.user.username + "bot")
   console.log("Bot owner: " + owner)
