@@ -134,24 +134,14 @@ bot.on("message", (message) => {
     console.log(message.author.username + " used the bork command!");
   }
   if (message.content == prefix + "filteroff") {
-    // Prevents Unauthorized Users from accessing filters
-    if(message.member.hasPermission("MANAGE SERVER")) {
-      filteron == false
+      filteron = false
       message.channel.send("Okay, I turned my filters off!")
       console.log(message.author.username + " turned the filters to = " + filteron)
-    } else {
-      message.channel.send("Sorry, you don't have the required permissions!")
-    }
   }
   if (message.content == prefix + "filteron") {
-    // Prevents Unauthorized Users from accessing filters
-    if(message.member.hasPermission("MANAGE SERVER")) {
-      filteron == true
+      filteron = true
       message.channel.send("Okay, I turned my filters back on!")
       console.log(message.author.username + " turned the filters to = " + filteron)
-    } else {
-      message.channel.send("Sorry, you don't have the required permissions!")
-    }
   }
  
 });
