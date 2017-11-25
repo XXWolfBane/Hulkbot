@@ -134,14 +134,16 @@ bot.on("message", (message) => {
     console.log(message.author.username + " used the bork command!");
   }
   if (message.content == prefix + "filteroff") {
-      filteron = false
-      message.channel.send("Okay, I turned my filters off!")
-      console.log(message.author.username + " turned the filters to = " + filteron)
+    filteron = false
+    message.channel.send("Okay, I turned my filters off!")
+    console.log(message.author.username + " turned the filters to = " + filteron)
   }
   if (message.content == prefix + "filteron") {
-      filteron = true
-      message.channel.send("Okay, I turned my filters back on!")
-      console.log(message.author.username + " turned the filters to = " + filteron)
+    filteron = true
+    message.channel.send("Okay, I turned my filters back on!")
+    console.log(message.author.username + " turned the filters to = " + filteron)
   }
+ 
+});
 
 bot.login(process.env.botToken);
