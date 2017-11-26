@@ -27,6 +27,7 @@ bot.on("ready", () => {
   console.log("Bot Dev 1: " + owner)
   console.log("Bot Dev 2: " + dev2)
   console.log(`${bot.guilds.array().length} Servers`)
+  console.log(`Hulkbot Version ${version} Loaded!`)
   bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
 
   bot.guilds.forEach(async (guild, id) => {
