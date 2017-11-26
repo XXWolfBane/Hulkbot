@@ -5,7 +5,7 @@ const bot = new discord.Client()
 const prefix = process.env.prefix
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
-const version = "0.1.1"
+const version = "1.2.0"
 
 var filteron = true
 
