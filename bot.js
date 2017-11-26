@@ -7,7 +7,7 @@ const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "1.2.0"
 
-var filteron = true
+var filteron = "true"
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -26,7 +26,7 @@ bot.on("ready", () => {
   console.log("Bot owner: " + owner)
   console.log("Bot Dev 1: " + owner)
   console.log("Bot Dev 2: " + dev2)
-  console.log(`${bot.guilds.array().length} Servers`)
+   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`)
   console.log(`Hulkbot Version ${version} Loaded!`)
   bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
 
@@ -47,7 +47,7 @@ bot.on("ready", () => {
 });
 
 bot.on("message", message => {
-  if (filteron == true) {
+  if (filteron == "true") {
   for (x = 0; x < profanities.length; x++) {
     if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
       console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
@@ -139,7 +139,7 @@ bot.on("message", (message) => {
     if (message.content == prefix + "filteroff") {
     // Prevents Unauthorized Users from accessing filters
     if(message.member.hasPermission("MANAGE_GUILD")) {
-      filteron == false;
+      filteron = "false"
       message.channel.send("Okay, I turned my filters off!");
       console.log(message.author.username + " turned the filters to = " + filteron);
     } else {
@@ -149,7 +149,7 @@ bot.on("message", (message) => {
   if (message.content == prefix + "filteron") {
     // Prevents Unauthorized Users from accessing filters
     if(message.member.hasPermission("MANAGE_GUILD")) {
-      filteron == true;
+      filteron = "true"
       message.channel.send("Okay, I turned my filters back on!");
       console.log(message.author.username + " turned the filters to = " + filteron);
      } else {
