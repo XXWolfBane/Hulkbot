@@ -7,7 +7,7 @@ const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "0.1.1"
 
-let filteron = true
+var filteron = t  rue
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -46,13 +46,14 @@ bot.on("ready", () => {
 });
 
 bot.on("message", message => {
+  if filteron = true {
   for (x = 0; x < profanities.length; x++) {
     if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
       console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
       message.channel.send(`<@${message.author.id}>, LANGUAGE!`).then(m => m.delete(10000))
       message.delete(500)
       return;
-    };
+    }};
   };
   if (message.channel.type === "dm") {
     if (message.cleanContent.toLowerCase() == "cleardm") {
@@ -107,7 +108,7 @@ bot.on("message", (message) => {
       message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
     }).catch(() => {
       // Failmessage
-      message.channel.send("Access Denied");
+      message.channel.send("I can't kick without permissions, noob!");
     });
   }
   if (message.content.startsWith(prefix + "ban")) {
