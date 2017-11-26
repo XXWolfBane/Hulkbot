@@ -7,7 +7,7 @@ const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "0.1.1"
 
-var filteron = t  rue
+var filteron = true
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -46,14 +46,15 @@ bot.on("ready", () => {
 });
 
 bot.on("message", message => {
-  if filteron = true {
+  if (filteron == true) {
   for (x = 0; x < profanities.length; x++) {
     if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
       console.log(`[Profanity] ${message.author.username}, said ${profanities[x]} in the ${message.channel.name} channel!`)
       message.channel.send(`<@${message.author.id}>, LANGUAGE!`).then(m => m.delete(10000))
       message.delete(500)
       return;
-    }};
+      };
+    }
   };
   if (message.channel.type === "dm") {
     if (message.cleanContent.toLowerCase() == "cleardm") {
@@ -76,7 +77,7 @@ bot.on("message", message => {
     console.log(message.author.username + " used the invite command.")
   }
   if (message.content == prefix + "joinserver") {
-    message.reply("use this to join the help server: https://discord.gg/XvMA2rJ")
+    message.channel.send("Use this to join the help server: https://discord.gg/XvMA2rJ")
   }
   if (message.content == prefix + "shutdown") {
     message.channel.send(":wave: Hulkbot will now shutdown.").then(m => m.delete(9999))
