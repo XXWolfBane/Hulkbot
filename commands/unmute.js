@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 
 module.exports.run = (bot, message, args) => {
 	let muteRole = message.guild.roles.find("name", "Muted");
+	let member = message.mentions.members.first();
 
 	if(!member.roles.find("name", "Muted")) return message.channel.send(`:x: ${member.user.username}, isn't muted!`).then(m => m.delete(2500))
 		
