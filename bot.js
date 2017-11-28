@@ -36,7 +36,7 @@ bot.on("ready", () => {
   let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
   // Status Rotator
   gameval = 0
-  setInterval(() => {
+  setInterval(() => { 
     if (gameval == status.length) {
       gameval = 0
     }
