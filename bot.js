@@ -80,13 +80,12 @@ bot.on("message", message => {
     message.channel.send("Use this to join the help server: https://discord.gg/XvMA2rJ")
   }
   if (message.content == prefix + "shutdown") {
-    message.channel.send(":wave: Hulkbot will now shutdown.").then(m => m.delete(9999))
+    if (message.author.id == config.ownerid) {message.channel.send(":wave: Hulkbot will now shutdown.")
     setTimeout(function() {
       process.exit(666);
-    }, 10010)
+    }, 10010)} else {message.channel.send("Nope!")}
     console.log("Someone used the shutdown command.")
-  }
-
+}
   let mArray = message.content.split(" ");
   let args = mArray.slice(1);
 
