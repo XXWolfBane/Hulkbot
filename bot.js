@@ -36,7 +36,7 @@ bot.on("ready", () => {
   // Status Rotator
   gameval = 0
   setInterval(() => { 
-    if (gameval == status.length) {
+    if (gameval == status.length) { 
       gameval = 0
     }
     var game = status[gameval]
