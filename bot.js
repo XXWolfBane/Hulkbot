@@ -24,8 +24,8 @@ bot.on("ready", () => {
   console.log("Bot Dev 2: " + config.dev2)
   console.log("Bot Dev 3: " + config.dev3)
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`)
-  console.log(`Hulkbot Version ${version} Loaded!`)
-  bot.user.setGame("h!help | Hulkbot Version " + version + " Loaded!")
+  console.log(`Hulkbot Version ${config.version} Loaded!`)
+  bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
