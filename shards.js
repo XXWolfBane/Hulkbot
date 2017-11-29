@@ -1,4 +1,3 @@
 const Discord = require('discord.js');
-const Manager = new Discord.ShardingManager(botjs);
-const botjs = require('./bot.js')
+const Manager = new Discord.ShardingManager('./bot.js');
 Manager.spawn(2); // This example will spawn 2 shards (5,000 guilds);
