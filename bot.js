@@ -124,7 +124,7 @@ bot.on("message", (message) => {
       message.channel.send("I can't ban without permissions, noob!");
     });
   }
-  if (message.content.startsWith(prefix + "ownerid")) {
+  if (message.content.startsWith(prefix + "giverole")) {
     let member = message.mentions.members.first();
     let role = message.mentions.roles.first();
     member.addRole(role).then(console.log(member.displayName + " was given " + role).catch(message.reply("I can't assign roles without permissions. Please move the Hulkbot role above all other roles. Thanks! :grin:")))
