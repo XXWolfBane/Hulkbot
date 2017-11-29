@@ -7,9 +7,10 @@ module.exports.run = (bot, message, args) => {
  var game = args.join(' ')
  bot.user.setGame(game)
  message.channel.send(`:ok_hand: Okay, I will set my playing status to ${game}!`)
-}} else {
+} else {
   message.channel.send("Nope!")
 } 
+}
 
 module.exports.help = {
   name: "changegame",
