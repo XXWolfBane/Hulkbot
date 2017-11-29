@@ -112,6 +112,7 @@ bot.on("message", (message) => {
     });
   }
   if (message.content.startsWith(prefix + "ban")) {
+    if (message.member.hasPermission("BAN_MEMBERS")
     // Easy way to get member object though mentions.
     var member = message.mentions.members.first();
     // Kick
@@ -151,7 +152,7 @@ bot.on("message", (message) => {
       message.channel.send("Okay, I turned my filters back on!");
       console.log(message.author.username + " turned the filters to = " + filteron);
      } else {
-      return message.channel.send("Sorry, you don't have the required permissions!");
+      return message.channel.send(message.author.username + ", sorry, but you don't have the required permissions.");
     }
   }
   if (message.content == prefix + "myid") {
@@ -159,6 +160,9 @@ bot.on("message", (message) => {
   }
   if (message.content == prefix + "serverid") {
     message.channel.send("The server id is " + message.channel.guild.id)
+  }
+  if (message.content == prefix + "myavi") {
+    message.channel.send("This is your avatar:" + user.avatar)
   }
 });
 
