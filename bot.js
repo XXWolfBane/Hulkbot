@@ -6,6 +6,12 @@ const prefix = process.env.prefix
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "1.2.0"
+var Cleverbot = require('cleverbot-node');
+    cleverbot = new Cleverbot;
+    cleverbot.configure({botapi: process.env.cbk});
+    cleverbot.write(cleverMessage, function (response) {
+       console.log(response.output);
+    });
 
 var filteron = "true"
 
