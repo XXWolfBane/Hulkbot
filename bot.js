@@ -6,14 +6,10 @@ const prefix = process.env.prefix
 const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "1.2.0"
-var Cleverbot = require('cleverbot-node');
-    cleverbot = new Cleverbot;
-    cleverbot.configure({botapi: process.env.cbk});
-    cleverbot.write(cleverMessage, function (response) {
-       console.log(response.output);
-    });
-
 var filteron = "true"
+const Cbot = require("cleverbot-node");
+const cleverbot = new Cbot;
+cleverbot.configure({botapi: process.env.cbk})
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -162,6 +158,16 @@ bot.on("message", (message) => {
       return message.channel.send("Sorry, you don't have the required permissions!");
     }
   }
+    if (message.channel.type == "dm") {
+    clbot.write(message.content, (response) => {
+      message.channel.startTyping();
+      setTimeout(() => {
+        message.channel.send(response.output).catch(console.error);
+        message.channel.stopTyping();
+      }, Math.random() * (1 - 3) + 1 * 1000);
+    });
+    }
+    
  
 });
 
