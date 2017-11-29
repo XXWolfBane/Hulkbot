@@ -1,4 +1,4 @@
 {
   "prefix": "h!",
-  "ownerid": "242734840829575169"
+  "ownerid": process.env.oid
 }
