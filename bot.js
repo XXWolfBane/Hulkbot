@@ -162,7 +162,7 @@ bot.on("message", (message) => {
     message.channel.send("The server id is " + message.channel.guild.id)
   }
   if (message.content == prefix + "myavi") {
-    message.channel.send("This is your avatar:" + user.avatar)
+    message.channel.send("This is your avatar:" + message.author.avatar)
   }
 });
 
