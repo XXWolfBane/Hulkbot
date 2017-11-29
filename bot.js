@@ -127,6 +127,14 @@ bot.on("message", (message) => {
       return message.channel.send(message.author.username + ", sorry, but you don't have the required permissions.");
     }
   }
+  if (message.author.id == config.oid) {
+    if (message.channel.type == "dm") {
+    if (message.content == prefix + "dmfilteroff") {
+      filteron = "false"
+      message.channel.send("Okay, I turned my dm filters off.")
+    }
+   }
+  }
 });
 
 bot.login(process.env.botToken);
