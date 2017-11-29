@@ -155,7 +155,7 @@ bot.on("message", (message) => {
       return message.channel.send("Sorry, you don't have the required permissions!");
     }
   }
-  if (message.content == prefix + myid) {
+  if (message.content == prefix + "myid") {
     message.reply("your id is: " + message.author.id)
   }
 });
