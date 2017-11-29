@@ -7,9 +7,6 @@ const owner = "FreakingHulk Gaming#6545"
 const dev2 = "RHG#0822"
 const version = "1.2.0"
 var filteron = "true"
-const Cbot = require("cleverbot-node");
-const clbot = new Cbot;
-clbot.configure({botapi: process.env.cbk})
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -158,17 +155,9 @@ bot.on("message", (message) => {
       return message.channel.send("Sorry, you don't have the required permissions!");
     }
   }
-    if (message.channel.type == "dm") {
-    clbot.write(message.content, (response) => {
-      message.channel.startTyping();
-      setTimeout(() => {
-        message.channel.send(response.output).catch(console.error);
-        message.channel.stopTyping();
-      }, Math.random() * (1 - 3) + 1 * 1000);
-    });
-    }
-    
- 
+  if (message.content == prefix + myid) {
+    message.reply("your id is: " + message.author.id)
+  }
 });
 
 bot.login(process.env.botToken);
