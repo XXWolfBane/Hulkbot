@@ -158,6 +158,9 @@ bot.on("message", (message) => {
   if (message.content == prefix + "myid") {
     message.reply("your id is: " + message.author.id)
   }
+  if (message.content == prefix + "serverid") {
+    message.channel.send("The server id is " + message.channel.guild.id)
+  }
 });
 
 bot.login(process.env.botToken);
