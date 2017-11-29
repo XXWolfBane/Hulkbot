@@ -41,7 +41,7 @@ bot.on("ready", () => {
       gameval = 0
     }
     var game = status[gameval]
-    bot.user.setGame(`h!help | ${bot.guilds.array().length} servers | ${game}`)
+    bot.user.setGame(`h!help | bot.hulkbot.ml | ${bot.guilds.array().length} servers | ${game}`)
     gameval++
   }, 25000) // One min
 });
