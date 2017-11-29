@@ -38,7 +38,7 @@ bot.on("ready", () => {
   setInterval(() => { 
     if (gameval == status.length) { 
       gameval = 0
-    }
+    } 
     var game = status[gameval]
     bot.user.setGame(`h!help | bot.hulkbot.ml | ${bot.guilds.array().length} servers | ${game}`)
     gameval++
