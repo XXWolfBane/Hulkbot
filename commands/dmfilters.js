@@ -1,5 +1,5 @@
 const config = require('../config.json')
-const prefix = require(config.prefix)
+const prefix = require(process.env.prefix)
 profan = require('../profanities.json')
 
 var dmfilters = "true"
