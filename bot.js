@@ -3,6 +3,7 @@ const config = require('./config.json')
 const profanities = require("./profanities.json")
 const bot = new discord.Client()
 const prefix = process.env.prefix
+const {logger} = require('./logger.js');
 var filteron = "true"
 
 // Gather commands
@@ -78,6 +79,7 @@ bot.on("message", message => {
   if (cmd) {
     cmd.run(bot, message, args);
     console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
+    logger(bot, "**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}")
   }
 })
 
@@ -126,14 +128,6 @@ bot.on("message", (message) => {
     } else {
       return message.channel.send(message.author.username + ", sorry, but you don't have the required permissions.");
     }
-  }
-  if (message.author.id == config.ownerid) {
-    if (message.channel.type == "dm") {
-    if (message.content == prefix + "dmfilteroff") {
-      filteron = "false"
-      message.channel.send("Okay, I turned my dm filters off.")
-    }
-   }
   }
 });
 
