@@ -8,7 +8,7 @@ const dev2 = "RHG#0822"
 const version = "1.2.0"
 var filteron = "true"
 const Cbot = require("cleverbot-node");
-const cleverbot = new Cbot;
+const clbot = new Cbot;
 cleverbot.configure({botapi: process.env.cbk})
 
 // Gather commands
