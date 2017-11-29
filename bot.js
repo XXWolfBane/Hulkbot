@@ -112,7 +112,7 @@ bot.on("message", (message) => {
     });
   }
   if (message.content.startsWith(prefix + "ban")) {
-    if (message.member.hasPermission("BAN_MEMBERS")
+    if (message.member.hasPermission("BAN_MEMBERS"))
     // Easy way to get member object though mentions.
     var member = message.mentions.members.first();
     // Kick
@@ -132,7 +132,7 @@ bot.on("message", (message) => {
   }
   if (message.content.startsWith(prefix + "bork")) {
     let member = message.mentions.members.first();
-    message.channel.send(`<@${member.id}> was borked by <@${message.author.id}>`)
+    message.channel.send(`<@${member.id}> was borked by <@${message.author.id}>`);
     console.log(message.author.username + " used the bork command!");
   }
     if (message.content == prefix + "filteroff") {
