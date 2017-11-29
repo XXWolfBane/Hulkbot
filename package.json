@@ -2,11 +2,11 @@
   "name": "Hulkbot",
   "version": "0.1.0",
   "description": "Utility, music, etc",
-  "main": "shards.js",
+  "main": "bot.js",
   "author": "FHGDev",
   "license": "ISC",
   "scripts": {
-    "start": "node shards.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "cleverbot-node": "^0.3.11",
