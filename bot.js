@@ -9,7 +9,7 @@ const version = "1.2.0"
 var filteron = "true"
 const Cbot = require("cleverbot-node");
 const clbot = new Cbot;
-cleverbot.configure({botapi: process.env.cbk})
+clbot.configure({botapi: process.env.cbk})
 
 // Gather commands
 bot.commands = new discord.Collection();
