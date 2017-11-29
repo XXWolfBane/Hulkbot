@@ -127,7 +127,7 @@ bot.on("message", (message) => {
       return message.channel.send(message.author.username + ", sorry, but you don't have the required permissions.");
     }
   }
-  if (message.author.id == config.oid) {
+  if (message.author.id == config.ownerid) {
     if (message.channel.type == "dm") {
     if (message.content == prefix + "dmfilteroff") {
       filteron = "false"
