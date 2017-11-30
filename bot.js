@@ -144,7 +144,7 @@ bot.on("message", (message) => {
     message.channel.send("wait what")
   }
   if (message.channel.id == config.logid) {
-    if (message.content == prefix + "logname 2") {
+    if (message.content == prefix + "logname2") {
     message.channel.setName("Hulkbot-Logs")
 }}
 });
