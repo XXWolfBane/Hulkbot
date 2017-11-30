@@ -131,7 +131,7 @@ bot.on("message", (message) => {
       message.channel.send("Okay, I turned my filters back on!");
       console.log(message.author.username + " turned the filters to = " + filteron);
     } else {
-      return message.channel.send(message.author.username + ", sorry, but you don't have the required permissions.");
+      return message.channel.send("Sorry, but you don't have the required permissions.");
     }
     if (message.content == prefix + "coinflip") {
       if (result) {
@@ -143,10 +143,20 @@ bot.on("message", (message) => {
   if (message.content == "i love you Hulkbot") {
     message.channel.send("wait what")
   }
-  if (message.channel.id == config.logid) {
     if (message.content == prefix + "logname2") {
-    message.channel.setName("Hulkbot-Logs")
-}}
+    let channel = message.server.channels.get('name', 'logs');
+      channel.setName("hulkbot-logs");
+      if (channel.Name == "hulkbot-logs") {
+        return;
+      }
+}
+  if (message.content == prefix + "logname1") {
+    let channel = message.server.channels.get('name', 'hulkbot-logs');
+    channel.setName("logs");
+    if (channel.Name == "logs") {
+      return;
+    }
+  }
 });
 
 bot.on("guildCreate", (guild) => {
