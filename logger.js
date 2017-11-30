@@ -1,8 +1,9 @@
 const config = require("./config.json");
 const discord = require('discord.js');
+const logchannel = "356181785899565077"
 
 module.exports = (bot, custom) => {
-  const messages = await bot.channels.get(config.logchannel).fetchMessages({limit: 5});
+  const messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
   const log = messages.filter(m => m.author.id === bot.user.id &&
     m.embeds[0] &&
     m.embeds[0].type === 'rich' &&
@@ -25,5 +26,5 @@ module.exports = (bot, custom) => {
     .setColor("7289DA")
     .setDescription(`${custom}`)
     .setFooter(foot);
-  bot.channels.get("356181785899565077").send({embed});
+  bot.channels.get(logchannel).send({embed});
 };
