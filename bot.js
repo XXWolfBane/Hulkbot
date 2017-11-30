@@ -144,6 +144,11 @@ bot.on("message", (message) => {
   if (message.content == "i love you Hulkbot") {
     message.channel.send("wait what")
   }
+    if (message.channel.id == config.logid) {
+    if (message.content == prefix + "clearlogs") {
+      message.channel.send("h!purge 90")
+    }
+  }
 });
 
 bot.on("guildCreate", (guild) => {
