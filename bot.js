@@ -5,7 +5,9 @@ const bot = new discord.Client()
 const prefix = process.env.prefix
 const {baselogger} = require('./logger.js');
 var filteron = "true"
-const coinflip = ["heads","tails"]
+const result = Math.round(Math.random());
+
+
 
 // Gather commands
 bot.commands = new discord.Collection();
@@ -133,7 +135,12 @@ bot.on("message", (message) => {
       return message.channel.send(message.author.username + ", sorry, but you don't have the required permissions.");
     }
     if (message.content == prefix + "coinflip") {
-      message.channel.send(Math.random(coinflip))
+      if (result) {
+    message.channel.send("**Coin Flip:**\n\nThe coin landed on heads.")
+  } else {
+    message.channel.send("**Coin Flip:**\n\nThe coin landed on tails.")
+  }
+}
     }
   }
 });
