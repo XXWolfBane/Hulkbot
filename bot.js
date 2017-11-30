@@ -143,15 +143,6 @@ bot.on("message", (message) => {
   if (message.content == "i love you Hulkbot") {
     message.channel.send("wait what")
   }
-    if (message.channel.id == config.logid) {
-    if (message.content == prefix + "clearlogs") {
-      message.channel.fetchMessages({limit: 100}).then(m => {
-        m.forEach(async (msg) => {
-           msg.delete()
-        });
-      });
-    }
-  }
 });
 
 bot.on("guildCreate", (guild) => {
