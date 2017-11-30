@@ -10,15 +10,19 @@ module.exports.run = (bot, message, args) => {
     description: "You asked for help, here it is.",
     fields: [{
         name: "Utility :tools:",
-        value: "mute, kick, ban, auth, purge"
+        value: "mute, unmute, kick, ban, auth, purge, and perms. More later."
       },
       {
         name: "Bot Status :robot:",
-        value: "uptime, ping, changegame."
+        value: "uptime, ping, and changegame."
       },
       {
+        name: "Adding the bot, and more help.",
+        value: "joinserver, and invite, and info."
+      },
+             {
         name: "Fun",
-        value: "coinflip"
+        value: "coinflip, say, myid, avatar, serverid, and bork."
       },
       {
         name: "More",
