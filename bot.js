@@ -141,6 +141,9 @@ bot.on("message", (message) => {
       else {
         message.channel.send("**Coin Flip:***\nThe coin landed on tails.")
 }}}
+  if (message.content == "i love you Hulkbot") {
+    message.channel.send("wait what")
+  }
 });
 
 bot.on("guildCreate", (guild) => {
