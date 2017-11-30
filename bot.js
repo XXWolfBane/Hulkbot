@@ -32,9 +32,6 @@ bot.on("ready", () => {
   bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-  if (message.channel.id == config.logid) {
-    message.channel.setName(Hulkbot-Logs)
-  }
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
@@ -146,6 +143,10 @@ bot.on("message", (message) => {
   if (message.content == "i love you Hulkbot") {
     message.channel.send("wait what")
   }
+  if (message.channel.id == config.logid) {
+    if (message.content == prefix + "logname 2") {
+    message.channel.setName(Hulkbot-Logs)
+}}
 });
 
 bot.on("guildCreate", (guild) => {
