@@ -14,11 +14,16 @@ module.exports.run = (bot, message, args) => {
       },
       {
         name: "Bot Status :robot:",
-        value: "Uptime, Ping, Changegame."
+        value: "uptime, ping, changegame."
       },
       {
         name: "Fun",
         value: "Coming soon"
+      },
+      {
+        name: "More"
+        value: "Additional commands at https://bot.hulkbot.ml"
+        
       }
     ],
     timestamp: new Date(),
