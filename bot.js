@@ -141,7 +141,9 @@ bot.on("message", (message) => {
       else {
         message.channel.send("**Coin Flip:***\nThe coin landed on tails.")
       }
-    } 
+     }
+   }  
+  } 
 });
 
 bot.on("guildCreate", (guild) => {
