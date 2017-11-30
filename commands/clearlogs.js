@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "clearlogs"
-  usage: "h!clearlogs"
+  name: "clearlogs",
+  usage: "h!clearlogs",
   information: "Clears the bot logs"
 }
