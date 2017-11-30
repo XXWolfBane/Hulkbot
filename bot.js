@@ -28,6 +28,8 @@ bot.on("ready", () => {
   console.log(`Hulkbot Version ${config.version} Loaded!`)
   bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
+  console.log(`Bot ID: ${bot.id}`)
+  bot.user.setAvatar('https://imgur.com/b0Sh52h')
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
@@ -139,6 +141,7 @@ bot.on("guildCreate", (guild) => {
 bot.on("guildDelete", (guild) => {
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL)
 });
+
 
 
 
