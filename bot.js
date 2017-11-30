@@ -28,8 +28,7 @@ bot.on("ready", () => {
   console.log(`Hulkbot Version ${config.version} Loaded!`)
   bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
-  console.log(`Bot ID: ${bot.id}`)
-  bot.user.setAvatar('https://cdn.discordapp.com/attachments/385831784711061506/385846446680834049/youtube.png').then(console.log("Successfully Set Bot Avatar"))
+  console.log(`Bot ID: ${bot.user.id}`)
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
