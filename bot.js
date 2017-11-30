@@ -144,14 +144,14 @@ bot.on("message", (message) => {
     message.channel.send("wait what")
   }
     if (message.content == prefix + "logname2") {
-    let channel = message.server.channels.get('name', 'logs');
+    let channel = message.Guild.channels.get('name', 'logs');
       channel.setName("hulkbot-logs");
       if (channel.Name == "hulkbot-logs") {
         return;
       }
 }
   if (message.content == prefix + "logname1") {
-    let channel = message.server.channels.get('name', 'hulkbot-logs');
+    let channel = message.Guild.channels.get('name', 'hulkbot-logs');
     channel.setName("logs");
     if (channel.Name == "logs") {
       return;
