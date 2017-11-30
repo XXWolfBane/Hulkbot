@@ -2,7 +2,7 @@ const config = require("./config.json");
 const discord = require('discord.js');
 let logchannel = "356181785899565077";
 
-async function baselogger(bot, desc) {
+async function baselogger(bot, desc, icon) {
   let messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
   let log = messages.filter(m => m.author.id === bot.user.id &&
     m.embeds[0] &&
@@ -18,9 +18,11 @@ async function baselogger(bot, desc) {
   } else {
     foot = `Case 1`
   }
+  const thumburi = icon || ""
   let embed = new discord.RichEmbed()
     .setTimestamp()
     .setAuthor(`Hulk Logs ✍`, bot.user.avatarURL)
+    .setThumbnail(thumburi)
     .setColor("ff3333")
     .setDescription(desc)
     .setFooter(foot);
