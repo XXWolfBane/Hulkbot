@@ -23,7 +23,6 @@ module.exports.run = (bot, message, args) => {
       {
         name: "More",
         value: "Additional commands at https://bot.hulkbot.ml"
-       }
       }
     ],
     timestamp: new Date(),
