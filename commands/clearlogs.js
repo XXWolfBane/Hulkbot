@@ -1,3 +1,5 @@
+const config = require('../config.json')
+
 module.exports.run = (bot, message, args) => {
   if (message.channel.id == config.logid) {
     if (message.content == prefix + "clearlogs") {
