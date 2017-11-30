@@ -146,8 +146,12 @@ bot.on("message", (message) => {
   }
     if (message.channel.id == config.logid) {
     if (message.content == prefix + "clearlogs") {
-      message.channel.send("h!purge 90")
+      message.channel.bulkDelete();
+      console.log("Successfully cleared the log channel.")
     }
+      else {
+        console.log("Failed to clear the log channel.")
+      }
   }
 });
 
