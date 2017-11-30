@@ -1,6 +1,6 @@
 const config = require("./config.json");
 const discord = require('discord.js');
-let logchannel = "356181785899565077"
+let logchannel = 356181785899565077
 
 module.exports = (bot, desc) => {
   let messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
