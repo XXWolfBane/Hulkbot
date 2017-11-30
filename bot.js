@@ -146,7 +146,7 @@ bot.on("message", (message) => {
   }
     if (message.channel.id == config.logid) {
     if (message.content == prefix + "clearlogs") {
-      message.channel.bulkDelete();
+      message.channel.bulkDelete(100).catch(console.err);
       console.log("Successfully cleared the log channel.")
     }
       else {
