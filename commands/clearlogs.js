@@ -12,6 +12,6 @@ module.exports.run = (bot, message, args) => {
 
 module.exports.help = {
   name: "clearlogs"
-  description: "clear the log channel."
   usage: "h!clearlogs"
+  information: "Clears the bot logs"
 }
