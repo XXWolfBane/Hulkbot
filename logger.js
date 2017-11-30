@@ -1,8 +1,8 @@
 const config = require("./config.json");
 const discord = require('discord.js');
-let logchannel = 356181785899565077
+let logchannel = "356181785899565077";
 
-module.exports = (bot, desc) => {
+async function baselogger(bot, desc) => {
   let messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
   let log = messages.filter(m => m.author.id === bot.user.id &&
     m.embeds[0] &&
@@ -29,3 +29,5 @@ module.exports = (bot, desc) => {
   
   bot.channels.get(logchannel).send({embed});
 };
+
+module.exports = {baselogger};
