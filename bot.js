@@ -137,12 +137,11 @@ bot.on("message", (message) => {
     if (message.content == prefix + "coinflip") {
       if (result) {
     message.channel.send("**Coin Flip:**\n\nThe coin landed on heads.")
-  } else {
-    message.channel.send("**Coin Flip:**\n\nThe coin landed on tails.")
-  }
-}
-    }
-  }
+      }
+      else {
+        message.channel.send("**Coin Flip:***\nThe coin landed on tails.")
+      }
+    } 
 });
 
 bot.on("guildCreate", (guild) => {
