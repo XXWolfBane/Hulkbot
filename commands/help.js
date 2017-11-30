@@ -18,7 +18,7 @@ module.exports.run = (bot, message, args) => {
       },
       {
         name: "Fun",
-        value: "Coming soon"
+        value: "coinflip"
       },
       {
         name: "More",
