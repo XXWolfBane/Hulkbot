@@ -21,7 +21,7 @@ module.exports.run = (bot, message, args) => {
         value: "Coming soon"
       },
       {
-        name: "More"
+        name: "More",
         value: "Additional commands at https://bot.hulkbot.ml"
        }
       }
