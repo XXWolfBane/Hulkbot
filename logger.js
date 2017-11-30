@@ -18,7 +18,6 @@ async function baselogger(bot, desc) {
   } else {
     foot = `Case 1`
   }
-  const reason = reaso || `No reason given.`
   let embed = new discord.RichEmbed()
     .setTimestamp()
     .setAuthor(`Hulk Logs ✍`, bot.user.avatarURL)
