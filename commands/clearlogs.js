@@ -1,4 +1,5 @@
 const config = require('../config.json')
+const prefix = process.env.prefix
 
 module.exports.run = (bot, message, args) => {
   if (message.channel.id == config.logid) {
