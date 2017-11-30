@@ -29,10 +29,9 @@ bot.on("ready", () => {
   console.log("Bot Dev 3: " + config.dev3)
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`)
   console.log(`Hulkbot Version ${config.version} Loaded!`)
-  bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
+  bot.user.setGame(bot.shardCount + "h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-  bot.user.setAvatar('https://cdn.discordapp.com/attachments/356178662837452801/385855117066371082/images.png')
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
@@ -146,12 +145,12 @@ bot.on("message", (message) => {
   }
     if (message.channel.id == config.logid) {
     if (message.content == prefix + "clearlogs") {
-      message.channel.bulkDelete(100).catch(console.err);
-      console.log("Successfully cleared the log channel.")
+      message.channel.fetchMessages({limit: 100}).then(m => {
+        m.forEach(async (msg) => {
+           msg.delete()
+        });
+      });
     }
-      else {
-        console.log("Failed to clear the log channel.")
-      }
   }
 });
 
