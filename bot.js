@@ -3,7 +3,7 @@ const config = require('./config.json')
 const profanities = require("./profanities.json")
 const bot = new discord.Client()
 const prefix = process.env.prefix
-const {logger} = require('./logger.js');
+const {baselogger} = require('./logger.js');
 var filteron = "true"
 
 // Gather commands
@@ -79,7 +79,7 @@ bot.on("message", message => {
   if (cmd) {
     cmd.run(bot, message, args);
     console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
-    logger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}`)
+    baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}`)
   }
 })
 
