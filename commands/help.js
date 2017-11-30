@@ -18,7 +18,7 @@ module.exports.run = (bot, message, args) => {
       },
       {
         name: "Adding the bot, and more help.",
-        value: "joinserver, and invite, and info."
+        value: "joinserver, invite, and info."
       },
              {
         name: "Fun",
