@@ -21,7 +21,7 @@ async function baselogger(bot, desc) {
   let embed = new discord.RichEmbed()
     .setTimestamp()
     .setAuthor(`Hulk Logs ✍`, bot.user.avatarURL)
-    .setColor("7289DA")
+    .setColor("ff3333")
     .setDescription(desc)
     .setFooter(foot);
   
