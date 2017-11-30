@@ -29,7 +29,7 @@ bot.on("ready", () => {
   console.log("Bot Dev 3: " + config.dev3)
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`)
   console.log(`Hulkbot Version ${config.version} Loaded!`)
-  bot.user.setGame(bot.shardCount + "h!help | Hulkbot Version " + config.version + " Loaded!")
+  bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
 
