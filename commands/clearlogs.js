@@ -4,7 +4,7 @@ const prefix = process.env.prefix
 module.exports.run = (bot, message, args) => {
   if (message.channel.id == config.logid) {
     if (message.content == prefix + "clearlogs") {
-      message.channel.bulkDelete(150).catch(console.err)
+      message.channel.bulkDelete(100).catch(console.err)
       message.channel.send("Successfully cleared the logs.").then(m => m.delete(5000))
     }
     else {
