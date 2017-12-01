@@ -37,7 +37,7 @@ bot.on("ready", () => {
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
   });
-  if (roff == "false") {
+  
   let status = ["Use a command already!", "https://bot.hulkbot.ml/home", "Serving my owner", "You wouldn't like me when I'm angry."]
   // Status Rotator
   gameval = 0
@@ -49,10 +49,6 @@ bot.on("ready", () => {
     bot.user.setGame(`h!help | ${bot.guilds.array().length} servers | ${game}`)
     gameval++
   }, 25000) // One min
-  }
-  else {
-    return;
-  }
   });
 
 bot.on("message", message => {
