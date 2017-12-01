@@ -38,7 +38,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
   });
   if (roff == "false") {
-  let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
+  let status = ["Use a command already!", "https://bot.hulkbot.ml/home", "Serving my owner", "You wouldn't like me when I'm angry."]
   // Status Rotator
   gameval = 0
   setInterval(() => {
@@ -46,7 +46,7 @@ bot.on("ready", () => {
       gameval = 0
     }
     var game = status[gameval]
-    bot.user.setGame(`h!help | bot.hulkbot.ml | ${bot.guilds.array().length} servers | ${game}`)
+    bot.user.setGame(`h!help | ${bot.guilds.array().length} servers | ${game}`)
     gameval++
   }, 25000) // One min
   }
