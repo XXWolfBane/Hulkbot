@@ -89,18 +89,6 @@ bot.on("message", message => {
 })
 
 bot.on("message", (message) => {
-  if (message.content.startsWith(prefix + "kick")) {
-    // Easy way to get member object though mentions.
-    var member = message.mentions.members.first();
-    // Kick
-    member.kick().then((member) => {
-      // Successmessage
-      message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
-    }).catch(() => {
-      // Failmessage
-      message.channel.send("I can't kick without permissions, noob!");
-    });
-  }
   if (message.content.startsWith(prefix + "ban")) {
     if (message.member.hasPermission("BAN_MEMBERS"))
       // Easy way to get member object though mentions.
