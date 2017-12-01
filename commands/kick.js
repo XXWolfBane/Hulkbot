@@ -1,4 +1,5 @@
 const config = require('../config.json')
+const prefix = config.prefix
 
 module.exports.run = (bot, message, args) => {
   if (message.member.hasPermission("KICK_MEMBERS")) {
