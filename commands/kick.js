@@ -11,3 +11,9 @@ module.exports.run = (bot, message, args) => {
     message.channel.send("You don't have permission to kick people. If there's someone who needs to be kicked, contact an administrator or a moderator.")
   }
 }
+
+module.exports.help = {
+  name: "kick",
+  usage: "h!kick @user",
+  information: "Kicks a mentioned user."
+}
