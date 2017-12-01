@@ -6,7 +6,6 @@ const prefix = process.env.prefix
 const {baselogger} = require('./logger.js');
 var filteron = "true"
 const result = Math.round(Math.random());
-var roff = "false"
 
 
 
@@ -37,8 +36,7 @@ bot.on("ready", () => {
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name}, ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
   });
-  
-  let status = ["Use a command already!", "https://bot.hulkbot.ml/home", "Serving my owner", "You wouldn't like me when I'm angry."]
+  let status = ["Taking over the world", "Pizza is better", "Serving my owner", "You wouldn't like me when I'm angry."]
   // Status Rotator
   gameval = 0
   setInterval(() => {
@@ -46,10 +44,10 @@ bot.on("ready", () => {
       gameval = 0
     }
     var game = status[gameval]
-    bot.user.setGame(`h!help | ${bot.guilds.array().length} servers | ${game}`)
+    bot.user.setGame(`h!help | bot.hulkbot.ml | ${bot.guilds.array().length} servers | ${game}`)
     gameval++
   }, 25000) // One min
-  });
+});
 
 bot.on("message", message => {
   if (filteron == "true") {
@@ -131,7 +129,7 @@ bot.on("message", (message) => {
     if (message.member.hasPermission("MANAGE_GUILD")) {
       filteron = "true"
       message.channel.send("Okay, I turned my filters back on!");
-      console.log(message.author.username + " set the filters to = " + filteron);
+      console.log(message.author.username + " turned the filters to = " + filteron);
     } else {
       return message.channel.send("Sorry, but you don't have the required permissions.");
     }
@@ -145,26 +143,6 @@ bot.on("message", (message) => {
   if (message.content == "i love you Hulkbot") {
     message.channel.send("wait what")
   }
-  if (message.author.id == process.env.oid)
-  if (message.content == prefix + "roff") {
-    roff = "true"
-    message.channel.send("Successfully turned the status rotator off!")
-  }
-   else {
-    message.channel.send("Owner only!")
-   }
-}
-
-  if (message.author.id == process.env.oid) {
-  if (message.content == prefix + "ron") {
-    roff = "false"
-    message.channel.send("Successfully turned the status rotator back on!")
-  }
-    }
-  else {
-    message.channel.send("Owner only!")
-  }
- }
 });
 
 bot.on("guildCreate", (guild) => {
@@ -176,6 +154,3 @@ bot.on("guildDelete", (guild) => {
 });
 
 
-
-
-bot.login(process.env.botToken);
