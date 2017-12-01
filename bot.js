@@ -154,17 +154,19 @@ bot.on("message", (message) => {
     roff = "true"
     message.channel.send("Successfully turned the status rotator off!")
   }
-  else {
-    message.channel.send("Owner only!")
   }
+   else {
+    message.channel.send("Owner only!")}
+
   if (message.author.id == process.env.oid) {
   if (message.content == prefix + "ron") {
     roff = "false"
     message.channel.send("Successfully turned the status rotator back on!")
   }
-    else {
-      message.channel.send("Owner only!")
     }
+  else {
+    message.channel.send("Owner only!")
+  }
  }
 });
 
