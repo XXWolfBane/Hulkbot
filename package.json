@@ -17,6 +17,8 @@
     "profanities": "^2.5.0",
     "querystring": "^0.2.0",
     "request": "^2.83.0",
-    "snekfetch": "^3.5.3"
+    "snekfetch": "^3.5.3",
+    "enmap": "^0.4.2",
+    "enmap-level": "^1.0.0"
   }
 }
