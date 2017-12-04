@@ -22,7 +22,7 @@ module.exports.run = (bot, message, args) => {
       },
              {
         name: "Fun",
-        value: "coinflip, say, myid, avatar, serverid, and bork."
+        value: "coinflip, say, myid, avatar, serverid, bork, and yomomma."
       },
       {
         name: "More",
