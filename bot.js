@@ -1,4 +1,4 @@
-// Discord and Enmap init
+// Discord init
 const discord = require('discord.js')
 const config = require('./config.json')
 const profanities = require("./profanities.json")
@@ -7,9 +7,6 @@ const prefix = process.env.prefix
 const {baselogger} = require('./logger.js');
 var filteron = "true"
 const result = Math.round(Math.random());
-const Enmap = require('enmap');
-const EnmapLevel = require('enmap-level');
-const settings = new Enmap({provider: new EnmapLevel({name: "settings"});});
 // End of init
 
 // Gather commands
