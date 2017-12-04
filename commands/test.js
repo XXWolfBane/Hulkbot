@@ -1,6 +1,6 @@
 const oid = process.env.oid
 
-module.exports.run = [bot, message, args] => {
+module.exports.run = (bot, message, args) => {
   let auth = message.author.id
   if (auth == oid) {
     if (message.content == prefix + "test") {
