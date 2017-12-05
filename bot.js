@@ -21,6 +21,7 @@ require('fs').readdir("./commands/", (err, files) => {
 })
 
 bot.on("ready", () => {
+  bot.user.setUsername('Hulkbot')
   console.log("Bot is started. Get ready for some sweet commands!")
   console.log("Bot name: " + bot.user.username + "bot")
   console.log("Bot owner: " + config.owner)
