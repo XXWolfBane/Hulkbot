@@ -6,8 +6,7 @@
   "author": "FHGDev",
   "license": "ISC",
   "scripts": {
-    "start": "node bot.js",
-    "ini": "npm install --save discord.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "cleverbot-node": "^0.3.11",
