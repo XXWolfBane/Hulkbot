@@ -34,7 +34,7 @@ bot.on("ready", () => {
   console.log(`Bot ID: ${bot.user.id}`)
 
   bot.guilds.forEach(async (guild, id) => {
-    console.log(`[SERVER] ${guild.name} with ${guild.memberCount} members ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
+    console.log(`[SERVER] ${guild.name} with ${guild.memberCount} members | ID: ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
   });
   let status = ["Taking over the world", "https://bot.hulkbot.ml/home", "Serving my owner", "You wouldn't like me when I'm angry."]
   // Status Rotator
