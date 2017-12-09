@@ -83,7 +83,7 @@ bot.on("message", message => {
 
   if (cmd) {
     cmd.run(bot, message, args);
-    console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
+    console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command on " + message.channel.guild.name + ".");
     baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`)
   }
 })
