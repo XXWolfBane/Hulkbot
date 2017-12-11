@@ -9,12 +9,16 @@ module.exports.run = (bot, message, args) => {
     url: "https://discord.gg/XvMA2rJ",
     description: "You asked for help, here it is.",
     fields: [{
+        name: "Owner Only",
+        value: "shutdown, restart, and changegame."
+      },
+      {
         name: "Utility :tools:",
         value: "mute, unmute, kick, ban, auth, purge, perms, filteroff, and filteron."
       },
       {
         name: "Bot Status :robot:",
-        value: "uptime, ping, and changegame."
+        value: "uptime and ping."
       },
       {
         name: "Adding the bot, and more help.",
