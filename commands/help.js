@@ -1,6 +1,6 @@
 module.exports.run = (bot, message, args) => {
   message.channel.send({embed: {
-    color: 3447003,
+    color: 00FF00,
     author: {
       name: bot.user.username,
       icon_url: bot.user.avatarURL
