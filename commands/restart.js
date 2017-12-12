@@ -3,10 +3,10 @@ const prefix = config.prefix
 
 module.exports.run = (bot, message, args) => {
   if (message.author.id == config.ownerid) {
-    message.channel.send(":wave: Hulkbot will now restart.")
+    message.channel.send(":wave: Hulkbot will now restart.");
     setTimeout(function() {
       process.exit(666);
-      process.start(666);
+      bot.login(process.env.botToken)
     }, 10010)
   } else {
     message.channel.send("Nope!")
