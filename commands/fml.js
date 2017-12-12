@@ -14,8 +14,6 @@ module.exports.run = (bot, message, args) => {
       const href = root.querySelector('.panel-content p.block a');
       const card = root.querySelector('.panel-content div.votes span.vote div');
       const signature = root.querySelector('.panel div.text-center');
-      const link = 'http://www.fmylife.com'
-      const cardId = card.rawAttrs.replace(/\D/g,'');
       let signatureDisplay = 'Author and date of this fml unkown';
       if (signature.childNodes.length === 1) {
         signatureDisplay = signature.childNodes[0].text;
@@ -24,8 +22,8 @@ module.exports.run = (bot, message, args) => {
       }
   
       const embed = new RichEmbed()
-        .setTitle(`FML #${cardId}`)
-        .setURL(link)
+        .setTitle(`FML`)
+        .setURL('http://www.fmylife.com')
         .setColor(165868)
         .setThumbnail('http://i.imgur.com/5cMj0fw.png')
         .setFooter(signatureDisplay)
