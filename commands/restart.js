@@ -4,7 +4,7 @@ const prefix = config.prefix
 module.exports.run = (bot, message, args) => {
 if (message.content == prefix + "shutdown") {
   if (message.author.id == config.ownerid) {
-    message.channel.send(":wave: Hulkbot will now shutdown.")
+    message.channel.send(":wave: Hulkbot will now restart.")
     setTimeout(function() {
       process.exit(666);
       process.start(666);
