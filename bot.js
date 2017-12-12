@@ -154,5 +154,5 @@ bot.on("guildDelete", (guild) => {
 
 bot.login(process.env.botToken)
 
-var ups = '1'
+var ups = 1
 
