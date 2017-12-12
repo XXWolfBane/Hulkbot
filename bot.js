@@ -33,10 +33,11 @@ bot.on("ready", () => {
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
   
-  if (ups == 1) {
+  if (!ups == 1) {
+    bot.channels.get('387342809390120970').send("Hulkbot v" + config.version + " loaded!");
     ups = ups + 1
   } else {
-    bot.channels.get('387342809390120970').send("Hulkbot v" + config.version + " loaded!");
+    console.log(ups)
   }
   
   //Let's just leave this out for now.
