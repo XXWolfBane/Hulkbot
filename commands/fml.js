@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args) => {
       const href = root.querySelector('.panel-content p.block a');
       const card = root.querySelector('.panel-content div.votes span.vote div');
       const signature = root.querySelector('.panel div.text-center');
-      const link = 'http://www.fmylife.com' + href.rawAttrs.replace(/^href=|"/g,'');
+      const link = 'http://www.fmylife.com'
       const cardId = card.rawAttrs.replace(/\D/g,'');
       let signatureDisplay = 'Author and date of this fml unkown';
       if (signature.childNodes.length === 1) {
@@ -30,8 +30,8 @@ module.exports.run = (bot, message, args) => {
         .setThumbnail('http://i.imgur.com/5cMj0fw.png')
         .setFooter(signatureDisplay)
         .setDescription(`_${article.childNodes[0].text}\n\n_`)
-        .addField('I agree, your life sucks', updoot.childNodes[0].text, true)
-        .addField('You deserved it:', downdoot.childNodes[0].text, true);
+        .addField('I agree, your life sucks:', `#${updoot.childNodes[0].text}`, true)
+        .addField('You deserved it:', `#${downdoot.childNodes[0].text}, true);
       if (article.childNodes[0].text.length < 5 ) {
         return message.channel.send('Something went wrong, so you\'ll have to try again in a few moments. FML');
       }
