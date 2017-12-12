@@ -133,7 +133,7 @@ bot.on("message", (message) => {
       else {
         message.channel.send("**Coin Flip:***\nThe coin landed on tails.")
 }}}
-  if (message.content == "i love you Hulkbot") {
+  if (message.content.toLowerCase().includes("i love you hulk") {
     message.channel.send("wait what")
   }
 });
