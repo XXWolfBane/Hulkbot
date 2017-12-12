@@ -13,20 +13,14 @@ module.exports.run = (bot, message, args) => {
       const updoot = root.querySelector('.vote-up');
       const href = root.querySelector('.panel-content p.block a');
       const card = root.querySelector('.panel-content div.votes span.vote div');
-      const signature = root.querySelector('.panel div.text-center');
-      let signatureDisplay = 'Author and date of this fml unkown';
-      if (signature.childNodes.length === 1) {
-        signatureDisplay = signature.childNodes[0].text;
-      } else if (signature.childNodes.length === 3) {
-        signatureDisplay = signature.childNodes[0].text.replace('-', '/') + signature.childNodes[2].text.replace('/','');
-      }
+
   
       const embed = new RichEmbed()
         .setTitle(`FML`)
         .setURL('http://www.fmylife.com')
         .setColor(165868)
         .setThumbnail('http://i.imgur.com/5cMj0fw.png')
-        .setFooter(signatureDisplay)
+        .setFooter(`FML Command`)
         .setDescription(`_${article.childNodes[0].text}\n\n_`)
         .addField('I agree, your life sucks:', `#${updoot.childNodes[0].text}`, true)
         .addField('You deserved it:', `#${downdoot.childNodes[0].text}`, true);
