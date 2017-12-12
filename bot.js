@@ -32,10 +32,11 @@ bot.on("ready", () => {
   bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-var channel = bot.channels.get('387342809390120970');
-  channel.send("Hulkbot v" + config.version + " loaded!");
-  var general = bot.channels.find('name', 'general')
-  general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
+  bot.channels.get('387342809390120970').send("Hulkbot v" + config.version + " loaded!");
+  
+  //Let's just leave this out for now.
+  //var general = bot.channels.find('name', 'general')
+  //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] ${guild.name} with ${guild.memberCount} members | ID: ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
