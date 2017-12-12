@@ -29,7 +29,7 @@ bot.on("ready", () => {
   console.log("Bot Dev 3: " + config.dev3)
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`)
   console.log(`Hulkbot Version ${config.version} Loaded!`)
-  bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
+  bot.user.setGame("h!help | https://bot.hulkbot.ml/home")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
   
@@ -39,7 +39,6 @@ bot.on("ready", () => {
   } else {
     console.log(ups)
   }
-  
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
@@ -47,19 +46,7 @@ bot.on("ready", () => {
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
   });
-  let status = ["Taking over the world", "https://bot.hulkbot.ml/home", "Serving my owner", "You wouldn't like me when I'm angry."]
-  // Status Rotator
-  gameval = 0
-  setInterval(() => {
-    if (gameval == status.length) {
-      gameval = 0
-    }
-    var game = status[gameval]
-    bot.user.setGame(`h!help | ${game} |  ${bot.guilds.array().length} servers`)
-    gameval++
-  }, 25000) // One min
-});
-
+ 
 bot.on("message", message => {
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
