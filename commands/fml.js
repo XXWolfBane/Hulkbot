@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
  
       const reply = message.channel.send("Searching for a random FML card (this can take a few seconds");
  
-      const res = await request.get('http://www.fmylife.com/random');
+      const res = request.get('http://www.fmylife.com/random');
       const root = HTMLParser.parse(res.text);
       const article = root.querySelector('.block a');
       const downdoot = root.querySelector('.vote-down');
