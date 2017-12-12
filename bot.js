@@ -32,7 +32,12 @@ bot.on("ready", () => {
   bot.user.setGame("h!help | Hulkbot Version " + config.version + " Loaded!")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-  bot.channels.get('387342809390120970').send("Hulkbot v" + config.version + " loaded!");
+  
+  if (ups == 1) {
+    ups = ups + 1
+  } else {
+    bot.channels.get('387342809390120970').send("Hulkbot v" + config.version + " loaded!");
+  }
   
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
@@ -148,3 +153,6 @@ bot.on("guildDelete", (guild) => {
 
 
 bot.login(process.env.botToken)
+
+var ups = '1'
+
