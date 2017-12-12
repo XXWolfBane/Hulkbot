@@ -39,7 +39,7 @@ bot.on("ready", () => {
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
 
   bot.guilds.forEach(async (guild, id) => {
-    console.log(`[SERVER] ${guild.name} with ${guild.memberCount} members | ID: ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
+    console.log(`[SERVER] [#${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
   });
   let status = ["Taking over the world", "https://bot.hulkbot.ml/home", "Serving my owner", "You wouldn't like me when I'm angry."]
   // Status Rotator
@@ -133,7 +133,7 @@ bot.on("message", (message) => {
       else {
         message.channel.send("**Coin Flip:***\nThe coin landed on tails.")
 }}}
-  if (message.content.toLowerCase().includes("i love you hulk") {
+  if (message.content.toLowerCase().includes("i love you hulk")) {
     message.channel.send("wait what")
   }
 });
