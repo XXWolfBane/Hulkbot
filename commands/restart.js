@@ -7,6 +7,7 @@ if (message.content == prefix + "shutdown") {
     message.channel.send(":wave: Hulkbot will now shutdown.")
     setTimeout(function() {
       process.exit(666);
+      process.start(666);
     }, 10010)
   } else {
     message.channel.send("Nope!")
