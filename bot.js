@@ -33,7 +33,7 @@ bot.on("ready", () => {
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
 var channel = bot.channels.get('387342809390120970');
-  channel.send("Hulkbot v" + version + " loaded!");
+  channel.send("Hulkbot v" + config.version + " loaded!");
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] ${guild.name} with ${guild.memberCount} members | ID: ${guild.id} | Joined: ${guild.joinedAt.toString()}`)
