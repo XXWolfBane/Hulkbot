@@ -29,22 +29,17 @@ bot.on("ready", () => {
   console.log("Bot Dev 3: " + config.dev3)
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`)
   console.log(`Hulkbot Version ${config.version} Loaded!`)
-  bot.user.setGame("h!help | https://bot.hulkbot.ml/home")
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-  
-  if (ups == 1) {
-    bot.channels.get('387342809390120970').send("Hulkbot v" + config.version + " loaded!");
-    ups = ups + 1
-  } else {
-    console.log(ups)
-  }
+  bot.user.setGame(`h!helping on ${bot.guilds.array().length`)
+ 
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [#${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
+   }
   });
  
 bot.on("message", message => {
