@@ -4,7 +4,7 @@ const HTMLParser = require('fast-html-parser');
 
 module.exports.run = (bot, message, args) => {
  
- const reply = await message.channel.send("Searching for a random FML card (this can take a few seconds"));
+      const reply = message.channel.send("Searching for a random FML card (this can take a few seconds"));
  
       const res = await request.get('http://www.fmylife.com/random');
       const root = HTMLParser.parse(res.text);
