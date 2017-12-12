@@ -31,7 +31,7 @@ module.exports.run = (bot, message, args) => {
         .setFooter(signatureDisplay)
         .setDescription(`_${article.childNodes[0].text}\n\n_`)
         .addField('I agree, your life sucks:', `#${updoot.childNodes[0].text}`, true)
-        .addField('You deserved it:', `#${downdoot.childNodes[0].text}, true);
+        .addField('You deserved it:', `#${downdoot.childNodes[0].text}`, true);
       if (article.childNodes[0].text.length < 5 ) {
         return message.channel.send('Something went wrong, so you\'ll have to try again in a few moments. FML');
       }
