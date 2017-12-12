@@ -1,3 +1,5 @@
+const prefix = "h!"
+
 module.exports.run = (bot, message, args) => {
   require('request')('http://api.fmylife.com/', function(error, response, body) {
 	  if (message.content == prefix + "fml") {
