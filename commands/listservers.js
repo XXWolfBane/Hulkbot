@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args) => {
-  message.channel.send(`${bot.guilds.array().length} is the number of servers I'm on.`)
+  message.channel.send(`I am in ${bot.guilds.array().length} servers.`)
 }
 
 module.exports.help = {
