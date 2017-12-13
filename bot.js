@@ -38,8 +38,8 @@ bot.on("ready", () => {
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
 
   bot.guilds.forEach(async (guild, id) => {
-    console.log(`[SERVER] [#${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
-   }
+    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
+}})
   });
  
 bot.on("message", message => {
