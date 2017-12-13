@@ -39,7 +39,7 @@ bot.on("ready", () => {
 
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
-}})
+})
   });
  
 bot.on("message", message => {
