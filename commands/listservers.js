@@ -3,7 +3,7 @@ module.exports.run = (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "",
+  name: "listservers",
   usage: ``,
   information: ""
 } 
