@@ -31,7 +31,7 @@ bot.on("ready", () => {
   console.log(`Hulkbot Version ${config.version} Loaded!`)
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-  bot.user.setGame(`h!helping on ${bot.guilds.array().length`)
+  bot.user.setGame(`h!helping on ${bot.guilds.array().length}`)
  
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
