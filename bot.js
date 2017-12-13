@@ -41,7 +41,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    guild.channels.find('name', 'general').send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
+    //guild.channels.find('name', 'general').send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
   })
 });
  
