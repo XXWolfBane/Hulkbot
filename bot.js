@@ -42,7 +42,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    guild.channels.find('name', 'general').send(`@everyone\nHulkbot Public Announcement:\nThe FCC has voted to repeal Net Neutrality. It still has to go through congress. If net neutrality is repealed completely, your ISP will be able to slow down your internet, no matter what internet package you paid for, and they will be able to make you buy things to be able to use Netflix, Discord, etc. FIGHT FOR THE WEB!`)
+    //guild.channels.find('name', 'general').send(`@everyone\nHulkbot Public Announcement:\nThe FCC has voted to repeal Net Neutrality. It still has to go through congress. If net neutrality is repealed completely, your ISP will be able to slow down your internet, no matter what internet package you paid for, and they will be able to make you buy things to be able to use Netflix, Discord, etc. FIGHT FOR THE WEB!`)
   })
 });
  
