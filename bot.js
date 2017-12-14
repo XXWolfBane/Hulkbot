@@ -32,7 +32,7 @@ bot.on("ready", () => {
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
   bot.user.setGame(`h!helping on ${bot.guilds.array().length} servers.`)
-  bot.guilds.channels.find('name', 'general').send("@everyone, net neutrality has not been repealed yet! :despirateplease: The FCC Voted today to kill Net Neutrality, but it still has to go through congress!. If Net Neutrality is killed, it will be legal for your Internet service providers to slow down your internet speed by a considerable amount!\n\nIf they vote it out, then R.I.P Net Neutrality 2015-2017")
+  bot.guild.channels.find('name', 'general').send("@everyone, net neutrality has not been repealed yet! :despirateplease: The FCC Voted today to kill Net Neutrality, but it still has to go through congress!. If Net Neutrality is killed, it will be legal for your Internet service providers to slow down your internet speed by a considerable amount!\n\nIf they vote it out, then R.I.P Net Neutrality 2015-2017")
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
