@@ -36,7 +36,7 @@ bot.on("ready", () => {
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
-
+bot.user.guilds.channels.find('name', 'general').send("")
  
 
   
