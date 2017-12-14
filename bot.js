@@ -32,11 +32,9 @@ bot.on("ready", () => {
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
   bot.user.setGame(`h!helping on ${bot.guilds.array().length} servers.`)
-  guild.channels.find('name', 'general').send("@everyone, net neutrality has not been repealed yet! :despirateplease: The FCC Voted today to kill Net Neutrality, but it still has to go through congress!. If Net Neutrality is killed, it will be legal for your Internet service providers to slow down your internet speed by a considerable amount!\n\nIf they vote it out, then R.I.P Net Neutrality 2015-2017")
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
-bot.user.guilds.channels.find('name', 'general').send("")
  
 
   
@@ -44,7 +42,7 @@ bot.user.guilds.channels.find('name', 'general').send("")
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    //guild.channels.find('name', 'general').send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
+    guild.channels.find('name', 'general').send(`@everyone\nHulkbot Public Announcement:\nThe FCC has voted to repeal Net Neutrality. It still has to go through congress. If net neutrality is repealed completely, your ISP will be able to slow down your internet, no matter what internet package you paid for, and they will be able to make you buy things to be able to use Netflix, Discord, etc. FIGHT FOR THE WEB!`)
   })
 });
  
