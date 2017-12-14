@@ -37,6 +37,11 @@ bot.on("ready", () => {
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
 
+  
+    guild.channels.find('name', 'general').send("@everyone, net neutrality has been repealed! :sob: The FCC Voted today to kill Net Neutrality. Now it is legal for your Internet service providers to slow down your internet speed by a considerable amount!\n\n R.I.P Net Neutrality 2015-2017")
+  })
+
+  
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
