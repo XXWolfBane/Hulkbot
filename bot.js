@@ -31,11 +31,13 @@ bot.on("ready", () => {
   console.log(`Hulkbot Version ${config.version} Loaded!`)
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
-  bot.user.setGame(`h!helping on ${bot.guilds.array().length} servers.`)
+  bot.user.setGame(`Loading Hulkbot...`)
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
- 
+ setInterval(() => {
+   bot.user.setGame(`h!helping on ${bot.guilds.array().length} servers.`)
+}, 10000)
 
   
   bot.guilds.forEach(async (guild, id) => {
