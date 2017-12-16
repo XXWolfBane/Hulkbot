@@ -104,7 +104,7 @@ bot.on("message", (message) => {
     if (message.member.hasPermission("MANAGE_GUILD")) {
       filteron = "false"
       message.channel.send("Okay, I turned my filters off!");
-      console.log(message.author.username + " turned the filters to = " + filteron);
+      console.log(message.author.username + " set the filters to = " + filteron);
     } else {
       return message.channel.send("Sorry, you don't have the required permissions!");
     }
@@ -114,7 +114,7 @@ bot.on("message", (message) => {
     if (message.member.hasPermission("MANAGE_GUILD")) {
       filteron = "true"
       message.channel.send("Okay, I turned my filters back on!");
-      console.log(message.author.username + " turned the filters to = " + filteron);
+      console.log(message.author.username + " set the filters to = " + filteron);
     } else {
       return message.channel.send("Sorry, but you don't have the required permissions.");
     }
@@ -125,8 +125,11 @@ bot.on("message", (message) => {
       else {
         message.channel.send("**Coin Flip:***\nThe coin landed on tails.")
 }}}
-  if (message.content.toLowerCase().includes("i love you hulk")) {
+  if (message.content.toLowerCase().includes("i love you hulkbot")) {
     message.channel.send("wait what")
+  }
+  if (message.content.startsWith("<@294194506113220608>")) {
+   message.channel.send(`Oh god, ${message.author.username} is watching me... O_O`) 
   }
 });
 
