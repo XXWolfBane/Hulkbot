@@ -37,7 +37,7 @@ bot.on("ready", () => {
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
   bot.user.setGame(`Loading Hulkbot...`)
-  console.log("")
+  console.log(`Updates: ${loggedupdates}`)
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
