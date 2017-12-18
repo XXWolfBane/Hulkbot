@@ -3,5 +3,7 @@ module.exports.run = (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "onbot"
+  name: "onbot",
+  usage: "",
+  info: ""
 }
