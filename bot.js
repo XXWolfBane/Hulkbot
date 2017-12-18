@@ -37,16 +37,25 @@ bot.on("ready", () => {
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
- setInterval(() => {
-   bot.user.setGame(`h!helping on ${bot.guilds.array().length} servers.`)
-}, 10000)
+ let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`]
+  // Status Rotator
+  gameval = 0
+  setInterval(() => {
+    if (gameval == status.length) {
+      gameval = 0
+    }
+    var game = status[gameval]
+    bot.user.setGame(`h!help | ${game}`)
+    gameval++
+  }, 45000) // 45 secs
+});
 
   
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    //guild.channels.find('name', 'general').send(`@everyone\nHulkbot Public Announcement:\nThe FCC has voted to repeal Net Neutrality. It still has to go through congress. If net neutrality is repealed completely, your ISP will be able to slow down your internet, no matter what internet package you paid for, and they will be able to make you buy things to be able to use Netflix, Discord, etc. FIGHT FOR THE WEB!`)
+    //guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n`)
   })
 });
  
