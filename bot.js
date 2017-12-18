@@ -7,11 +7,7 @@ const prefix = process.env.prefix
 const {baselogger} = require('./logger.js');
 var filteron = "true"
 const result = Math.round(Math.random());
-const up = require('./updates.json')
-const update = updates.updates
-const update2 = updates.update2
-const update3 = updates.update3
-const loggedupdates = [update, update2, update3]
+const updates = ["fixed kick command, deleted timer command, and made 3 new commands."]
 // End of init
 
 // Gather commands
@@ -37,7 +33,7 @@ bot.on("ready", () => {
   console.log(`Number of shards: ${bot.shardCount}`)
   console.log(`Bot ID: ${bot.user.id}`)
   bot.user.setGame(`Loading Hulkbot...`)
-  console.log(`Updates: ${loggedupdates}`)
+  console.log(`Updates: ${updates}`)
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
