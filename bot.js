@@ -7,7 +7,7 @@ const prefix = process.env.prefix
 const {baselogger} = require('./logger.js');
 var filteron = "true"
 const result = Math.round(Math.random());
-const updates = ["Fixed kick command, deleted timer command, and made 3 new commands."]
+const updates = ["Fixed kick command, deleted timer command, made 3 new commands, and put status rotator back in."]
 // End of init
 
 // Gather commands
