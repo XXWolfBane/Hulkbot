@@ -53,7 +53,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n\nHeya! Hulk here. *`)
+    guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n\nHeya! Hulk here. `)
  })
 });
  
