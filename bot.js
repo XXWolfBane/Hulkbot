@@ -49,15 +49,12 @@ bot.on("ready", () => {
     bot.user.setGame(`h!help | ${game}`)
     gameval++
   }, 45000) // 45 secs
-})
-
   
   bot.guilds.forEach(async (guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
     //guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n`)
-  })
 });
  
 bot.on("message", message => {
