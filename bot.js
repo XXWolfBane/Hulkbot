@@ -8,7 +8,6 @@ const {baselogger} = require('./logger.js');
 var filteron = "true"
 const result = Math.round(Math.random());
 const updates = ["Fixed kick command, deleted timer command, made 3 new commands, and put status rotator back in."]
-const servers = bot.guilds.array().length
 // End of init
 
 // Gather commands
@@ -38,7 +37,7 @@ bot.on("ready", () => {
   //Let's just leave this out for now.
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
- let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", servers + " servers"]
+ let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`]
   // Status Rotator
   gameval = 0
   setInterval(() => {
@@ -54,7 +53,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    //guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n`)
+    guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n\nHeya! Hulk here. *`)
  })
 });
  
