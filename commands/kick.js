@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
     member.kick().catch(message.channel.send("I can't kick without permissions, noob!"))
   } else {
     message.channel.send("You don't have permission to kick people. If there's someone who needs to be kicked, contact an administrator or a moderator.")
-  }
+  } 
 }
 
 module.exports.help = {
