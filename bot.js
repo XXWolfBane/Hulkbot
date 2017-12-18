@@ -7,6 +7,10 @@ const prefix = process.env.prefix
 const {baselogger} = require('./logger.js');
 var filteron = "true"
 const result = Math.round(Math.random());
+const updates = require('./updates.json')
+const update = updates.updates
+const update2 = updates.update2
+const update3 = updates.update3
 // End of init
 
 // Gather commands
