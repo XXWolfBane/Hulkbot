@@ -55,6 +55,7 @@ bot.on("ready", () => {
     
     // send to all servers v v v 
     //guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n`)
+ })
 });
  
 bot.on("message", message => {
