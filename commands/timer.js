@@ -6,7 +6,8 @@ module.exports.run = (bot, message, args) => {
   if (counting == "true") {
   setInterval(() => {
     if (num == 1) {
-      channel.send("BEEEEEP! Time is up.").then(counting = "false")
+      channel.send("BEEEEEP! Time is up.")
+      counting = "false"
     } else {
       channel.send(num)
       num = num - 1
