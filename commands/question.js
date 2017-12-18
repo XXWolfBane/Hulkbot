@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args) => {
-  const result = Math.round(Math.Random())
+  const result = Math.round(Math.random())
   if (result) {
     message.channel.send("Yes!")
   } else {
