@@ -53,7 +53,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    guild.channels.find('name', 'general').send(`Sorry about the bug. I'll have it fixed soon, so hang with me :grin:`)
+    // guild.channels.find('name', 'general').send(`Sorry about the bug. I'll have it fixed soon, so hang with me :grin:`)
  })
 });
  
