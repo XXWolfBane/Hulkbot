@@ -101,7 +101,7 @@ bot.on("message", (message) => {
   if (message.content == prefix) {
     let channel = message.channel
     
-    channel.send("Sorry, that's not a command. :stuck_out_tongue:")
+    channel.send("Sorry, that's not a command. :stuck_out_tongue:").then(m => m.delete(1000))
   }
   
   if (message.content.startsWith(prefix + "ban")) {
