@@ -11,4 +11,13 @@ My Discord Bot.
 [![GitHub license](https://img.shields.io/github/license/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/blob/master/LICENSE)
 [![GitHub forks](https://img.shields.io/github/forks/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/network)
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
+
+## Todo
+
+- [x] Clean up the code a bit.
+    - [ ] Clean up the code some more.
+    - [ ] More modulating.
+- [x] Add permissions to certain commands.
+    - [ ] Make permissions alittle more advanced.
+
  
