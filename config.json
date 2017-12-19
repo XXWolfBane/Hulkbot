@@ -8,5 +8,6 @@
   "logid": "356181785899565077",
   "BCO": "140487710727995392",
   "BMA": "359069241963446273",
-  "_comment": "BCO = Bot Co Owner, BMA = Bot main admin (role)."
+  "comment": "BCO = Bot Co Owner, BMA = Bot main admin (role).",
+  "statues": ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry", "`${bot.guilds.array().length} servers`"]
 }
