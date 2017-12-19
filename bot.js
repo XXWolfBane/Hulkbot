@@ -53,7 +53,7 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)
     
     // send to all servers v v v 
-    guild.channels.find('name', 'general').send(`Hulkbot Public Announcement:\n\nHeya! Hulk here. `)
+    guild.channels.find('name', 'general').send(`Sorry about the bug. I'll have it fixed soon, so hang with me :grin:`)
  })
 });
  
@@ -97,6 +97,13 @@ bot.on("message", message => {
 })
 
 bot.on("message", (message) => {
+  
+  if (message.content.startsWith(prefix)) {
+    let channel = message.channel
+    
+    channel.send("Sorry, that's not a command. :stuck_out_tongue:")
+  }
+  
   if (message.content.startsWith(prefix + "ban")) {
     if (message.member.hasPermission("BAN_MEMBERS"))
       // Easy way to get member object though mentions.
