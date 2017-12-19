@@ -98,7 +98,7 @@ bot.on("message", message => {
 
 bot.on("message", (message) => {
   
-  if (message.content.startsWith(prefix)) {
+  if (message.content.startsWith(prefix + " ")) {
     let channel = message.channel
     
     channel.send("Sorry, that's not a command. :stuck_out_tongue:")
