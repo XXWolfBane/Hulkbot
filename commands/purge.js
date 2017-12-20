@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args) => {
-	if (message.author.hasPermission("MANAGE_MESSAGES"))
+	if (message.author.hasPermission("MANAGE_MESSAGES")) {
   if (isNaN(args[0])) {
     return message.channel.send('Please define a number..')
   }
