@@ -1,4 +1,5 @@
 module.exports.run = (bot, message, args) => {
+	if (message.author.hasPermission("MANAGE_MESSAGES"))
   if (isNaN(args[0])) {
     return message.channel.send('Please define a number..')
   }
@@ -16,8 +17,10 @@ module.exports.run = (bot, message, args) => {
   setTimeout(function() {
 	message.channel.fetchMessages({limit: am}).then(m => message.channel.bulkDelete(m))
 	message.channel.send("Done! Purged " + am + " messages.")
-  }, 3000);
-
+  }, 1000);
+} else {
+	message.channel.send("Sorry, you don't have the required permissions. :neutral:")
+}
 
 }
 
