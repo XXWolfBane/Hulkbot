@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const pak = require("../package.json")
 const config = require("../config.json")
-//🔎 👤 ⚙ 🆔 📄 📝 ⌛ 🖍 🔊 📬
+//🔎 👤 ⚙ 🆔 📄 📝 ⌛ 🖍 🔊 📬 🚀
 
 
 module.exports.run = (bot, message, args) => {
@@ -18,7 +18,7 @@ module.exports.run = (bot, message, args) => {
 ⚙ **Bot Version:** ${pak.version}\n
 👤 **Bot Name:** ${bot.user.tag}\n
 🆔 **Bot ID:** ${bot.user.id}\n
-:rocket: Memory Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+🚀 **Memory Usage:** ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\n
 🖍 **Bot Prefix:** ${config.prefix}\n
 🔎 **I know:**\n -   ${bot.guilds.array().length} Guilds\n -   ${bot.channels.array().length} Channels\n -   ${bot.users.array().length} Users\n
 ⌛ **Uptime:** ${Math.round(bot.uptime / (1000 * 60 * 60))} hours, ${Math.round(bot.uptime / (1000 * 60)) % 60}  minutes, ${Math.round(bot.uptime / 1000) % 60} seconds.\n
