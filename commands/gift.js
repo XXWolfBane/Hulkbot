@@ -23,7 +23,6 @@ module.exports.run = (bot, message, args) => {
     "url": "https://bot.hulkbot.ml/home",
     "icon_url": "https://cdn.discordapp.com/attachments/356178662837452801/392851847037321216/Hulk.png"
   }
-};
 }
  message.author.send({embed})
 }
