@@ -3,7 +3,7 @@ const discord = require('discord.js')
 module.exports.run = (bot, message, args) => {
   let channel = message.channel
   const embed = {
-    "title": "Christmas",
+  "title": "Christmas",
   "description": "Here's a fun little gif from the bot owner!",
   "url": "",
   "color": 1000,
@@ -22,6 +22,9 @@ module.exports.run = (bot, message, args) => {
     "name": "Hulkbot",
     "url": "https://bot.hulkbot.ml/home",
     "icon_url": "https://cdn.discordapp.com/attachments/356178662837452801/392851847037321216/Hulk.png"
+  }
+};
+channel.send({ embed });
   }
   message.author.send({ embed })
 }
