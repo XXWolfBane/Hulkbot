@@ -1,4 +1,6 @@
-module.exports.run = (bot, message, args, discord) => {
+const discord = require('discord.js')
+
+module.exports.run = (bot, message, args) => {
   let channel = message.channel
   const embed = new discord.RichEmbed()
     .setTitle("Here's a gif from the bot owner! Merry Christmas!")
