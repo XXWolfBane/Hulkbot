@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args, discord) => {
     .setTitle("Here's a gif from the bot owner! Merry Christmas!")
     .setDescription("https://media.giphy.com/media/gNke2UrUTopOg/giphy.gif")
   
-  channel.send({embed})
+  message.author.send({embed})
 }
 
 module.exports.help = {
