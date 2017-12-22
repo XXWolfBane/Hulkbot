@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args) => {
   "description": "Here's a fun little gif from the bot owner!",
   "url": "",
   "color": 1000,
-  "timestamp": "2017-12-22T21:55:18.263Z",
+  "timestamp": new Date(),
   "footer": {
     "icon_url": "",
     "text": "Merry Christmas!"
@@ -24,9 +24,8 @@ module.exports.run = (bot, message, args) => {
     "icon_url": "https://cdn.discordapp.com/attachments/356178662837452801/392851847037321216/Hulk.png"
   }
 };
-channel.send({ embed });
-  }
-  message.author.send({ embed })
+}
+ message.author.send({embed})
 }
 
 module.exports.help = {
