@@ -1,5 +1,5 @@
 // Discord init
-const disord = require('discord.js')
+const discord = require('discord.js')
 const config = require('./config.json')
 const profanities = require("./profanities.json")
 const bot = new discord.Client()
