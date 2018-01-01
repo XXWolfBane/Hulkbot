@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
   let embed = new discord.RichEmbed()
     .setTitle("Status Changer")
     .setDescription("Successfully set the bot status to Online!")
-    .setColor("RED")
+    .setColor("GREEN")
     .setThumbnail(bot.user.avatarURL)
     .setFooter(`This command was used at ${new Date()}`)
  } else {
