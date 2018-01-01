@@ -9,6 +9,7 @@ module.exports.run = (bot, message, args) => {
     .setColor("GREEN")
     .setThumbnail(bot.user.avatarURL)
     .setFooter(`This command was used at ${new Date()}`)
+  message.channel.send({ embed })
  } else {
       message.channel.send("Nope!") 
   }
