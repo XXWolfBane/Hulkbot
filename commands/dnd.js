@@ -8,6 +8,7 @@ module.exports.run = (bot, message, args) => {
     .setTitle("Status Changer")
     .setThumbnail(bot.user.avatarURL)
     .setDescription("Successfully set the bot status to Do Not Disturb!")
+    .setFooter(`This command was used at ${new Date()}`)
     
   message.channel.send({ embed })
   } else {
