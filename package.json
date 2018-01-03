@@ -1,6 +1,6 @@
 {
 "name": "Hulkbot",
-"version": "2.0",
+"version": "2.0.0",
 "description": "Utility, music, etc",
 "main": "bot.js",
 "author": "FHGDev",
