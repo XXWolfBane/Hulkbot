@@ -9,9 +9,9 @@ My Discord Bot.
 [![Status](https://img.shields.io/badge/Status-Ready-green.svg?style=flat-square)]()
 [![GitHub stars](https://img.shields.io/github/stars/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/stargazers)
 [![GitHub license](https://img.shields.io/github/license/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/blob/master/LICENSE)
-[![GitHub forks](https://img.shields.io/github/forks/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/network)
+[![GitHub borks](https://img.shields.io/github/forks/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/network)
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
-[Click here to go to the homepage](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
+[![Homepage](https://img.shields.io/badge/bot-homepage-F96854.svg?style=flat-square)](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
 
 ## Todo
 
@@ -20,5 +20,6 @@ My Discord Bot.
     - [ ] More modulating.
 - [x] Add permissions to certain commands.
     - [ ] Make permissions alittle more advanced.
+- [ ] Fix borking
 
  
