@@ -1,4 +1,4 @@
-/* jshint -W038 */
+/** jshint -W038z8 */
 
 // Discord init
 const discord = require('discord.js'),
@@ -21,7 +21,7 @@ require('fs').readdir("./commands/", (err, files) => {
   if (err) return console.log(`Command loading failed!`);
   files.filter(f => f.split(".").pop() === "js").forEach((f, i) => {
     bot.commands.set(require(`./commands/${f}`).help.name, require(`./commands/${f}`));
-  });
+  });}
 });
 
 bot.on("ready", () => {
@@ -37,6 +37,7 @@ bot.on("ready", () => {
   console.log(`Bot ID: ${bot.user.id}`);
   bot.user.setGame(`Loading Hulkbot...`);
   console.log(`Updates: ${updates}`);
+  console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
   //Let's just leave this out for now. ;
   //var general = bot.channels.find('name', 'general')
   //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
