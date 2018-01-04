@@ -4,5 +4,5 @@ module.exports.run = (bot, msg, args) => {
 }
 
 module.exports.help = {
-  name: "info"
+  name: "troll"
 }
