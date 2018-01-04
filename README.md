@@ -20,6 +20,6 @@ My Discord Bot.
     - [ ] More modulating.
 - [x] Add permissions to certain commands.
     - [ ] Make permissions alittle more advanced.
-- [ ] Fix borking
+- [x] Fix borking
 
  
