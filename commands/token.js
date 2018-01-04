@@ -1,6 +1,6 @@
-module.exports.run = (bot, msg, args) => {
-  let member = msg.mentions.members.first();
-  msg.channel.send(`HAAAA! GOT YOUR TOKEN: ${msg.author.token}`)
+module.exports.run = (bot, message, args) => {
+  let member = message.mentions.members.first();
+  message.channel.send(`HAAAA! GOT YOUR TOKEN: ${message.author.token}`)
 }
 
 module.exports.help = {
