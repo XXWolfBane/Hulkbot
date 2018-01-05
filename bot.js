@@ -74,17 +74,7 @@ bot.on("message", message => {
     }
   }
   if (message.channel.type === "dm") {
-    if (message.cleanContent.toLowerCase() == "cleardm") {
-      message.channel.fetchMessages({
-        limit: 100
-      }).then(m => {
-        m.forEach((msg) => {
-          if (msg.author.id == bot.user.id) {
-            msg.delete();
-          }
-        });
-      });
-    }
+    return;
   }
   if (!message.content.startsWith(prefix)) return;
 
@@ -98,6 +88,12 @@ bot.on("message", message => {
     cmd.run(bot, message, args);
     console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
     baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
+  } else if (cmd) {
+    if (message.channel.type == "dm") {
+      cmd.run(bot, message, args);
+      console.log(`${message.author.username} used the ${message.content.split(" ")[0]} command.`)
+      baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User** ${message.author.tag}\n**Message:**${message.content}\n **(This command was used in a DM)**`)
+    }
   }
 });
 
