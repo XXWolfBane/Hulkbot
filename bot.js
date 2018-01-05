@@ -35,7 +35,7 @@ bot.on("ready", () => {
   console.log(`Hulkbot Version ${config.version} Loaded!`);
   console.log(`Number of shards: ${bot.shardCount}`);
   console.log(`Bot ID: ${bot.user.id}`);
-  bot.user.setPresence(`online`, "YOU!", "Watching");
+  bot.user.setGame(`Loading Hulkbot...`); 
   console.log(`Updates: ${updates}`);
   console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
   //Let's just leave this out for now. ;
