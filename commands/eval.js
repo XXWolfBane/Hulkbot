@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports.run = (bot, message, args) => {
-  const content = message.content.split(' ').slice(1).join(' ');
+  if (message.author.id == process.env.oid) {
+    const content = message.content.split(' ').slice(1).join(' ');
   const result = new Promise((resolve, reject) => resolve(eval(content)));
 
   return result.then(output => {
@@ -18,8 +19,11 @@ module.exports.run = (bot, message, args) => {
     if (err.includes(bot.token)) err = err.replace(bot.token, 'Not for your eyes');
 
     return message.channel.send(err, { code: 'js' })
-  });
-}
+  });  
+  } else {
+    message.channel.send("Nope!")
+  }
+  }
 
 module.exports.help = {
   name: "eval",
