@@ -1,8 +1,14 @@
 const config = require('../config.json')
+const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
   if (message.author.id == config.ownerid) {
-    message.channel.send(":wave: Hulkbot will now shutdown.")
+    let embed = new discord.RichEmbed()
+      .setTitle("Hulkbot Shutdown")
+      .setDescription(":wave: Hulkbot will now shutdown... :cry:")
+      .setThumbnail(bot.user.avatarURL)
+      .setColor('BLUE')
+    message.channel.send({ embed })
     setTimeout(function() {
       process.exit(666);
     }, 10010)
