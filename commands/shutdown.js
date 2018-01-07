@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
     message.channel.send({ embed })
     setTimeout(function() {
       process.exit(666);
-    }, 10010)
+    }, 500)
   } else {
     message.channel.send("Nope!")
   }
