@@ -1,8 +1,8 @@
 const config = require("./config.json");
 const discord = require('discord.js');
+let logchannel = "356181785899565077";
 
 async function baselogger(bot, desc, icon) {
-  let logchannel = bot.channels.find('name', 'bot-audit', 'logs', 'bot_audit')
   let messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
   let log = messages.filter(m => m.author.id === bot.user.id &&
     m.embeds[0] &&
