@@ -8,6 +8,7 @@ module.exports.run = (bot, message, args) => {
     .setTitle("Status Changer")
     .setDescription("Successfully set the bot status to Invisible!")
     .setColor("GREY")
+    .setThumbnail(bot.user.avatarURL)
     .setFooter(`This command was used at ${new Date}`)
     message.channel.send({ embed })
 } else {
