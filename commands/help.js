@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
     description: "You asked for help, here it is.",
     fields: [{
         name: "Owner Only",
-        value: "shutdown, restart, and changegame."
+        value: "shutdown and changegame."
       },
       {
         name: "Utility :tools:",
@@ -22,7 +22,7 @@ module.exports.run = (bot, message, args) => {
       },
       {
         name: "Adding the bot, and more help.",
-        value: "joinserver, invite, and info."
+        value: "joinserver, invite, info, and contact => (make sure to include your username)."
       },
              {
         name: "Fun",
