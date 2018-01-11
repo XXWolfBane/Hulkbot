@@ -2,15 +2,15 @@
 
 // Discord init
 const discord = require('discord.js'),
-config = require('./config.json'),
-profanities = require("./profanities.json"),
-bot = new discord.Client(),
-prefix = process.env.prefix,
-{baselogger} = require('./logger.js'),
-result = Math.round(Math.random()),
-updates = ["CODES!"];
-
+const config = require('./config.json'),
+const profanities = require("./profanities.json"),
+const bot = new discord.Client(),
+const prefix = process.env.prefix,
+const {baselogger} = require('./logger.js'),
+const result = Math.round(Math.random()),
+const updates = ["CODES!"];
 var filteron = "true";
+var roff = "false";
 // End of init
 
 // Gather commands
@@ -38,9 +38,7 @@ bot.on("ready", () => {
   bot.user.setGame(`Loading Hulkbot...`); 
   console.log(`Updates: ${updates}`);
   console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
-  //Let's just leave this out for now. ;
-  //var general = bot.channels.find('name', 'general')
-  //general.send("Hey everyone. Hulk here. Just letting you know, if the bot shuts down, it's just for updates. See ya.")
+  if (roff = "false") {
  let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
   // Status Rotator
   gameval = 0;
@@ -52,6 +50,7 @@ bot.on("ready", () => {
     bot.user.setGame(`h!help | ${game}`);
     gameval++;
   }, 45000); // 45 secs
+}
   
   bot.guilds.forEach((guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
@@ -144,13 +143,34 @@ bot.on("message", (message) => {
         message.channel.send("**Coin Flip:***\nThe coin landed on tails.");
 }}}
   if (message.content.toLowerCase().includes("i love you hulkbot")) {
-    message.channel.send("wait what");
+    message.channel.send("ERMAHGERD");
   }
   if (message.content.startsWith("<@294194506113220608>")) {
-   message.channel.send(`Oh god, ${message.author.username} is watching me... O_O`) ;
+      let embed = new discord.RichEmbed()
+      .setTitle("Hulkbot for Beginners")
+      .setDescription("YUP! It's me, Hulkbot! To see more info on me, use the info command. (h!info)")
+      .setColor("PURPLE")
+      .setThumbnail(bot.user.avatarURL)
+   message.channel.send({ embed })
   }
-});
-
+  if (message.author.id == process.env.oid) {
+    if (message.content == prefix + "roff") {
+        roff = "false";
+        message.channel.send("Okay, I'll turn my Status Rotator off.")
+    }
+} else {
+    message.channel.send("Nope!")
+}  
+    if (message.author.id == process.env.oid) {
+        if (message.content == prefix + "ron") {
+            roff = "true";
+            message.channel.send("Okay, I'll turn my Status Rotator on.")
+        }
+    } else {
+        message.channel.send("Nope!")
+    }
+ });
+      
 bot.on("guildCreate", (guild) => {
   baselogger(bot, `**Guild Join**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
