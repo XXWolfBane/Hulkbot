@@ -136,18 +136,7 @@ bot.on("message", (message) => {
       .setThumbnail(bot.user.avatarURL)
    message.channel.send({ embed })
   }
-  if (message.author.id == process.env.oid) {
-    if (message.content == prefix + "roff") {
-        roff = "true";
-        message.channel.send("Okay, I'll turn my Status Rotator off.")
-    }
-}
-    if (message.author.id == process.env.oid) {
-        if (message.content == prefix + "ron") {
-            roff = "false";
-            message.channel.send("Okay, I'll turn my Status Rotator on.")
-        }
-    }
+ 
  });
       
 bot.on("guildCreate", (guild) => {
