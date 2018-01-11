@@ -25,7 +25,7 @@ module.exports.run = (bot, message, args) => {
 ⌛ **Uptime:** ${Math.round(bot.uptime / (1000 * 60 * 60))} hours, ${Math.round(bot.uptime / (1000 * 60)) % 60}  minutes, ${Math.round(bot.uptime / 1000) % 60} seconds.\n
 🔊 **Status Updates:** [#${config.statues.length}]\n      ${config.statues.join("\n   ")}\n
 📝 **Guilds I Know:** [#${bot.guilds.array().length}]\n${guild_list}`)
-  message.channel.send({embed}).then(m => m.delete(10000))
+  message.channel.send({embed})
 } else {
   message.channel.send("Nope!")
 } 
