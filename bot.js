@@ -1,16 +1,16 @@
 /** jshint -W038z8 */
 
-// Discord init
-const discord = require('discord.js'),
-const config = require('./config.json'),
-const profanities = require("./profanities.json"),
-const bot = new discord.Client(),
-const prefix = process.env.prefix,
-const {baselogger} = require('./logger.js'),
-const result = Math.round(Math.random()),
-const updates = ["CODES!"];
-var filteron = "true";
-var roff = "false";
+// Discord init 
+discord = require('discord.js'),
+config = require('./config.json'),
+profanities = require("./profanities.json"),
+bot = new discord.Client(),
+prefix = process.env.prefix,
+{baselogger} = require('./logger.js'),
+result = Math.round(Math.random()),
+updates = ["CODES!"];
+filteron = "true";
+roff = "false";
 // End of init
 
 // Gather commands
@@ -38,7 +38,7 @@ bot.on("ready", () => {
   bot.user.setGame(`Loading Hulkbot...`); 
   console.log(`Updates: ${updates}`);
   console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
-  if (roff = "false") {
+  
  let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
   // Status Rotator
   gameval = 0;
@@ -49,8 +49,7 @@ bot.on("ready", () => {
     var game = status[gameval];
     bot.user.setGame(`h!help | ${game}`);
     gameval++;
-  }, 45000); // 45 secs
-}
+  }, 45000); // 45 sec
   
   bot.guilds.forEach((guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
