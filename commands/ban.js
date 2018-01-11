@@ -9,6 +9,7 @@ module.exports.run = (bot, message, args) => {
     .setDescription(`:wave: Successfully Banned ${member.displayName} :point_right:`)
     .setColor("RED")
     .setThumbnail(bot.user.avatarURL)
+    
     message.channel.send({ em })
   } else {
     message.channel.send(`ADMIN ONLY, CHUMP!`)
