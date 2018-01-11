@@ -10,7 +10,6 @@ const {baselogger} = require('./logger.js')
 const result = Math.round(Math.random())
 const updates = ["CODES!"];
 var filteron = "true";
-var roff = "false";
 // End of init
 
 // Gather commands
@@ -102,20 +101,6 @@ bot.on("message", (message) => {
     
     channel.send("Sorry, that's not a command. :stuck_out_tongue:").then(m => m.delete(1000));
   }
-  
-  if (message.content.startsWith(prefix + "ban")) {
-    if (message.member.hasPermission("BAN_MEMBERS"))
-      // Easy way to get member object though mentions.
-      var member = message.mentions.members.first();
-    // Kick
-    member.ban().then((member) => {
-      // Successmessage
-      message.channel.send(":wave: " + member.displayName + " has been successfully banned! :point_right: ");
-    }).catch(() => {
-      // Failmessage
-      message.channel.send("I can't ban without permissions, noob!");
-    });
-  }
   if (message.content == prefix + "filteroff") {
     // Prevents Unauthorized Users from accessing filters
     if (message.member.hasPermission("MANAGE_GUILD")) {
@@ -131,7 +116,7 @@ bot.on("message", (message) => {
     if (message.member.hasPermission("MANAGE_GUILD")) {
       filteron = "true";
       message.channel.send("Okay, I turned my filters back on!");
-      console.log(message.author.username + " set the filters to = " + filteron);
+      console.log(message.author.username + " set the filters to " + filteron);
     } else {
       return message.channel.send("Sorry, but you don't have the required permissions.");
     }
