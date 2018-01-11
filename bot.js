@@ -1,4 +1,4 @@
-/** jshint -W038z8 */
+jshint -W038z8 
 
 // Discord init 
 const discord = require('discord.js')
@@ -37,7 +37,6 @@ bot.on("ready", () => {
   bot.user.setGame(`Loading Hulkbot...`); 
   console.log(`Updates: ${updates}`);
   console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
-  if (roff == "false") {
  let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
   // Status Rotator
   gameval = 0;
@@ -49,8 +48,7 @@ bot.on("ready", () => {
     bot.user.setGame(`h!help | ${game}`);
     gameval++;
   }, 45000); // 45 sec
-}
-  
+ 
   bot.guilds.forEach((guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
     
