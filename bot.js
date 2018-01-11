@@ -155,13 +155,13 @@ bot.on("message", (message) => {
   }
   if (message.author.id == process.env.oid) {
     if (message.content == prefix + "roff") {
-        roff = "false";
+        roff = "true";
         message.channel.send("Okay, I'll turn my Status Rotator off.")
     }
 }
     if (message.author.id == process.env.oid) {
         if (message.content == prefix + "ron") {
-            roff = "true";
+            roff = "false";
             message.channel.send("Okay, I'll turn my Status Rotator on.")
         }
     }
