@@ -1,4 +1,4 @@
-jshint -W038z8 
+/** jshint -W038z8  */
 
 // Discord init 
 const discord = require('discord.js')
