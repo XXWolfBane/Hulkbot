@@ -1,6 +1,6 @@
 const config = require("./config.json");
 const discord = require('discord.js');
-let logchannel = ["356181785899565077", "399387994433257502", "362713361332568075"];
+let logchannel = "356181785899565077";
 
 async function baselogger(bot, desc, icon) {
   let messages = await bot.channels.get(logchannel).fetchMessages({limit: 5});
