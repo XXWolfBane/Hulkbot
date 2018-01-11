@@ -158,16 +158,12 @@ bot.on("message", (message) => {
         roff = "false";
         message.channel.send("Okay, I'll turn my Status Rotator off.")
     }
-} else {
-    message.channel.send("Nope!")
-}  
+}
     if (message.author.id == process.env.oid) {
         if (message.content == prefix + "ron") {
             roff = "true";
             message.channel.send("Okay, I'll turn my Status Rotator on.")
         }
-    } else {
-        message.channel.send("Nope!")
     }
  });
       
