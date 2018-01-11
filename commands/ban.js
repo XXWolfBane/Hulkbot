@@ -14,3 +14,7 @@ module.exports.run = (bot, message, args) => {
     message.channel.send(`ADMIN ONLY, CHUMP!`)
   }
 }
+
+module.exports.help = {
+  name: "ban"
+}
