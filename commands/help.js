@@ -8,7 +8,12 @@ module.exports.run = (bot, message, args) => {
     title: "Help",
     url: "https://discord.gg/XvMA2rJ",
     description: "You asked for help, here it is.",
-    fields: [{
+    fields: [
+      {
+        name: "Prefix",
+        value: "h!"
+      },
+      {
         name: "Owner Only",
         value: "shutdown and changegame."
       },
@@ -22,7 +27,7 @@ module.exports.run = (bot, message, args) => {
       },
       {
         name: "Adding the bot, and more help.",
-        value: "joinserver, invite, info, and contact => (make sure to include your username)."
+        value: "joinserver, invite, info, and contact."
       },
              {
         name: "Fun",
@@ -43,7 +48,5 @@ module.exports.run = (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "help",
-  usage: ``, 
-  information: ""
+  name: "help"
 }
