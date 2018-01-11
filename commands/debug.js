@@ -6,6 +6,7 @@ const config = require("../config.json")
 
 module.exports.run = (bot, message, args) => {
  // return; //SOON
+ if (message.author.id == process.env.oid) {
   let guild_list = []
   bot.guilds.forEach(async(guild, id) => {
     guild_list.push(`      ${guild.name}, ${id}\n`)
@@ -24,7 +25,10 @@ module.exports.run = (bot, message, args) => {
 ⌛ **Uptime:** ${Math.round(bot.uptime / (1000 * 60 * 60))} hours, ${Math.round(bot.uptime / (1000 * 60)) % 60}  minutes, ${Math.round(bot.uptime / 1000) % 60} seconds.\n
 🔊 **Status Updates:** [#${config.statues.length}]\n      ${config.statues.join("\n   ")}\n
 📝 **Guilds I Know:** [#${bot.guilds.array().length}]\n${guild_list}`)
-  message.channel.send({embed}).then(m => m.delete(2500))
+  message.channel.send({embed}).then(m => m.delete(10000))
+} else {
+  message.channel.send("Nope!")
+} 
 }
 
 module.exports.help = {
