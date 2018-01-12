@@ -1,8 +1,7 @@
 # JSHulkbot
 My Discord Bot.
 
-(You must have discord.js installed to run this bot, as well as NodeJS.)
- If you don't have those, get them here. https://www.discord.js.org www.nodejs.org
+## You need [NodeJS](https://nodejs.org/en/ "Get NodeJS") and [Discord.js](https://discord.js.org/ "Get Discord.js") to be able to run dis bot.
  
  
 [![Version](https://img.shields.io/badge/Version-0.1.0-green.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/releases)
