@@ -3,8 +3,8 @@ const fs = require('fs')
 const config = require('../config.json')
 
 module.exports.run = (bot, message, args) => {
-let reason = args.join(' ')
 if (message.member.hasPermission("BAN_MEMBERS")) {
+    let reason = args.slice(1).join(" ");
     let member = message.mentions.members.first();
     member.ban().catch(console.error)
     let embed = new discord.RichEmbed()
@@ -13,7 +13,7 @@ if (message.member.hasPermission("BAN_MEMBERS")) {
     .setColor("RED")
     .setThumbnail(bot.user.avatarURL)
     config.banreason = reason;
-    fs.writeFile('../config.json', JSON.stringify(reason), (err) => console.error)
+    fs.writeFile('../config.json', JSON.stringify(reason) (err) => console.error)
     message.channel.send({embed})
   } else {
     message.channel.send(`ADMIN ONLY, CHUMP!`)
