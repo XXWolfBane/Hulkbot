@@ -1,8 +1,8 @@
 const discord = require('discord.js')
 
 module.exports = (bot, guild, member) => {
-  console.log(`${member.username} was banned from ${guild.name} for ${reason}!`)
   let reason = require('../config.json').banreason
+  console.log(`${member.username} was banned from ${guild.name} for ${reason}!`)
   member.send(`${member.displayName}, you are now banned from ${guild.name} for the reason ${reason}!`)
   let log = guild.channels.find('name', 'guild-maintenance')
   let logs = ["logs", "audit", "log", "server-maintenance"]
