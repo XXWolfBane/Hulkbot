@@ -10,5 +10,6 @@
   "BMA": "359069241963446273",
   "comment": "BCO = Bot Co Owner, BMA = Bot main admin (role).",
   "statues": ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry", "`${bot.guilds.array().length} servers`"],
-  "banreason": ""
+  "banreason": "",
+  "kickreason": ""
 }
