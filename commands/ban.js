@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
 if (message.member.hasPermission("BAN_MEMBERS")) {
     let reason = args.slice(1).join(" ");
     let member = message.mentions.members.first();
-    member.ban().catch(console.error)
+    member.ban(reason).catch(console.error)
     let embed = new discord.RichEmbed()
     .setTitle("Hulkbot Banning System")
     .setDescription(`:wave: Successfully Banned ${member.displayName} :point_right:`)
