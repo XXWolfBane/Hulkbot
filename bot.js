@@ -59,6 +59,9 @@ bot.on("ready", () => {
     //guild.channels.find('name', 'chat').send(`Happy new year from the owner!`)
   });
 });
+
+bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
+bot.on("guildMemberRemove", (member) => require('./events/guildMemberRemove.js')(bot, member))
  
 bot.on("message", message => {
   if (filteron == "true") {
