@@ -13,7 +13,7 @@ if (message.member.hasPermission("BAN_MEMBERS")) {
     .setColor("RED")
     .setThumbnail(bot.user.avatarURL)
     config.banreason = reason;
-    fs.writeFile('../config.json', JSON.stringify(reason) (err) => console.error)
+    fs.writeFile('../config.json', JSON.stringify(reason), (err) => console.error)
     message.channel.send({embed})
   } else {
     message.channel.send(`ADMIN ONLY, CHUMP!`)
