@@ -1,7 +1,8 @@
 const discord = require('discord.js')
 
 module.exports.run = (bot, message, args) => {
-  if (message.member.hasPermission("BAN_MEMBERS")) {
+let reason = args.join(' ')
+if (message.member.hasPermission("BAN_MEMBERS")) {
     let member = message.mentions.members.first();
     member.ban().catch(console.error)
     let embed = new discord.RichEmbed()
