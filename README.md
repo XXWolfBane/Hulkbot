@@ -21,4 +21,5 @@ My Discord Bot.
     - [ ] Make permissions alittle more advanced.
 - [x] Fix borking
 
- 
+## Support and Info
+   Find the support server [here](https://discord.gg/qEFNkxB "Click to join the invite server")
