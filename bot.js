@@ -12,6 +12,8 @@ const updates = ["CODES!"];
 var filteron = "true";
 // End of init
 
+bot.invite = "https://discord.gg/qEFNkxB"
+
 // Gather commands
 bot.commands = new discord.Collection();
 
