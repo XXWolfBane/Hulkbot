@@ -8,8 +8,8 @@ const bot = new discord.Client()
 const prefix = process.env.prefix
 const {baselogger} = require('./logger.js')
 const result = Math.round(Math.random())
-const updates = ["CODES!"];
-var filteron = "true";
+const updates = ["Set the default filter to off."];
+var filteron = "false";
 // End of init
 
 bot.invite = "https://discord.gg/qEFNkxB"
