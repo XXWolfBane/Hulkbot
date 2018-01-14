@@ -20,6 +20,6 @@
           "snekfetch": "^3.5.3",
           "fast-html-parser": "^1.0.1",
           "enmap": "^0.4.2",
-          "enmap-level": "^1.0.0"
-     }
+          "enmap-level": "^1.0.0",
+          "cleverbot.io", "^1.0.4"
 }
