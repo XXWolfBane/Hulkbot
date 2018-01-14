@@ -36,7 +36,7 @@ bot.on("ready", () => {
   console.log(`Hulkbot Version ${config.version} Loaded!`);
   console.log(`Number of shards: ${bot.shardCount}`);
   console.log(`Bot ID: ${bot.user.id}`);
-  bot.user.setGame(`Loading Hulkbot...`); 
+  bot.user.setActivity(`Hulkbot load...`, {type: "WATCHING"}); 
   console.log(`Updates: ${updates}`);
   console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
  let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
@@ -47,7 +47,7 @@ bot.on("ready", () => {
       gameval = 0;
     }
     var game = status[gameval];
-    bot.user.setGame(`h!help | ${game}`);
+    bot.user.setActivity(`for h!help | ${game}`, {type: "WATCHING"});
     gameval++;
   }, 45000); // 45 sec
  
