@@ -1,6 +1,7 @@
 /** jshint -W038z8  */
 
 // Discord init 
+const pak = require('./package.json')
 const discord = require('discord.js')
 const config = require('./config.json')
 const profanities = require("./profanities.json")
