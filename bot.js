@@ -11,6 +11,8 @@ const {baselogger} = require('./logger.js')
 const result = Math.round(Math.random())
 const updates = ["Set the default filter to off."];
 var filteron = "false";
+var cleverbot = require('cleverbot.io')
+var cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 // End of init
 
 bot.invite = "https://discord.gg/qEFNkxB"
