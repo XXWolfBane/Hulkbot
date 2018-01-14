@@ -1,5 +1,4 @@
 module.exports = (cb, bot, message) => {
-  cb.setNick("Hulkbot")
   cb.create(function (err, session) {
     cb.ask(message.content, function (err, response) {
       message.channel.send(response)
