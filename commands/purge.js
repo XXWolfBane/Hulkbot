@@ -19,7 +19,7 @@ module.exports.run = (bot, message, args) => {
 	message.channel.send("Done! Purged " + am + " messages.")
   }, 1000);
 } else {
-	message.channel.send("Sorry, you don't have the required permissions. :neutral:")
+	message.channel.send("Sorry, you don't have the required permissions. :neutral_face:")
 }
 
 }
