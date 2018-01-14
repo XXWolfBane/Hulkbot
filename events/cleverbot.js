@@ -1,4 +1,4 @@
-var cleverbot = require('discord.js'),
+var cleverbot = require('cleverbot.io'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 
 module.exports = (bot, message) => {
