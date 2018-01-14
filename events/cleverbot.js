@@ -1,4 +1,8 @@
-module.exports = (cb, bot, message) => {
+var cleverbot = require('discord.js'),
+cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
+
+module.exports = (bot, message) => {
+  cb.setNick("Hulkbot")
   cb.create(function (err, session) {
     cb.ask(message.content, function (err, response) {
       message.channel.send(response)
