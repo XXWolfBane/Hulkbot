@@ -2,6 +2,7 @@ var cleverbot = require('cleverbot.io'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 
 module.exports = (bot, message) => {
+  if (message.author.bot) return;
   cb.setNick("Hulkbot")
   cb.create(function (err, session) {
     cb.ask(message.content, function (err, response) {
