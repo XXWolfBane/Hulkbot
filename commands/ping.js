@@ -17,8 +17,7 @@ module.exports.run = (bot, message, args) => {
                   name: `${bot.user.username}`,
                   icon_url: `${bot.user.avatarURL}`
               },
-              title: `:ping_pong: Pong!`,
-              description: `Heyo! I'm watching over**${bot.users.array().length} users** in over **${bot.guilds.array().length} servers**!`,
+              description: `:ping_pong: Pong! I'm watching over **${bot.users.array().length} users** in over **${bot.guilds.array().length} servers**!`,
               fields: [
                   {
                       name: `:information_source: Latency:`,
@@ -30,7 +29,10 @@ module.exports.run = (bot, message, args) => {
                       value: `\`${Math.round(bot.ping)}ms\``,
                       inline: true
                   }
-              ]
+              ],
+              footer: {
+                text: `Serving for ${Math.round(bot.uptime / (1000 * 60 * 60))} hours, ${Math.round(bot.uptime / (1000 * 60)) % 60}  minutes, & ${Math.round(bot.uptime / 1000) % 60} seconds! ツ`
+              }
           },
       })
   })
