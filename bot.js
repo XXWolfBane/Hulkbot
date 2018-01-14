@@ -69,6 +69,9 @@ bot.on("guildBanAdd", (guild, member) => require('./events/BanAdd.js')(bot, guil
 bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
  
 bot.on("message", message => {
+  if (message.channel.type == "dm") {
+    require('./events/cleverbot.js')(bot, message, cb)
+  }
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
