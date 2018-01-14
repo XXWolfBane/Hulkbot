@@ -70,7 +70,7 @@ bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot
  
 bot.on("message", message => {
   if (message.channel.type == "dm") {
-    require('./events/cleverbot.js')(bot, message, cb)
+    require('./events/cleverbot.js')(bot, message)
   }
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
