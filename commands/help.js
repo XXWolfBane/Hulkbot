@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args, suffix) => {
+module.exports.run = (bot, message, args, suffix, discord) => {
   let fields = [
     {
       name: ":gear: Prefix:",
