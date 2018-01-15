@@ -1,11 +1,6 @@
 module.exports.run = (bot, message, args, suffix) => {
     //message.channel.send(`Avatar:\n${message.author.avatarURL}`)
-    let usr;
-    if (suffix == "") {
-      usr = msg.user;
-    } else {
-      usr = bot.userSearch(suffix, message.channel.guild);
-    }
+    let usr = message.mentions.users.first() ? message.mentions.users.first() : message.author;
     if (usr){
       message.channel.send({
         embed: {
@@ -16,7 +11,7 @@ module.exports.run = (bot, message, args, suffix) => {
           },
           title: `${member.user.username}'s Avatar!`,
           image: {
-            url: avatar_url,
+            url: usr.avatarURL,
           },
       },
       })
