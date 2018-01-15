@@ -1,10 +1,9 @@
-const discord = require('discord.js');
 const pak = require("../package.json")
 const config = require("../config.json")
 //🔎 👤 ⚙ 🆔 📄 📝 ⌛ 🖍 🔊 📬 🚀
 
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
  // return; //SOON
  if (message.author.id == process.env.oid) {
   let guild_list = []
