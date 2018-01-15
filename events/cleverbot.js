@@ -2,10 +2,11 @@ let prefix = "h!"
 var cleverbot = require('cleverbot.io'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 
-module.exports = (bot, message, bot.commands) => {
+module.exports = (bot, message) => {
   if (message.author.bot) return;
+  let 
   let args = message.content.split(" ")
-  let cmd = args.slice(0)
+  let cmd = bot.commands.get(args.slice(0))
   cb.setNick("Hulkbot")
   cb.create(function (err, session) {
     if (!cmd) {
