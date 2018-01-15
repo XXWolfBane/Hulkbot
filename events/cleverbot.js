@@ -4,7 +4,8 @@ cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 
 module.exports = (bot, message, bot.commands) => {
   if (message.author.bot) return;
-  let cmd = bot.commands.get(args[0].slice(prefix.length))
+  let args = message.content.split(" ")
+  let cmd = args.slice(0)
   cb.setNick("Hulkbot")
   cb.create(function (err, session) {
     if (!cmd) {
