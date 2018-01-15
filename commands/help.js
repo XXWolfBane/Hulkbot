@@ -26,8 +26,8 @@ module.exports.run = (bot, message, args, suffix) => {
     if(suffix == "-o") {
       embed_fields.push({
         name: ":medal: Owner:",
-				value: `\`\`\`css\nshutdown = "No Usage Provided!"\nchangegame = "No Usage Provided!"\`\`\``,
-        inline: true
+	value: `\`\`\`css\nshutdown = "No Usage Provided!"\nchangegame = "No Usage Provided!"\`\`\``,
+        inline: false
       });
     } else {
       null;
