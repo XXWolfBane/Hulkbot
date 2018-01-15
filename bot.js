@@ -52,8 +52,8 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
     
     // send to all servers v v v 
-     //guild.channels.find('name', 'general').send(`Happy new year from the owner!`)
-    //guild.channels.find('name', 'chat').send(`Happy new year from the owner!`)
+     guild.channels.find('name', 'general').send(`Hey there!\nHulkbot Developer here! I'm doing a full rewrite of the Hulkbot commands, so expect outages.`)
+     guild.channels.find('name', 'chat').send(`Hey there!\nHulkbot Developer here! I'm doing a full rewrite of the Hulkbot commands, so expect outages.`)
   });
 });
 
