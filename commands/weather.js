@@ -14,7 +14,8 @@ module.exports.run = (bot, message, args) => {
               name: `${bot.user.username}`,
               icon_url: `${bot.user.avatarURL}`
           },
-          title: `:cloud: **Weather for ${location}`,
+          title: `:cloud: **Weather for ${location.name}`,
+          description: `succ me jerry`
       },
       })
    })
