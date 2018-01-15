@@ -1,6 +1,4 @@
-const discord = require('discord.js')
-
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
 	let member = message.mentions.members.first();
 	let embed = new discord.RichEmbed()
 	.setTitle(`BORK!`)
