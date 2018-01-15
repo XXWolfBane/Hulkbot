@@ -10,8 +10,12 @@ module.exports.run = (bot, message, args) => {
       .setAuthor(`Hulk Inviter ✍`, bot.user.avatarURL)
       .setThumbnail(bot.guilds.get(`356178662837452800`).iconURL)
       .setColor(message.guild.me.displayHexColor !='#000000' ? message.guild.me.displayHexColor : "ff3333")
-      .setDescription(`Yes! We have a help server!\n\n[Join](${invite} \`${invite.expiresAt}\`)`)
-      .setFooter(`Expires at ${invite.expiresAt}`)
+      .setDescription(`
+Yes! We have a help server!
+
+[Join](${invite} "Expires in 5 minutes")
+`)
+    .setFooter(`**Online Members:** ${invite..presenceCount}/${invite..memberCount}`);
     
   message.channel.send({embed});
     
