@@ -1,5 +1,5 @@
 const weather = require('weather-js');
-cont discord = require(`discord.js`);
+const discord = require(`discord.js`);
 
 
 module.exports.run = (bot, message, args) => {
