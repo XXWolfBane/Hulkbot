@@ -1,12 +1,14 @@
-const weather = require('weather-js')
-let degreesym = "F";
+const weather = require('weather-js');
+cont discord = require(`discord.js`);
+
 
 module.exports.run = (bot, message, args) => {
   weather.find({
     search: `${args[0]}`,
-    degreetype: `${degreesym}`
+    degreetype: "F"
     },
     function (err, result) {
+    
       message.channel.send({
       embed: {
           color: 3447003,
