@@ -1,7 +1,7 @@
 module.exports.run = (bot, message, args, suffix) => {
     //message.channel.send(`Avatar:\n${message.author.avatarURL}`)
     let usr;
-    if (suffix.toLowerCase() == "") {
+    if (suffix == "") {
       usr = msg.member;
     } else {
       usr = bot.memberSearch(suffix, message.channel.guild);
