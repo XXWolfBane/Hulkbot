@@ -2,8 +2,8 @@ const weather = require('weather-js')
 
 module.exports.run = (bot, message, args) => {
   weather.find({
-    search: "Pontotoc, Texas",
-    degreetype: "F"
+    search: args[<3],
+    degreetype: args[2]
     },
     function (err, result) {
     console.log(JSON.stringify(result))
