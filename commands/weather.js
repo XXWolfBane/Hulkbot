@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
     degreetype: args[2]
     },
     function (err, result) {
-      message.channel.send(`The weather in your area is ${result}!`)
+      message.channel.send(`The weather in your area is ${JSON.stringify(result, null, 2)}!`)
    })
 }
 
