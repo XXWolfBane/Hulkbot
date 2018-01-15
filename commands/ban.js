@@ -1,8 +1,7 @@
-const discord = require('discord.js')
 const fs = require('fs')
 const config = require('../config.json')
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
 if (message.member.hasPermission("BAN_MEMBERS")) {
     let reason = args.slice(1).join(" ");
     let member = message.mentions.members.first();
