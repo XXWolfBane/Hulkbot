@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
   require('request')('http://api.adviceslip.com/advice', function(error, response, body) {
     if (!error && response.statusCode == 200) {
       message.channel.send(`**Advice:**\n\n ${JSON.parse(body).slip.advice}`)
