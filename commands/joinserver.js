@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
       .setAuthor(`Hulk Inviter ✍`, bot.user.avatarURL)
       .setThumbnail(bot.guilds.get(`356178662837452800`).iconURL)
       .setColor("ff3333")
-      .setDescription(`Yes! We have a help server!\n\n[Join here!](${invite} "Click to join Hulkbot base")`)
+      .setDescription(`Yes! We have a help server!\n\n[Join](${invite} \`${invite.expiresAt}\`)`)
       .setFooter(`Expires at ${invite.expiresAt}`)
     
   message.channel.send({embed});
