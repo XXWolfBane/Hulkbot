@@ -1,7 +1,7 @@
 const config = require('../config.json')
 const oid = process.env.oid
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
  
  if (message.author.id == oid) {
  if (!args) return message.channel.send(`:ok_hand: Okay, I will set my playing status back to normal!`)
