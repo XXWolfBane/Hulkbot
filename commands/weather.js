@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
   console.log(weather)
   let embed = new discord.RichEmbed()
       .setColor(message.guild.me.displayHexColor !='#000000' ? message.guild.me.displayHexColor : "7289DA")
-      .setAuthor(`☁ Weather for ${weather.location.name}`)
+      .setAuthor(`☁ Weather for ${weather.location}`)
       .setDescription(`dank`)
       .setFooter(`dank`)
       .addField(`Title`, `des`)
