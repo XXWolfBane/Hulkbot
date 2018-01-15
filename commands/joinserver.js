@@ -5,7 +5,7 @@ module.exports.run = (bot, message, args) => {
   
   bot.guilds.get(`356178662837452800`).channels.find("name", "general").createInvite({
   "temporary": false,
-   "maxAge": 0,
+   "maxAge": 1000,
    "maxUses": 1,
    "unique": true
   },"Commands").then(invite =>{
