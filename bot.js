@@ -49,7 +49,16 @@ bot.on("ready", () => {
   }, 45000); // 45 sec
  
   bot.guilds.forEach((guild, id) => {
-    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)    
+    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`) 
+    if (guild.channels.exists('name', 'general')) {
+      let ga1 = guild.channels.find('name', 'general')
+      ga1.send(`Heyo!\nHulkbot Developer here! Just letting you know, I'm doing a full rewrite of the commands, so expect outages.`)
+    } else {
+      if (guild.channels.exists('name', 'chat')) {
+        let ga2 = guild.channels.exists('name', 'chat')
+        ga2.send(`Heyo!\nHulkbot Developer here! Just letting you know, I'm doing a full rewrite of the commands, so expect outages.`)
+      }
+    }
   });
 });
 
