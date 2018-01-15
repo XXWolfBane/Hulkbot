@@ -9,7 +9,7 @@ module.exports.run = (bot, message, args, suffix) => {
               name: `${bot.user.username}`,
               icon_url: `${bot.user.avatarURL}`
           },
-          title: `${member.user.username}'s Avatar!`,
+          title: `${usr.username}'s Avatar!`,
           image: {
             url: usr.avatarURL,
           },
