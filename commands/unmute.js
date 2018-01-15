@@ -1,8 +1,8 @@
 
 const Discord = require('discord.js');
 
-
 module.exports.run = (bot, message, args) => {
+  if (message.member.hasPermission("MANAGE_MESSAGES")) {	
 	let muteRole = message.guild.roles.find("name", "Muted");
 	let member = message.mentions.members.first();
 
@@ -10,6 +10,9 @@ module.exports.run = (bot, message, args) => {
 		
 	member.removeRole(muteRole.id);
 	message.channel.send(`${member.user.username}, is now unmuted`).then(m => m.delete(2500))
+} else {
+	message.channel.send("Sorry, you don't have the required permissions!")
+}
 }
 
 module.exports.help = {
