@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args, suffix) => {
+module.exports.run = (bot, message, args, discord) => {
     //message.channel.send(`Avatar:\n${message.author.avatarURL}`)
     let usr = message.mentions.users.first() ? message.mentions.users.first() : message.author;
     if (usr){
