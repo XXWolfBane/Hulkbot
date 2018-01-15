@@ -15,7 +15,7 @@ Yes! We have a help server!
 
 [Join](${invite} "Expires in 5 minutes")
 `)
-    .setFooter(`**Online Members:** ${invite..presenceCount}/${invite..memberCount}`);
+    .setFooter(`**Online Members:** ${invite.presenceCount}/${invite.memberCount}`);
     
   message.channel.send({embed});
     
