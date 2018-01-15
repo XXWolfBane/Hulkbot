@@ -2,9 +2,9 @@ module.exports.run = (bot, message, args, suffix) => {
     //message.channel.send(`Avatar:\n${message.author.avatarURL}`)
     let usr;
     if (suffix == "") {
-      usr = msg.member;
+      usr = msg.user;
     } else {
-      usr = bot.memberSearch(suffix, message.channel.guild);
+      usr = bot.userSearch(suffix, message.channel.guild);
     }
     if (usr){
       message.channel.send({
