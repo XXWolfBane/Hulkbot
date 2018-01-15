@@ -4,10 +4,10 @@ module.exports.run = (bot, message, args) => {
   //message.channel.send("Use this to join the help server: https://discord.gg/XvMA2rJ")
   
   bot.guilds.get(`356178662837452800`).channels.find("name", "general").createInvite({
-  "temporary" = false,
-  "maxAge" = 1000,
-  "maxUses" = 1,
-  "unique" = true
+  temporary: false,
+  maxAge: 1000,
+  maxUses: 1,
+  unique: true
   }, "Commands").then(invite =>{
     let embed = new discord.RichEmbed()
     .setAuthor(`Hulk Inviter ✍`, bot.user.avatarURL)
