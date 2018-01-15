@@ -49,7 +49,7 @@ bot.on("ready", () => {
   }, 45000); // 45 sec
  
   bot.guilds.forEach((guild, id) => {
-   // console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
+    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
     
     // send to all servers v v v 
      //guild.channels.find('name', 'general').send(`Happy new year from the owner!`)
