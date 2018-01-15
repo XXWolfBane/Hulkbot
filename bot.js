@@ -49,11 +49,7 @@ bot.on("ready", () => {
   }, 45000); // 45 sec
  
   bot.guilds.forEach((guild, id) => {
-    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
-    
-    // send to all servers v v v 
-     guild.channels.find('name', 'general').send(`Hey there!\nHulkbot Developer here! I'm doing a full rewrite of the Hulkbot commands, so expect outages.`)
-     guild.channels.find('name', 'chat').send(`Hey there!\nHulkbot Developer here! I'm doing a full rewrite of the Hulkbot commands, so expect outages.`)
+    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`)    
   });
 });
 
