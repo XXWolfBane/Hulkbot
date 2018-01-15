@@ -32,7 +32,7 @@ bot.on("ready", () => {
   console.log("Bot is started. Get ready for some sweet commands!");
   console.log("Bot name: " + bot.user.username);
   console.log("Bot owner: " + config.owner);
-  console.log(config.owner, onfig.dev2, config.dev3);
+  console.log(config.owner, config.dev2, config.dev3);
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
   bot.user.setActivity(`Hulkbot load...`, {type: "LISTENING"}); 
   
