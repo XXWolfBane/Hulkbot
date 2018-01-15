@@ -1,16 +1,14 @@
 const weather = require('weather-js')
+let degreesym = "F";
 
 module.exports.run = (bot, message, args) => {
-  let location = args.slice(2).join("")
-  console.log(location)
-  
   weather.find({
-    search: location,
-    degreetype: "F"
+    search: `${args[0]}`,
+    degreetype: `${degreesym}`
     },
     function (err, result) {
-      console.log(result)
-      message.channel.send(`The weather in your area is ${result}!`)
+    console.log(JSON.stringify(result))
+      message.channel.send(`The weather in your area is ${JSON.stringify(result)}!`)
    })
 }
 
