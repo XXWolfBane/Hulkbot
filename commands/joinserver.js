@@ -17,7 +17,7 @@ module.exports.run = (bot, message, args) => {
     .setDescription(`Use this to join the help server: ${invite}`)
     .setURL(invite)
   
-  bot.channels.get(logchannel).send({embed});
+  message.channel.send({embed});
   });
 }
 
