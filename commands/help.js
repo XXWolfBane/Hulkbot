@@ -8,15 +8,15 @@ module.exports.run = (bot, message, args, suffix) => {
     {
       name: ":hammer_pick: Moderation:",
       value: `mute, unmute, kick, ban, auth, purge, perms, filteroff, and filteron.`,
-      value: `\`\`\`ini\nauth = "No Usage Provided!"\nban = "Mention | User ID"\nfilteron = "No Usage Provided!"\nfilteroff = "No Usage Provided!"\nkick = "Mention | User ID"\nmute = "Mention | User ID"\nunmute = "Mention | User ID\npurge = "Amount of Msgs"\`\`\``,
+      value: `\`\`\`ini\nauth = "Authorize Yourself!"\nban = "Need to ban someone?"\nfilteron = "Turns on the language filter!"\nfilteroff = "Turns off the language filter!"\nkick = "Need to kick someone?"\nmute = "Mute someone in chat!"\nunmute = "Unmute someone from chat!"\npurge = "Delete Messages from Chat!"\`\`\``,
     },
     {
       name: ":robot: Bot:",
-      value: `\`\`\`ini\njoinserver = "No Usage Provided!"\ninvite = "No Usage Provided!"\ninfo = "No Usage Provided!"\nping = "No Usage Provided!"\nuptime = "No Usage Provided!"\`\`\``,
+      value: `\`\`\`ini\njoinserver = "Join the Support Server!"\ninvite = "Want to invite the bot?"\ninfo = "Know more about the bot!"\nping = "Pong?"\nuptime = "See how long the bot has been alive!"\`\`\``,
     },
            {
       name: ":lollipop: Fun:",
-      value: `\`\`\`ini\navatar = "Blank for youself | Mention for others"\nbork = "Mention | User ID"\ncoinflip = "No Usage Provided!"\nsay = "message"\nmyid = "No Usage Provided!"\nserverid = "No Usage Provided!"\nyomomma = "No Usage Provided!"\n\`\`\``,
+      value: `\`\`\`ini\navatar = "Fetches an HD Image of a user!"\nbork = "Bork someone for fun!"\ncoinflip = "Heads or Tails!"\nsay = "Want me to say something?"\nmyid = "Need your own ID?"\nserverid = "Need the Server's ID?"\nyomomma = "YOMOMMA!"\n\`\`\``,
     },
     {
       name: "Need More Help?",
@@ -26,7 +26,7 @@ module.exports.run = (bot, message, args, suffix) => {
     if(suffix == "-o") {
       embed_fields.push({
         name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "No Usage Provided!"\nchangegame = "No Usage Provided!"\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "useless"\`\`\``,
         inline: false
       });
     } else {
