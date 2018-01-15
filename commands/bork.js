@@ -4,8 +4,9 @@ module.exports.run = (bot, message, args) => {
 	let member = message.mentions.members.first();
 	let embed = new discord.RichEmbed()
 	.setTitle(`BORK!`)
+	.addField(`https://orig00.deviantart.net/3bd3/f/2015/141/0/5/bork_by_chiibe-d8u6uv3.gif`)
 	.setDescription(`<@${member.id}> was borked by <@${message.author.id}>`)
-	.setThumbnail(`https://goo.gl/gFQRX3`)
+	.setThumbnail(bot.user.avatarURL)
 	.setColor(`RANDOM`)
 	message.channel.send({ embed });
 }
