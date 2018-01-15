@@ -91,7 +91,7 @@ bot.on("message", message => {
     baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
   } else { 
       if (cmd) {
-       cmd.run(bot, message, args);
+       cmd.run(bot, message, args, discord);
        console.log(`${message.author.username} used the ${message.content.split(" ")[0]} command.`)
        baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User** ${message.author.tag}\n**Message:**${message.content}\n **(This command was used in a DM)**`)
     }
