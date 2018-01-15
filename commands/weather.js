@@ -7,8 +7,16 @@ module.exports.run = (bot, message, args) => {
     degreetype: `${degreesym}`
     },
     function (err, result) {
-    console.log(JSON.stringify(result))
-      message.channel.send(`The weather in your area is ${JSON.stringify(result)}!`)
+      message.channel.send({
+      embed: {
+          color: 3447003,
+          author: {
+              name: `${bot.user.username}`,
+              icon_url: `${bot.user.avatarURL}`
+          },
+          title: `:cloud: **Weather for ${location}`,
+      },
+      })
    })
 }
 
