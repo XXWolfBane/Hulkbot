@@ -1,7 +1,6 @@
 const oid = process.env.oid
-const discord = require('discord.js')
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
   if (message.author.id == oid) {
   bot.user.setStatus(`invisible`)
     let embed = new discord.RichEmbed()
