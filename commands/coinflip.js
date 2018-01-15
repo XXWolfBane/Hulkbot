@@ -3,6 +3,7 @@ module.exports.run = (bot, message, args, discord) => {
   if (result) {
     let embed = new discord.RichEmbed()
     .setTitle(`${bot.user.displayName} Coinflip`)
+    .setThumbnail(bot.user.avatarURL)
     .setDescription(`Welp! The coin landed on heads! You win.`)
     .setColor(`GREEN`)
     .setImage(`https://media3.giphy.com/media/mA51FMHGo3BDi/giphy.gif`)
