@@ -1,6 +1,6 @@
-const Discord = require("discord.js");
 
-module.exports.run = (bot, message, args) => {
+
+module.exports.run = (bot, message, args, discord) => {
 	var gid = message.guild.id
 	if (message.member.roles.find('name', 'Authorized')){
 		let em = new Discord.RichEmbed()
@@ -26,21 +26,21 @@ module.exports.run = (bot, message, args) => {
 		}, "I didn't find this role so I made it!")
 		.then (role => {
 		if (message.guild.roles.find('name', 'Authorized').comparePositionTo(message.guild.me.highestRole) > 0) {
-			let em = new Discord.RichEmbed()
+			let em = new discord.RichEmbed()
 			.setTitle(`${message.author.username}#${message.author.discriminator}`)
 			.setDescription("Couldn't be authorized")
 			.addField("Reason:", "The 'Authorized' role is higher than my role!")
 			.setThumbnail(message.author.displayAvatarURL)
 			.setColor(`#FF0000`)
 			.setTimestamp()
-			.setURL("https://github.com/FreakingHulk-Gaming/JSHulkbot")
+			.setURL("https://github.com/FHGDev/JSHulkbot")
 			.setFooter('ERROR');
 
 			message.channel.send({embed: em});
 			return;
 			};
 		message.member.addRole(message.guild.roles.find('name', 'Authorized'), "User has been authorized with AuthBot!")
-		let em = new Discord.RichEmbed()
+		let em = new discord.RichEmbed()
 			.setTitle(`${message.author.username}#${message.author.discriminator}`)
 			.setDescription("You are now Authorized")
 			.setThumbnail(message.author.displayAvatarURL)
@@ -58,7 +58,7 @@ module.exports.run = (bot, message, args) => {
 		return;
 	};
 	if (message.guild.roles.find('name', 'Authorized').comparePositionTo(message.guild.me.highestRole) > 0) {
-		let em = new Discord.RichEmbed()
+		let em = new discord.RichEmbed()
 		.setTitle(`${message.author.username}#${message.author.discriminator}`)
 		.setDescription("Couldn't be authorized")
 		.addField("Reason:", "The 'Authorized' role is higher than my role!")
@@ -72,7 +72,7 @@ module.exports.run = (bot, message, args) => {
 		return;
 		}
 	message.member.addRole(message.guild.roles.find('name', 'Authorized'), "User has been authorized with AuthBot!")
-	let em = new Discord.RichEmbed()
+	let em = new discord.RichEmbed()
 		.setTitle(`${message.author.username}#${message.author.discriminator}`)
    	 	.setDescription("You are now Authorized")
 		.setThumbnail(message.author.displayAvatarURL)
