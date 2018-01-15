@@ -1,6 +1,6 @@
 let oid = process.env.oid
 
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
     var mes = args.join(' ')
     var guild = bot.guilds.find('name', 'Hulkbot Base (and more)')
     let owner = guild.members.find('id', oid)
