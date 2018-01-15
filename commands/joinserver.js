@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
     .setAuthor(`Hulk Inviter ✍`, bot.user.avatarURL)
     .setThumbnail(bot.guilds.get(`356178662837452800`).iconURL)
     .setColor("ff3333")
-    .setDescription(`Use this to join the help server: ${invite}`)
+    .setDescription(`Use this to join the help server: ${invite.url}`)
     .setURL(invite.url)
   
   message.channel.send({embed});
