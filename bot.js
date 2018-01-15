@@ -25,6 +25,7 @@ require('fs').readdir("./commands/", (err, files) => {
   if (err) return console.log(`Command loading failed!`);
   files.filter(f => f.split(".").pop() === "js").forEach((f, i) => {
     bot.commands.set(require(`./commands/${f}`).help.name, require(`./commands/${f}`));
+    console.log(`${i}: ${require(`./commands/${f}`).help.name}`)
   });
 });
 
@@ -37,11 +38,7 @@ bot.on("ready", () => {
   console.log("Bot Dev 3: " + config.dev3);
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
   console.log(`Hulkbot Version ${config.version} Loaded!`);
-  console.log(`Number of shards: ${bot.shardCount}`);
-  console.log(`Bot ID: ${bot.user.id}`);
   bot.user.setActivity(`Hulkbot load...`, {type: "WATCHING"}); 
-  console.log(`Updates: ${updates}`);
-  console.log(`Bot Create Date: ${bot.user.createdTimestamp}`)
  let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
   // Status Rotator
   gameval = 0;
@@ -55,7 +52,7 @@ bot.on("ready", () => {
   }, 45000); // 45 sec
  
   bot.guilds.forEach((guild, id) => {
-    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
+   // console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`);
     
     // send to all servers v v v 
      //guild.channels.find('name', 'general').send(`Happy new year from the owner!`)
