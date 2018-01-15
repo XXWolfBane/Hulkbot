@@ -25,7 +25,6 @@ require('fs').readdir("./commands/", (err, files) => {
   if (err) return console.log(`Command loading failed!`);
   files.filter(f => f.split(".").pop() === "js").forEach((f, i) => {
     bot.commands.set(require(`./commands/${f}`).help.name, require(`./commands/${f}`));
-    console.log(`${i}: ${require(`./commands/${f}`).help.name}`)
   });
 });
 
@@ -33,12 +32,10 @@ bot.on("ready", () => {
   console.log("Bot is started. Get ready for some sweet commands!");
   console.log("Bot name: " + bot.user.username);
   console.log("Bot owner: " + config.owner);
-  console.log("Bot Dev 1: " + config.owner);
-  console.log("Bot Dev 2: " + config.dev2);
-  console.log("Bot Dev 3: " + config.dev3);
+  console.log(config.owner, onfig.dev2, config.dev3);
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
-  console.log(`Hulkbot Version ${config.version} Loaded!`);
-  bot.user.setActivity(`Hulkbot load...`, {type: "WATCHING"}); 
+  bot.user.setActivity(`Hulkbot load...`, {type: "LISTENING"}); 
+  
  let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
   // Status Rotator
   gameval = 0;
