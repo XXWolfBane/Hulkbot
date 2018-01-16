@@ -5,7 +5,7 @@ const discord = require(`discord.js`);
 module.exports.run = (bot, message, args) => {
 	loc = message.content.substring(10)
 	if (!loc) {
-		m.channel.sendMessage("You need to supply a City!")
+		message.channel.sendMessage("You need to supply a City!")
 		return;
 	}
 	w.find({search: loc, degreeType: 'F'}, function(err, result) {
