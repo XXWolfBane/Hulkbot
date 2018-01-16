@@ -2,7 +2,7 @@ module.exports.run = (bot, message, args, discord) => {
   const result = Math.round(Math.random());
   if (result) {
     let embed = new discord.RichEmbed()
-    .setTitle(`${bot.user.displayName} Coinflip`)
+    .setTitle(`${bot.user.username} Coinflip`)
     .setThumbnail(bot.user.avatarURL)
     .setDescription(`Welp! The coin landed on heads! You win.`)
     .setColor(`GREEN`)
@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args, discord) => {
     message.channel.send({embed})
   } else {
     let em = new discord.RichEmbed()
-    .setTitle(`${bot.user.displayName} Coinflip`)
+    .setTitle(`${bot.user.username} Coinflip`)
     .setDescription(`Welp! The coin landed on tails. You lose.`)
     .setColor(`RED`)
     .setImage(`https://media3.giphy.com/media/mA51FMHGo3BDi/giphy.gif`)
