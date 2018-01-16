@@ -8,6 +8,7 @@ module.exports.run = (bot, message, args) => {
 		message.channel.sendMessage("You need to supply a City!")
 		return;
 	}
+	try {
 	w.find({search: loc, degreeType: 'F'}, function(err, result) {
 	if (err) {
 		message.channel.sendMessage(err)
@@ -26,6 +27,9 @@ module.exports.run = (bot, message, args) => {
          `);
    	message.channel.send({ embed });
   });
+	} catch(err) {
+	msg.channel.createMessage("Idk why this is broken tbh 😭");
+	}
 };
 
 module.exports.help = {
