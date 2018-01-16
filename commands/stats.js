@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
   let embed = new discord.RichEmbed()
   
   
