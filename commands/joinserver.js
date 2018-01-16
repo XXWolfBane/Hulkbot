@@ -2,8 +2,8 @@ const discord = require('discord.js');
 
 module.exports.run = (bot, message, args) => {
   //message.channel.send("Use this to join the help server: https://discord.gg/XvMA2rJ")
-  
-  bot.guilds.get(`356178662837452800`).channels.find("name", "general").createInvite({
+  let guild = bot.guilds.get(`356178662837452800`)
+  guild.channels.find("name", "general").createInvite({
    temporary: false, maxAge: 400, maxUses: 1, unique: true})
    .then(invite =>{
       let embed = new discord.RichEmbed()
@@ -15,7 +15,7 @@ Yes! We have a help server!
 
 [Join](${invite} "Expires in 5 minutes")
 `)
-    .setFooter(`**Online Members:** ${invite.presenceCount}/${invite.memberCount}`);
+    .setFooter(`Members: ${guild.memberCount}`);
     
   message.channel.send({embed});
     
