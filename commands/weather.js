@@ -18,11 +18,11 @@ module.exports.run = (bot, message, args) => {
       .setColor(message.guild.me.displayHexColor !='#000000' ? message.guild.me.displayHexColor : "7289DA")
       .setAuthor(`☁ Weather for ${area.location.name}`)
       .setDescription(`
-         **Temperature:** ${area.current.temperature}°F
-         **Feels Like:** ${area.current.feelslike}°F
-         **Clouds:** ${area.current.skytext}
-         **Humidity:** ${area.current.humidity}%
-         **Wind Speed:** ${area.current.winddisplay}
+**Temperature:** ${area.current.temperature}°F
+**Feels Like:** ${area.current.feelslike}°F
+**Clouds:** ${area.current.skytext}
+**Humidity:** ${area.current.humidity}%
+**Wind Speed:** ${area.current.winddisplay}
          `);
    	message.channel.send({ embed });
   });
