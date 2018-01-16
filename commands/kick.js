@@ -1,11 +1,16 @@
 const config = require('../config.json')
 const prefix = config.prefix
-module.exports.run = (bot, message, args) => {
+module.exports.run = (bot, message, args, discord) => {
+ let member = message.mentions.members.first();
  let channel = message.channel
+ let embed = new discord.RichEmbed()
+ let reason = args[2]
+ .setTitle(`${bot.user.username} Kick System`)
+ .setDescription(`${member.displayName} was successfully kicked.`)
  
   if (message.member.hasPermission("KICK_MEMBERS")) {
-    let member = message.mentions.members.first();
-    member.kick().then(channel.send(`Successfully kicked ${member.displayName}! :point_right:`))
+   
+    member.kick(reason).then(channel.send({ embed }))
   } else {
     message.channel.send("You don't have permission to kick people. If there's someone who needs to be kicked, contact an administrator or a moderator.")
   } 
