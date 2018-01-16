@@ -2,7 +2,7 @@ module.exports.run = (bot, message, args, discord) => {
   let embed = new discord.RichEmbed()
   .setTitle('Hulkbot Status')
   .setColor(`RANDOM`)
-  .setDescription(`Bot Status: ${bot.user.status}
+  .setDescription(`Bot Status: Online
   Bot Servercount: ${bot.guilds.array().length}
   Bot Usercount: ${bot.users.array().length}
   Bot Channelcount: ${bot.channels.array().length}
