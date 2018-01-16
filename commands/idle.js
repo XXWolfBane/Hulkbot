@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args, discord) => {
     .setTitle("Status Changer")
     .setDescription("Successfully set the bot status to Idle!")
     .setThumbnail(bot.user.avatarURL)
-    .setColor("YELLOW")
+    .setColor(255,255,0)
     .setFooter(`This command was at ${new Date()}`)
     message.channel.send({ embed })
   } else {
