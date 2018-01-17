@@ -4,8 +4,8 @@ const prefix = config.prefix
 module.exports.run = (bot, message, args, discord) => {
  let member = message.mentions.members.first();
  let channel = message.channel
- let embed = new discord.RichEmbed()
  let reason = args[2]
+ let embed = new discord.RichEmbed()
  .setTitle(`${bot.user.username} Kick System`)
  .setDescription(`${member.displayName} was successfully kicked.`)
  
