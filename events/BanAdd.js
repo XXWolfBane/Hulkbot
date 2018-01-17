@@ -15,5 +15,7 @@ module.exports = (bot, guild, member) => {
   .setColor("RED")
   .setFooter(`${member.username} was banned at ${new Date}`)
   log.send({ embed })
+  cnl.send({ embed })
+  log.send({ embed })
   guild.channel.stopTyping()
 }
