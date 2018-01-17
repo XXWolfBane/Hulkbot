@@ -1,17 +1,9 @@
 const config = require('../config.json')
-
+const file = require('../bot.js')
 module.exports.run = (bot, message, args) => {
-  const reboot = new Promise(resolve => { // reboot; kill bot and start it again
-  bot.kill('SIGTERM');
-  bot = spawn('node', ['bot'], {
-    cwd: path.join(__dirname, 'bot'),
-    env: process.env
-  });
-  resolve();
-});
   if (message.author.id == config.ownerid) {
     message.channel.send(":wave: Hulkbot will now restart.")
-    reboot()
+    process.kill('SIGTERM')
   } else {
     message.channel.send("Nope!")
   }
