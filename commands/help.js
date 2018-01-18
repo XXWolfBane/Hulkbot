@@ -1,4 +1,6 @@
 module.exports.run = (bot, message, args, suffix, discord) => {
+	let au = message.author.id
+	let oid = process.env.oid
   let fields = [
     {
       name: ":gear: Prefix:",
@@ -23,14 +25,14 @@ module.exports.run = (bot, message, args, suffix, discord) => {
       value: `[Click Here!](https://bot.hulkbot.ml/commands)`,
     }
   ];
-    if(suffix == "-o") {
+    if(au == oid) {
       embed_fields.push({
         name: ":medal: Owner:",
 	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "useless"\`\`\``,
         inline: false
       });
     } else {
-      null;
+      return;
     };
   message.channel.send({
     embed: {
