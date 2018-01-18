@@ -12,7 +12,7 @@ My Discord Bot.
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
 [![Homepage](https://img.shields.io/badge/bot-homepage-F96854.svg?style=flat-square)](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
 
-## Todo
+# Todo
 
 - [x] Clean up the code a bit.
     - [ ] Clean up the code some more.
