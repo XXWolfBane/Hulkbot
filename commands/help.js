@@ -26,7 +26,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     }
   ];
     if(au == oid) {
-      embed_fields.push({
+      fields.push({
         name: ":medal: Owner:",
 	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "useless"\`\`\``,
         inline: false
