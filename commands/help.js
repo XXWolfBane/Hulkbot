@@ -28,11 +28,15 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     if(au == oid) {
       fields.push({
         name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "useless"\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\`\`\``,
         inline: false
       });
     } else {
-      return;
+      fields.pop({
+      	name: ":medal: Owner:",
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\`\`\``,
+	inline: false
+      });
     };
   message.channel.send({
     embed: {
