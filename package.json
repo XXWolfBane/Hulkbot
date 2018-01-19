@@ -9,7 +9,7 @@
      "start": "node bot.js"
 },
 "dependencies": {
-          "knock-knock-jokes": "^1.7.0"
+          "knock-knock-jokes": "^1.7.0",
           "weather-js": "^2.0.0",
           "cleverbot-node": "^0.3.11",
           "discord.js": "^11.3.0",
