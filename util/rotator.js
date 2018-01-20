@@ -1,4 +1,4 @@
-const r = "true"
+var r = "true"
 
 module.exports = (bot) => {
     bot.on("message", message => {
