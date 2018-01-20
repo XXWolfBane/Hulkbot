@@ -3,16 +3,16 @@ var r = "true"
 module.exports = (bot) => {
     bot.on("message", message => {
         if (message.author.id == process.env.oid) {
-             if (message.content == "h!toggle off") {
+            if (message.content == "h!toggle off") {
                 r = "false"
                 message.channel.send(`Okay, I turned my status rotator off.`)
             }
             if (message.content == "h!toggle on") {
                 r = "true"
-                message.channel.send(`Okay, I turned my status rotator back on!`)
+                message.channel.send(`Okay, I turned my status rotator back on.`)
             }
         } else {
-            message.channel.send("Nope!")
+            message.channel.send(`Nope!`)
         }
     })
     if (r == "true") {
