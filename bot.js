@@ -34,20 +34,9 @@ bot.on("ready", () => {
   console.log("Bot owner: " + config.owner);
   console.log(config.owner, config.dev2, config.dev3);
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
-  bot.user.setActivity(`Hulkbot load...`, {type: "LISTENING"}); 
-  
- let status = ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry.", `${bot.guilds.array().length} servers`];
-  // Status Rotator
-  gameval = 0;
-  setInterval(() => {
-    if (gameval == status.length) {
-      gameval = 0;
-    }
-    var game = status[gameval];
-    bot.user.setActivity(`for h!help | ${game}`, {type: "WATCHING"});
-    gameval++;
-  }, 45000); // 45 sec
- 
+  bot.user.setActivity(`Hulkbot load...`, {type: "LISTENING"});
+  require('./util/rotator.js')(bot)
+
   bot.guilds.forEach((guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`) 
   });
