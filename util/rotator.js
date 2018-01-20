@@ -12,7 +12,7 @@ module.exports = (bot) => {
                 message.channel.send(`Okay, I turned my status rotator back on.`)
             }
         } else {
-            message.channel.send(`Nope!`)
+            return;
         }
     })
     if (r == "true") {
