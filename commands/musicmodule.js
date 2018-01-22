@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args) => {
   var voiceChannelName = "Hulk's Private Music Channel";
   var aliasesFile = "";
   var botToken = process.env.botToken;
-m.run(serverName, textChannelName, voiceChannelName, aliasesFile, botToken, ytapikey);
+m.run(serverName, textChannelName, voiceChannelName, aliasesFile, botToken);
 m.setYoutubeKey(process.env.yt)
 }
 
