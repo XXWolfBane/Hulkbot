@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     },
     {
       name: ":robot: Bot:",
-      value: `\`\`\`ini\njoinserver = "Join the Support Server!"\ninvite = "Want to invite the bot?"\ninfo = "Know more about the bot!"\nping = "Pong?"\nuptime = "See how long the bot has been alive!"\`\`\``,
+      value: `\`\`\`ini\n@Hulkbot = "Get some more of that derp-awesome info!"\ninfo = "Get some basic info about the bot."\njoinserver = "Join the Support Server!"\ninvite = "Want to invite the bot?"\ninfo = "Know more about the bot!"\nping = "Pong?"\nuptime = "See how long the bot has been alive!"\nlistservers = "See the number of the bot users, channels, and guilds."\`\`\``,
     },
            {
       name: ":lollipop: Fun:",
@@ -25,16 +25,16 @@ module.exports.run = (bot, message, args, suffix, discord) => {
       value: `[Click Here!](https://bot.hulkbot.ml/commands)`,
     }
   ];
-    if(au == oid) {
+    if (au == oid) {
       fields.push({
         name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\`\`\``,
         inline: false
       });
     } else {
       fields.pop({
       	name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\`\`\``,
 	inline: false
       });
     };
