@@ -9,7 +9,7 @@ const bot = new discord.Client()
 const prefix = process.env.prefix
 const {baselogger} = require('./logger.js')
 const result = Math.round(Math.random())
-const updates = ["Set the default filter to off."];
+const updates = ["MOAR EMBEDs, New Commands, and 25 Server Celebration!"];
 var filteron = "false";
 var cleverbot = require('cleverbot.io')
 var cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
@@ -96,7 +96,7 @@ bot.on("message", (message) => {
     if (message.member.hasPermission("MANAGE_GUILD")) {
       filteron = "false";
       message.channel.send("Okay, I turned my filters off!");
-      console.log(message.author.username + " set the filters to = " + filteron);
+      console.log(`${message.author.tag} turned the filters off.`);
     } else {
       return message.channel.send("Sorry, you don't have the required permissions!");
     }
@@ -106,7 +106,7 @@ bot.on("message", (message) => {
     if (message.member.hasPermission("MANAGE_GUILD")) {
       filteron = "true";
       message.channel.send("Okay, I turned my filters back on!");
-      console.log(message.author.username + " set the filters to " + filteron);
+      console.log(`${message.author.tag} turned the filters on.`);
     } else {
       return message.channel.send("Sorry, but you don't have the required permissions.");
     }
