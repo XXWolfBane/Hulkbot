@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args, discord) => {
 google.resultsPerPage = 25
 var nextCounter = 0
 
-google(args[0], function (err, res) => {
+google(args[0], function (err, res) {
   if (err) console.error(err)
 
   for (var i = 0; i < res.links.length; ++i) {
