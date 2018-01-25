@@ -14,7 +14,11 @@ google(args[0], function (err, res) {
     .setDescription(link.title + "-" + link.href)
     .setThumbnail(bot.avatarURL)
     .setColor('RANDOM')
-    message.channel.send({ e })
+    bot.user.startTyping()
+    setTimeout(() => {
+      message.channel.send({ e })
+      bot.user.stopTyping()
+    }, 1000)
   }
 
   if (nextCounter < 4) {
