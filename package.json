@@ -9,6 +9,7 @@
      "start": "node bot.js"
 },
 "dependencies": {
+          "pouchdb": "6.4.2",
           "google": "^2.1.0",
           "discord-music-bot": "^2.3.0",
           "random_fml": "^1.1.0",
