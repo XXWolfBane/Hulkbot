@@ -11,3 +11,5 @@ app.get('/', (req, res) => {
 app.listen(50451, () => {
     console.info("Running on Port 50451.")
 });
+
+app.use('/api/discord', require('./api/discord'))
