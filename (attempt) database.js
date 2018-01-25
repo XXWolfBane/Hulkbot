@@ -1,3 +1,6 @@
-const pdb = require("pouchdb")
-const db = new pdb('Servers')
-
+const config = {
+  prefix: "h!",
+  filter: true,
+  guildname: false,
+  authorized: false
+}
