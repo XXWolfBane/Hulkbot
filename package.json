@@ -9,6 +9,7 @@
      "start": "node bot.js"
 },
 "dependencies": {
+          "google": "^2.1.0",
           "discord-music-bot": "^2.3.0",
           "random_fml": "^1.1.0",
           "knock-knock-jokes": "^1.7.0",
