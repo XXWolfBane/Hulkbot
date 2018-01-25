@@ -12,7 +12,7 @@ google(args[0], function (err, res) {
     let e = new discord.RichEmbed()
     .setTitle("Hulkbot Google")
     .setDescription(link.title + "-" + link.href)
-    .addField(link.description + `\n`)
+    .addField("Description - " + link.description)
     .setThumbnail(bot.avatarURL)
     .setColor('RANDOM')
     message.channel.send({ e })
