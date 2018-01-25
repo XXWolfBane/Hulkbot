@@ -1,18 +1,19 @@
 /** jshint -W038z8  */
 
 // Discord init 
-const pak = require('./package.json')
-const discord = require('discord.js')
-const config = require('./config.json')
-const profanities = require("./profanities.json")
-const bot = new discord.Client()
-const prefix = process.env.prefix
-const {baselogger} = require('./logger.js')
-const result = Math.round(Math.random())
-const updates = ["MOAR EMBEDs, New Commands, and 25 Server Celebration!"];
-var filteron = "false";
-var cleverbot = require('cleverbot.io')
-var cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
+const configdb = require('./(attempt) database.js'),
+pak = require('./package.json'),
+discord = require('discord.js'),
+config = require('./config.json'),
+profanities = require("./profanities.json"),
+bot = new discord.Client(),
+prefix = process.env.prefix,
+{baselogger} = require('./logger.js'),
+result = Math.round(Math.random()),
+updates = ["MOAR EMBEDs, new Commands, and 25 Server Celebration!"],
+filteron = "false",
+cleverbot = require('cleverbot.io'),
+cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 // End of init
 
 bot.invite = "https://discord.gg/qEFNkxB"
@@ -132,12 +133,12 @@ bot.on("message", (message) => {
  });
       
 bot.on("guildCreate", (guild) => {
-  require("./(attempt) database.js")
+  require("./(attempt) database.js")(guild, bot, discord)
   baselogger(bot, `**Guild Join**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
 bot.on("guildDelete", (guild) => {
-  require("./(attempt) database.js")
+  require("./(attempt) database.js")(guild, bot, discord)
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
