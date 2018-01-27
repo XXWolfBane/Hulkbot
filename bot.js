@@ -35,7 +35,7 @@ bot.on("ready", () => {
   console.log("Bot owner: " + config.owner);
   console.log(config.owner, config.dev2, config.dev3);
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
-  bot.user.setActivity(`Hulkbot loading...`, {type: "Streaming", url: "https://bot.hulkbot.ml/home"});
+  bot.user.setActivity(`h!help | ${bot.guilds.array().length} servers`, {type: "STREAMING", url: "https://bot.hulkbot.ml/home"});
 
   bot.guilds.forEach((guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`) 
