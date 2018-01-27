@@ -3,10 +3,6 @@ module.exports = (guild, bot, discord) => {
   
   const guildsettings = new discord.Collection()
   
-  bot.on('guildCreate', () => {
-    guildsettings.set(con)
-  })
-  
   np.init().then(() => {
     const con = [
     np.setItem('guild name', guild.name),
@@ -16,6 +12,12 @@ module.exports = (guild, bot, discord) => {
     np.setItem('log', guild.channels.find('name', 'log')),
     np.setItem('modrole', guild.roles.find('name', 'Admin')),
     np.setItem('welcomechannel', guild.channels.find('name', "welcome")),
+      bot.on('guildCreate', (err) => {
+    guildsettings.set(con)
+    if (err) console.error(err)
+  })
       ]
   });
 };
+
+
