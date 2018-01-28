@@ -35,7 +35,7 @@ bot.on("ready", () => {
   console.log("Bot owner: " + config.owner);
   console.log(config.owner, config.dev2, config.dev3);
   console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
-  bot.user.setActivity(`h!help | ${bot.guilds.array().length} servers`, {type: "STREAMING"});
+  bot.user.setActivity(`for h!help | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
 
   bot.guilds.forEach((guild, id) => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`) 
