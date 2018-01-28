@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args, discord) => {
  if (!args) return message.channel.send(`:ok_hand: Okay, I will set my activity back to normal!`)
  var game = args.join(' ')
  bot.user.setActivity(`${game}`, {type: "PLAYING"})
- message.channel.send(`:ok_hand: Okay, I will set my activity to ${game}!`)
+ message.channel.send(`:ok_hand: Okay, I will set my activity to '${game}'!`)
 } else {
   message.channel.send("Nope!")
 } 
