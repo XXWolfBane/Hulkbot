@@ -6,8 +6,8 @@
 
 #  Other Contributors: [RHGDEV](https://github.com/RHGDEV "RHGDEV"), and last but not least, [NovalFuzzy](https://github.com/NovalFuzzy), for the derp-awesome website.
 
-# [Website:](https://bot.hulkbot.ml/home "Used for showing off Noval's programming skills. :P")
-# [New Website:](https://hulkbot.tk "Used for the admin webpanel.")
+# [Website](https://bot.hulkbot.ml/home "Used for showing off Noval's programming skills. :P")
+# [New Website](https://hulkbot.tk "Used for the admin webpanel.")
 
 #### Hulkbot (C) Credit to [FHGDev](https://github.com/FHGDev), [RHGDEV](https://github.com/RHGDEV), and [NovalFuzzy](https://github.com/NovalFuzzy) for this project. All names, files, and code elements are copyrighted by the FHG Bot Development Organization. 
 
