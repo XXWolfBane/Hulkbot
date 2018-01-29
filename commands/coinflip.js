@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args, discord) => {
     .setColor(`GREEN`)
     .setImage(`https://media3.giphy.com/media/mA51FMHGo3BDi/giphy.gif`)
     .setFooter(new Date())
-    message.channel.send({embed})
+    message.channel.send({ embed })
   } else {
     let em = new discord.RichEmbed()
     .setTitle(`${bot.user.username} Coinflip`)
@@ -16,7 +16,7 @@ module.exports.run = (bot, message, args, discord) => {
     .setColor(`RED`)
     .setImage(`https://media3.giphy.com/media/mA51FMHGo3BDi/giphy.gif`)
     .setFooter(new Date())
-    message.channel.send({em})
+    message.channel.send({ em })
   }
 }
 
