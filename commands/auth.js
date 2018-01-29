@@ -3,7 +3,7 @@
 module.exports.run = (bot, message, args, discord) => {
 	var gid = message.guild.id
 	if (message.member.roles.find('name', 'Authorized')){
-		let em = new Discord.RichEmbed()
+		let em = new discord.RichEmbed()
 		.setTitle(`${message.author.username}#${message.author.discriminator}`)
 		.setDescription("Couldn't be authorized")
 		.addField("Reason:", "The user is already authorized!")
