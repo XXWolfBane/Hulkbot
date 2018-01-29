@@ -6,7 +6,7 @@
 
 #  Other Contributors: <a href=https://github.com/RHGDEV target=_blank>RHGDEV</a>and <a href=https://github.com/NovalFuzzy target=_blank>NovalFuzzy</a>, for the derp-awesome website.
 
-# <a href=https://bot.hulkbot.ml/home target=_blank>Website</a> and <a href=hulkbot.tk target=_blank>New Website</a> (for the admin panel).
+# <a href=https://bot.hulkbot.ml/home target=_blank>Website</a> and <a href=http://hulkbot.tk target=_blank>New Website</a> (for the admin panel).
 
 ###### Hulkbot (TM) Credit to [FHGDev](https://github.com/FHGDev), [RHGDEV](https://github.com/RHGDEV), and [NovalFuzzy](https://github.com/NovalFuzzy) for this project. All names, files, and code elements are copyrighted by the FHG Bot Development Organization. 
 
