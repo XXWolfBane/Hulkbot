@@ -1,5 +1,3 @@
-
-
 module.exports.run = (bot, message, args) => {
   require('request')(`https://discordbots.org/api/bots/${bot.id}/stats`, function(err, response, body) {
     if (!err && response.statusCode == 200) {
@@ -10,6 +8,6 @@ module.exports.run = (bot, message, args) => {
   })
 }
 
-module.exports.run = () => {
+module.exports.help = {
     name: "viewstats"
 }
