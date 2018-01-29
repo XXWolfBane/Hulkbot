@@ -8,8 +8,8 @@ module.exports.run = (bot, message, args, discord) => {
     .addField(`[Invite](https://discord.gg/qEFNkxB "Click to go to the Hulkbot Base!")`)
     .setAuthor(`${bot.user.avatarURL} ${bot.user.displayName}`)
     .setColor(`BLUE`)
-    .setFooter(new Date())
-    message.channel.send({ embed }).then(m => m.delete(5500))
+    .setFooter(new Date().getTime().toString())
+    message.channel.send({ em }).then(m => m.delete(5500))
   } else {
     message.channel.send("Sorry, incorrect code.")
   }
