@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args) => {
- message.delete()
+ message.delete(1000)
  message.channel.send(args.join(' '))
 }
 
