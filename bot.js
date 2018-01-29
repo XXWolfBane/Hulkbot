@@ -11,8 +11,8 @@ bot = new discord.Client(),
 prefix = process.env.prefix,
 {baselogger} = require('./logger.js'),
 result = Math.round(Math.random()),
-updates = ["MOAR EMBEDs, new Commands, and 25 Server Celebration!"],
-filteron = "false",
+updates = ["MOAR EMBEDs, new Commands, and 25 Server Celebration!"]
+var filteron = "false",
 cleverbot = require('cleverbot.io'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 // End of init
