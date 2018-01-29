@@ -11,6 +11,7 @@ My Discord Bot.
 [![GitHub borks](https://img.shields.io/github/forks/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/network)
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
 [![Homepage](https://img.shields.io/badge/bot-homepage-F96854.svg?style=flat-square)](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
+[![Discord Bots](https://discordbots.org/api/widget/294194506113220608.svg)](https://discordbots.org/bot/294194506113220608)
 
 # Todo
 
