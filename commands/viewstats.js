@@ -4,6 +4,7 @@ module.exports.run = (bot, message, args) => {
         message.channel.send(`DiscordBots.org Stats for Hulkbot: Server Count is: ${JSON.parse(body.server_count)}`)
     } else if (err) {
         console.error(err)
+        message.channel.send(`Rip I can't find anything...`)
     }
   })
 }
