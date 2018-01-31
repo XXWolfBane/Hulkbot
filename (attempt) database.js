@@ -12,12 +12,15 @@ module.exports = (guild, bot, discord) => {
     np.setItem('log', guild.channels.find('name', 'log')),
     np.setItem('modrole', guild.roles.find('name', 'Admin')),
     np.setItem('welcomechannel', guild.channels.find('name', "welcome")),
-      bot.on('guildCreate', (err) => {
+      ]
+    bot.on('guildCreate', (err) => {
     guildsettings.set(con)
     if (err) console.error(err)
+    exports = guildsettings, con
   })
-      ]
   });
 };
+
+
 
 
