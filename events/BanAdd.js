@@ -7,14 +7,17 @@ module.exports = (bot, guild, member) => {
   let log = guild.channels.find('name', 'guild-maintenance')
   let logs = ["logs", "audit", "log", "server-maintenance"]
   let cnl = guild.channels.find('name', logs)
-  guild.channel.startTyping()
   let embed = new discord.RichEmbed()
   .setTitle("Log")
   .setDescription(`${member.username} was banned from ${guild.name} for the reason ${reason}!`)
   .setThumbnail(member.avatarURL)
   .setColor("RED")
   .setFooter(`${member.username} was banned at ${new Date}`)
-  log.send({ embed })
-  cnl.send({ embed }) 
-  guild.channel.stopTyping()
+  if (!log) {
+    cnl.send({ embed })
+  } else {
+    if (!cnl) {
+        log.send({ embed })
+    }
+  }
 }
