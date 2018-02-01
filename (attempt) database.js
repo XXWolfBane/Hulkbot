@@ -16,7 +16,7 @@ module.exports = (guild, bot, discord) => {
     bot.on('guildCreate', (err) => {
     guildsettings.set(con)
     if (err) console.error(err)
-    exports = guildsettings, con
+    exports = guildsettings, con, np
   })
   });
 };
