@@ -9,5 +9,6 @@ module.exports = (bot, member) => {
             console.log(`${member.tag} is banned from ${member.guild.name}`)
           } else {
            channel.send(`:dizzy_face: ${member.displayName} just left ${member.guild.name}.`)
+          }
         })
 }
