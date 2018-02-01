@@ -9,7 +9,7 @@ module.exports = (bot, message) => {
   cb.create(function (err, session) {
     cb.ask(message.content, function (err, response) {
       message.channel.send(response)
-      console.log(`${message.author.username} said ${message.content}, and Hulkbot responded with ${response}!`)
+      console.log(`${message.author.username}(${message.author.id}) said ${message.content}, and Hulkbot responded with ${response}!`)
       if (err) {
         console.error
       }
