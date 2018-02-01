@@ -4,7 +4,8 @@ module.exports = (bot, member) => {
    const channel = member.guild.channels.find('name', 'welcome')
    if (!channel) return;
    let c = require('././(attempt) database.js')
-   let r = c
+   let r = c.guildSettings.con
+   let wm = c.np.getItem("welcome")
    
-   channel.send(`Welcome to ${member.guild.name}, <@${member.id}>! Enjoy your stay!`)
+   channel.send(wm)
 }
