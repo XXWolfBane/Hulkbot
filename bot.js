@@ -32,14 +32,17 @@ require('fs').readdir("./commands/", (err, files) => {
 
 bot.on("ready", () => {
   console.log("Bot is started. Get ready for some sweet commands!");
-  console.log("Bot name: " + bot.user.username);
-  console.log("Bot owner: " + config.owner);
-  console.log(config.owner, config.dev2, config.dev3);
-  console.log(`~ ${bot.guilds.array().length} Guilds ${bot.channels.array().length} Channels ${bot.users.array().length} Users\n`);
-  bot.user.setActivity(`for h!help | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
+  console.log("Bot name: " + bot.user.username + `\n`);
+  console.log("Bot owner: " + config.owner + `\n`);
+  console.log(`Bot Developers: ${config.owner}, ${config.dev2}, and ${config.dev3}\n`);
+  console.log(`~ ${bot.guilds.array().length} Servers, ${bot.channels.array().length} Channels, and ${bot.users.array().length} Users\n`);
+  bot.user.setActivity("Loading Hulkbot...", {type: "STREAMING", url: "https://twitch.tv/freakinghulk"})
+  setInterval(() => {
+    bot.user.setActivity(`for h!help | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
+  }, 20000)
 
   bot.guilds.forEach((guild, id) => {
-    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}`) 
+    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`) 
   });
 });
 
@@ -121,7 +124,7 @@ bot.on("message", (message) => {
   if (message.content.toLowerCase().includes("i love you hulkbot")) {
     message.channel.send("ERMAHGERD");
   }
-  if (message.content.startsWith("<@294194506113220608>")) {
+  if (message.content.includes(bot.id)) {
       let embed = new discord.RichEmbed()
       .setTitle("Hulkbot for Beginners")
       .setDescription("YUP! It's me, Hulkbot! To see more info on me, use the info command. (h!info)")
@@ -129,7 +132,7 @@ bot.on("message", (message) => {
       .setThumbnail(bot.user.avatarURL)
    message.channel.send({ embed })
   }
- 
+  
  });
       
 bot.on("guildCreate", (guild) => {
