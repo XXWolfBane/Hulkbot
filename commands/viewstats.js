@@ -18,6 +18,7 @@ module.exports.run = (bot, message, args, discord) => {
           .setColor("RANDOM")
           .setThumbnail(bot.user.avatarURL)
           .setImage(`https://i.imgur.com/aId29cQ.png`)
+          message.channel.send({ em })
       })
     } 
   } 
