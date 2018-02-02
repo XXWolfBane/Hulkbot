@@ -31,12 +31,14 @@ require('fs').readdir("./commands/", (err, files) => {
 });
 
 bot.on("ready", () => {
+  require('./util/poststats.js')
   console.log("Bot is started. Get ready for some sweet commands!");
   console.log("Bot name: " + bot.user.username + `\n`);
   console.log("Bot owner: " + config.owner + `\n`);
   console.log(`Bot Developers: ${config.owner}, ${config.dev2}, and ${config.dev3}\n`);
   console.log(`~ ${bot.guilds.array().length} Servers, ${bot.channels.array().length} Channels, and ${bot.users.array().length} Users\n`);
   bot.user.setActivity("Loading Hulkbot...", {type: "STREAMING", url: "https://twitch.tv/freakinghulk"})
+  
   setInterval(() => {
     bot.user.setActivity(`for h!help | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
   }, 20000)
