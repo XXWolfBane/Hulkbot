@@ -53,7 +53,7 @@ bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot
  
 bot.on("message", message => {
   if (message.channel.type == "dm") {
-    require('./events/cleverbot.js')(bot, message, bot.commands)
+    require('./events/cleverbot.js')(bot, message)
   }
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
@@ -129,7 +129,7 @@ bot.on("message", (message) => {
       .setTitle("Hulkbot for Beginners")
       .setDescription("YUP! It's me, Hulkbot! To see more info on me, use the info command. (h!info)")
       .setColor("PURPLE")
-      .setThumbnail(bot.user.avatarURL)
+      .setThumbnail(bot.user.avatarURL) 
    message.channel.send({ embed })
   }
   
