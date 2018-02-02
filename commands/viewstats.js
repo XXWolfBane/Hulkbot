@@ -6,24 +6,27 @@ module.exports.run = (bot, message, args, discord) => {
     id: bot.id
   })
   
-  let arg = args.slice(0)
-  if (message.content == "h!dblsearch user") {
-    if (arg[0].length !== 18) return;
-      if (!arg[0] == NaN) {
-        c.getUser(arg[0], (error, res) => {
-          let em = new discord.RichEmbed()
-          .setTitle(`Discord Bot List User Search`)
-          .setDescription(`This is what I got: ${res}`)
-          .setAuthor(`Hulkbot`)
-          .setColor("RANDOM")
-          .setThumbnail(bot.user.avatarURL)
-          .setImage(`https://i.imgur.com/aId29cQ.png`)
-          message.channel.send({ em })
-      })
-    } 
-  } 
+  setInterval(() => {
+    c.postStats(bot.guilds.array().length, (err) => {
+      if (err) console.error(new RangeError([`Failed to Post Stats to https://discordbots.org. Error Message: ${err}`]))
+    })
+  })
+  let v = c.getVotes((err, res) => console.log(res))
+  let s = c.getBot(bot.id, (err, res) => console.log(res))
+  let votes = v.res
+  let stats = s.res
+  
+  let em = new discord.RichEmbed()
+  .setTitle(`Discord Bot List Stats`)
+  .setDescription(`Discord Bot List Hulkbot Stats:`)
+  .addField(`Bot Upvotes: ${votes}`)
+  .addField(`Bot Name: ${stats}`)
+  .addField(`Bot Status: ${bot.status}`)
+  .setThumbnail(bot.user.avatarURL)
+  .setAuthor(bot.user.username)
+  .setImage('https://i.imgur.com/aId29cQ.png')
 }
 
 module.exports.help = {
-    name: "dblsearch"
+    name: "dblstats"
 }
