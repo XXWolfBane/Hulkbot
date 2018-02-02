@@ -31,7 +31,7 @@ require('fs').readdir("./commands/", (err, files) => {
 });
 
 bot.on("ready", () => {
-  require('./util/poststats.js')
+  require('./util/poststats.js')(bot)
   console.log("Bot is started. Get ready for some sweet commands!");
   console.log("Bot name: " + bot.user.username + `\n`);
   console.log("Bot owner: " + config.owner + `\n`);
