@@ -32,11 +32,7 @@ require('fs').readdir("./commands/", (err, files) => {
 
 bot.on("ready", () => {
   require('./util/poststats.js')(bot)
-  console.log("Bot is started. Get ready for some sweet commands!");
-  console.log("Bot name: " + bot.user.username + `\n`);
-  console.log("Bot owner: " + config.owner + `\n`);
-  console.log(`Bot Developers: ${config.owner}, ${config.dev2}, and ${config.dev3}\n`);
-  console.log(`~ ${bot.guilds.array().length} Servers, ${bot.channels.array().length} Channels, and ${bot.users.array().length} Users\n`);
+  require('./util/consoles.js')(bot, config)
   bot.user.setActivity("Loading Hulkbot...", {type: "STREAMING", url: "https://twitch.tv/freakinghulk"})
   
   setInterval(() => {
