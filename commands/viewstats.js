@@ -11,10 +11,10 @@ module.exports.run = (bot, message, args, discord) => {
       if (err) console.error(new RangeError([`Failed to Post Stats to https://discordbots.org. Error Message: ${err}`]))
     })
   })
-  let v = c.getVotes((err, res) => console.log(res))
-  let s = c.getBot(bot.id, (err, res) => console.log(res))
-  let votes = v.res
-  let stats = s.res
+  let v = c.getVotes()
+  let s = c.getBot()
+  let votes = v
+  let stats = s
   
   let em = new discord.RichEmbed()
   .setTitle(`Discord Bot List Stats`)
