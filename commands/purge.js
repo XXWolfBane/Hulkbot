@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args) => {
-	if (message.channel.type == "dm") {
+	if (!message.channel.type == "dm") {
 	if (message.member.hasPermission(["MANAGE_MESSAGES"], false, true, true)) {
   if (isNaN(args[0])) {
     return message.channel.send('Please define a number..')
