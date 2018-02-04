@@ -4,9 +4,9 @@ module.exports.run = (bot, message, args, discord) => {
   let joke = fml.random()
   let embed = new discord.RichEmbed()
   .setTitle('Hulkbot FML')
-  .setDescription(`${fml}`)
+  .setDescription(`${joke}`)
   .setColor("RANDOM")
-  .setFooter(new Date().toString())
+  .setFooter(new Date().toDateString())
   message.channel.send({ embed })
 }
 
