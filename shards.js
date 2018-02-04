@@ -1,14 +1,5 @@
-const Discord = require("discord.js");
+const { ShardingManager } = require('discord.js');
+const manager = new ShardingManager(`./bot.js`, { totalShards: 5 });
 
-
-const shard = new Discord.ShardingManager("./bot.js", {
-	totalShards: "auto",
-	token: process.env.botToken,
-	respawn: true
-});
-
-shard.on("launch", (s) => {
-  console.log("Launching shard " + (s.id + 1) + "/" + shard.totalShards);
-});
-
-shard.spawn();
+manager.spawn();
+manager.on('launch', shard => console.log(`Successfully launched shard ${shard.id}`));
