@@ -2,7 +2,7 @@
 
 // Discord init 
 const configdb = require('./(attempt) database.js'),
-time = new Date().getTime(),
+time = new Date().toString(),
 pak = require('./package.json'),
 discord = require('discord.js'),
 config = require('./config.json'),
