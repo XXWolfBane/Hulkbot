@@ -23,6 +23,9 @@ module.exports.run = (bot, message, args) => {
 	message.channel.send("Sorry, you don't have the required permissions. :neutral_face:")
 }
 } else {
+	if (isNaN(args[0])) {
+	    message.channel.send("Please define a number...")
+	}
 	let am = args[0]
 	if (am>190) {
 		message.channel.send("The maximum amount you can delete is 90 messages.")
