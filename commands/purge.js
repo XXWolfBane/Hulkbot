@@ -35,7 +35,7 @@ module.exports.run = (bot, message, args) => {
 	setTimeout(() => {
 	      message.channel.fetchMessages({limit: am}).then(m => message.channel.bulkDelete(m))
               message.channel.send("Done! Purged " + am + " messages!")
-	}, 1000) 
+	}, 1000)
 }
 }
 
