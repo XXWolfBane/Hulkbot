@@ -15,7 +15,7 @@
           "pouchdb": "6.4.2",
           "google": "^2.1.0",
           "discord-music-bot": "^2.3.0",
-          "random_fml": "^1.1.0",
+          "fmylife": "^1.1.0",
           "knock-knock-jokes": "^1.7.0",
           "weather-js": "^2.0.0",
           "cleverbot-node": "^0.3.11",
