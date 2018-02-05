@@ -1,1 +1,1 @@
-worker: node shards.js
+worker: node bot.js
