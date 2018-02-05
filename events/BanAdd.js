@@ -10,7 +10,7 @@ module.exports = (bot, guild, member) => {
     member.send(`${member.username}, you are now banned from ${guild.name}!`)
   }
   let log = guild.channels.find('name', 'guild-maintenance')
-  let alt1 = guild.channels.find('name', 'log')
+  let alt1 = guild.channels.find('name', 'mod-log')
   let alt2 = guild.channels.find('name', 'hulkbot-log')
   let embed = new discord.RichEmbed()
   .setTitle("Log")
