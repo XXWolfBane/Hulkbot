@@ -25,3 +25,7 @@ module.exports.run = (bot, message, args, discord) => {
         message.channel.send({ em })
     }
 }
+
+module.exports.help = {
+    name: "checkpremium"
+}
