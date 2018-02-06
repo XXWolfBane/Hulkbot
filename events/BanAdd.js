@@ -2,7 +2,7 @@ const discord = require('discord.js')
 
 module.exports = (bot, guild, member) => {
   let reason = require('../config.json').banreason
-  if (!reason) {
+  if (reason) {
   console.log(`${member.username} was banned from ${guild.name} for ${reason}!`)
   member.send(`${member.username}, you are now banned from ${guild.name} for the reason ${reason}!`)
   } else {
@@ -12,6 +12,7 @@ module.exports = (bot, guild, member) => {
   let log = guild.channels.find('name', 'guild-maintenance')
   let alt1 = guild.channels.find('name', 'mod-log')
   let alt2 = guild.channels.find('name', 'hulkbot-log')
+  let alt3 = guild.channels.find('name', 'bot-hell')
   let embed = new discord.RichEmbed()
   .setTitle("Log")
   if (reason) {
@@ -27,9 +28,13 @@ module.exports = (bot, guild, member) => {
   } else {
     if (!alt1) {
         log.send({ embed })
-      if (!log, !alt1) {
+      if (!== log, alt1) {
         alt2.send({ embed })
+      }
+      if (!== log, alt1) {
+        alt3.send({ embed })
       }
     }
   }
+  
 }
