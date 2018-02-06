@@ -9,3 +9,7 @@ module.exports.run = () => {
     .setThumbnail(bot.user.avatarURL)
   })
 }
+
+module.exports.help = {
+  name: "serverids"
+}
