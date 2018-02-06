@@ -15,7 +15,8 @@ module.exports.run = (bot, message, args, discord) => {
             message.channel.send({ em })
         }
     } else {
-    fs.writeFile(config, "premium": "false")
+    let json = (`"premium": "true"`)
+    fs.writeFile(config, json)
         let em = new discord.RichEmbed()
         .setTitle("Hulkbot Premium")
         .setDescription(`No. Your premium status is unactive. Buy premium [here!](https://www.patreon.com/bePatron?c=1365207 "buy premium")`)
