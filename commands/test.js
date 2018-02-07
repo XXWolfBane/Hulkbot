@@ -3,7 +3,7 @@ module.exports.run = (bot, message, args, discord) => {
       .setTitle(`Testing`)
       .setThumbnail(bot.user.avatarURL)
       .setDescription(`Test Successfull!`)
-      .setImage(`https://cdn.discordapp.com/attachments/358745922517336064/407813894078332928/giphy.gif`)
+      .setImage(`http://blvcccvrd.com/images/black-checkmark-21.gif`)
       .setAuthor(bot.user.username)
       .setColor(`RANDOM`)
       message.channel.send("Testing...").then(msg => {
