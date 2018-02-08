@@ -8,8 +8,8 @@ module.exports.run = (bot, message, args, discord) => {
  if (message.author.id == process.env.oid) {
   let guild_list = []
   bot.guilds.forEach(async(guild, id) => {
-    guild_list.push(`      ${guild.name}, ${id}\n`)
-  });
+    guild_list.push(`      ${guild.name}  ${id}\n`)
+  })
   let embed = new discord.RichEmbed()
     .setTimestamp()
     .setAuthor(`${bot.user.username} Debugger`, bot.user.avatarURL)
