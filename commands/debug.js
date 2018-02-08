@@ -11,6 +11,7 @@ module.exports.run = (bot, message, args, discord) => {
     guild_list.push(`      ${guild.name}  ${id}\n`)
   })
   let embed = new discord.RichEmbed()
+    .setTitle(`Hulkbot Debugger`)
     .setTimestamp()
     .setAuthor(`${bot.user.username} Debugger`, bot.user.avatarURL)
     .setColor("7289DA")
