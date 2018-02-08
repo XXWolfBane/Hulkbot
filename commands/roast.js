@@ -9,8 +9,9 @@ module.exports.run = (bot, message, args, discord) => {
   .setFooter(`${member.displayName} got roasted by ${message.member.displayName}!`)
   .setThumbnail(`https://i.imgur.com/6Bzv6Wv.png`)
   .setAuthor(`Hulkbot`)
-  
-  message.channel.send({embed})
+  .setColor("RANDOM")
+   
+  message.channel.send({ embed })
 }
 
 module.exports.help = {
