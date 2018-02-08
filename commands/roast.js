@@ -6,7 +6,7 @@ module.exports.run = (bot, message, args, discord) => {
   let embed = new discord.RichEmbed()
   .setTitle("Hulkbot Roasting")
   .setDescription(`${member.displayName} has a ${num2}% chance of failing in life.`)
-  .setFooter(`${member.displayName} got roasted by ${message.author.displayName}!`)
+  .setFooter(`${member.displayName} got roasted by ${message.member.displayName}!`)
   .setThumbnail(`https://i.imgur.com/6Bzv6Wv.png`)
   .setAuthor(`Hulkbot`)
   
