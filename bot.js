@@ -1,8 +1,8 @@
 /** jshint -W038z8  */
 
 // Discord init 
-const configdb = require('./(attempt) database.js'),
-time = new Date().toString(),
+
+const time = new Date().toString(),
 pak = require('./package.json'),
 discord = require('discord.js'),
 config = require('./config.json'),
@@ -131,12 +131,10 @@ bot.on("message", (message) => {
  });
       
 bot.on("guildCreate", (guild) => {
-  require("./(attempt) database.js")(guild, bot, discord)
   baselogger(bot, `**Guild Join**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
 bot.on("guildDelete", (guild) => {
-  require("./(attempt) database.js")(guild, bot, discord)
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
