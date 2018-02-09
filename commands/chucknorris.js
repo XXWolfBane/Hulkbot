@@ -1,4 +1,4 @@
-require('snekfetch')
+const snekfetch = require('snekfetch')
 
 module.exports.run = (bot, message, args, discord) => {
   snekfetch.get('http://api.icndb.com', function(err, body) {
