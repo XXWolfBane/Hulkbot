@@ -5,6 +5,7 @@
   .setImage("https://media.giphy.com/media/26DMWpQjDSf4AI9Ik/giphy.gif")
   .setThumbnail(bot.user.avatarURL)
   .setColor("RANDOM")
+  message.channel.send({ em })
  }
  
  module.exports.help = {
