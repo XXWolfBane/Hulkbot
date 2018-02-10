@@ -4,7 +4,9 @@
   .setDescription(`I am big snek. Are you?`)
   .setImage("https://media.giphy.com/media/26DMWpQjDSf4AI9Ik/giphy.gif")
   .setThumbnail(bot.user.avatarURL)
-  .setColor("RANDOM")
+  setInterval(() => {
+   em.setColor(`RANDOM`)
+  }, 1000)
   message.channel.send(em)
  }
  
