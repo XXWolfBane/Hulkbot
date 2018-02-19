@@ -9,7 +9,7 @@
      "start": "node bot.js"
 },
      "dependencies": {
-          "mongodb": "^3.0.2",
+          "mongodb-stitch": "^3.0.2",
           "automeme": "^0.0.3",
           "discord-bot-list": "1.0.1",
           "ffmpeg-binaries": "^3.2.2-3",
