@@ -1,6 +1,6 @@
 module.exports.run = (bot, message, args, discord) => {
   const m = require('automeme')
-  m.getMeme((err, meme) => {
+  m.getMeme('text', 1, (err, meme) => {
     if (err) {
       message.channel.send("I couldn't get a meme...")
       return console.error(err)
