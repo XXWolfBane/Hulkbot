@@ -1,4 +1,4 @@
-module.exports.run = () => {
+module.exports.run = (bot, message, args, discord) => {
   const m = require('automeme')
   m.getMeme((err, meme) => {
     if (err) return console.error(err)
