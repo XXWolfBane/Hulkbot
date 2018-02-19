@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args, discord) => {
     .setDescription("Here's a random meme!")
     .setImage(meme)
     .setFooter(new Date().toString())
-    message.channel.send({ em })
+    message.channel.send(em)
   })
 }
 
