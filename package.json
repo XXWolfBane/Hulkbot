@@ -9,6 +9,7 @@
      "start": "node bot.js"
 },
      "dependencies": {
+          "automeme": "^0.0.3",
           "discord-bot-list": "1.0.1",
           "ffmpeg-binaries": "^3.2.2-3",
           "node-persist": "2.1.0",
