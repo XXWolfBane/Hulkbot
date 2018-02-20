@@ -12,5 +12,5 @@
   "statues": ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry", "`${bot.guilds.array().length} servers`"],
   "banreason": "",
   "kickreason": "",
-  "premium": "false"
+  "premiumState": "false"
 }
