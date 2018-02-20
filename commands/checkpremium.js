@@ -11,9 +11,11 @@ module.exports.run = (bot, message, args, discord) => {
         if (config.premiumState == "true") {
             let em = new discord.RichEmbed()
             .setTitle("Hulkbot Premium")
-            .setDescription(`Yes! Your premium status is active!`)
+            .setAuthor(":money_mouth::skin-tone-3:")
+            .setDescription(`:moneybag: Your premium status is active! Thanks for donating! :moneybag:`)
             .setAuthor(bot.user.username)
             .setThumbnail(bot.user.avatarURL)
+            .setColor("GREEN")
             message.channel.send(em)
         }
     } else {
@@ -23,10 +25,11 @@ module.exports.run = (bot, message, args, discord) => {
     fs.writeFile('../config.json', JSON.stringify(json), (err) => console.error(err))
         let em = new discord.RichEmbed()
         .setTitle("Hulkbot Premium")
-        .setDescription(`No. Your premium status is unactive. Buy premium [here!](https://www.patreon.com/bePatron?c=1365207 "buy premium")`)
+        .setAuthor(":money_mouth::skin-tone-3:")
+        .setDescription(`Your premium status is unactive. Buy premium [here!](https://www.patreon.com/bePatron?c=1365207 "buy premium")`)
         .setAuthor(bot.user.username)
         .setThumbnail(bot.user.avatarURL)
-        .setColor("RANDOM")
+        .setColor("RED")
         message.channel.send(em)
     }
 }
