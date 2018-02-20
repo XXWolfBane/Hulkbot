@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args, discord) => {
             .setDescription(`Yes! Your premium status is active!`)
             .setAuthor(bot.user.username)
             .setThumbnail(bot.user.avatarURL)
-            message.channel.send({ em })
+            message.channel.send(em)
         }
     } else {
         let premiumState = "false"
@@ -27,7 +27,7 @@ module.exports.run = (bot, message, args, discord) => {
         .setAuthor(bot.user.username)
         .setThumbnail(bot.user.avatarURL)
         .setColor("RANDOM")
-        message.channel.send({ em })
+        message.channel.send(em)
     }
 }
 
