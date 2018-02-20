@@ -5,7 +5,7 @@ module.exports.run = (bot, message, args, discord) => {
     let member = message.author
     let json = JSON.stringify(`"premium": "true"`)
     if (ga.members.find('id', member.id).roles.find('name','SuperPatron')) {
-        fs.writeFile('../config.json', json)
+        fs.writeFile(config, json)
         if (config.premium == "true") {
             let em = new discord.RichEmbed()
             .setTitle("Hulkbot Premium")
@@ -15,7 +15,7 @@ module.exports.run = (bot, message, args, discord) => {
             message.channel.send({ em })
         }
     } else {
-    let json = (`"premium": "true"`)
+    let json = (`"premium": "false"`)
     fs.writeFile(config, json)
         let em = new discord.RichEmbed()
         .setTitle("Hulkbot Premium")
