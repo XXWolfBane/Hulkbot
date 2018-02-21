@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args, discord) => {
     return;
   }
   if (!servers[message.guild.id]) servers[message.guild.id] = {
-    queue: []
+    queue: ["https://www.youtube.com/watch?v=z4S2qqX7YvA"]
   }
   if (!message.member.voiceChannel) message.member.voiceChannel.join().then((connection) => {
      function play(connection, message) {
