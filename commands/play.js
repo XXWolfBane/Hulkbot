@@ -1,7 +1,8 @@
 const YTDL = require('ytdl-core')
 var servers = {}
 
-function play(connection, message) {
+module.exports.run = (bot, message, args, discord) => {
+   function play(connection, message) {
    message.channel.send("I have started playing " + args[0] + " in " + message.member.voiceChannel.name + ".")
    var server = servers[message.guild.id]
    
@@ -14,8 +15,7 @@ function play(connection, message) {
       else connection.disconnect()
     })
   }
-
-module.exports.run = (bot, message, args, discord) => {
+   
   if (!args[0]) {
     message.channel.send("Please provide a song name/link!");
     return;
