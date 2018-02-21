@@ -20,7 +20,14 @@ exports.run = (bot, message, args, discord) => {
         .then(url => {
             request.get(url).then(r => {
                 fs.writeFile(`pussy.jpg`, r.body)
-                message.channel.sendFile(r.body)
+                let embed = new discord.RichEmbed()
+                .setTitle("Hulkbot NSFW")
+                .setDescription("Alright... Here's a random pussy pic.")
+                .setImage(r.body)
+                .setColor("BLACK")
+                .setAuthor(":neutral:")
+                .setThumbnail(bot.user.avatarURL)
+                message.channel.send(embed)
                 fs.unlink(`./pussy.jpg`)
             })
         })
