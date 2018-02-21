@@ -2,6 +2,7 @@ const YTDL = require('ytdl-core')
 var servers = {}
 
 function play(connection, message) {
+   message.channel.send("I have started playing " + args[0] + " in " + message.member.voiceChannel.name + ".")
    var server = servers[message.guild.id]
    
    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}))
