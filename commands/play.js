@@ -29,8 +29,7 @@ module.exports.run = (bot, message, args, discord) => {
   if (!message.member.voiceChannel) message.member.voiceChannel.join().then((connection) => {
     play(connection, play);
   })
-    
-  }
+   
   let server = servers[message.guild.id]
 } 
   
