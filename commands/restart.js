@@ -3,7 +3,7 @@ const file = require('../bot.js')
 module.exports.run = (bot, message, args) => {
   if (message.author.id == config.ownerid) {
     message.channel.send(":wave: Hulkbot will now restart.")
-    process.kill('SIGTERM')
+    console.assert(true, ["heroku restart worker.1"])
   } else {
     message.channel.send("Nope!")
   }
