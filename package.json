@@ -9,6 +9,7 @@
      "start": "node bot.js"
 },
      "dependencies": {
+          "random-puppy": "^1.1.0",
           "nedb": "^1.8.0",
           "automeme": "^0.0.3",
           "discord-bot-list": "1.0.1",
