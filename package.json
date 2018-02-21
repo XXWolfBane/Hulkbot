@@ -9,6 +9,7 @@
      "start": "node bot.js"
 },
      "dependencies": {
+          "discord.js-music-v11": "^1.3.4",
           "random-puppy": "^1.1.0",
           "nedb": "^1.8.0",
           "automeme": "^0.0.3",
