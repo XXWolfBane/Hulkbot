@@ -2,7 +2,7 @@ const randomPuppy = require('random-puppy');
 const request = require('snekfetch');
 const fs = require("fs")
 
-exports.run = (client, message, args) => {
+exports.run = (bot, message, args, discord) => {
     if (!message.channel.nsfw) return message.channel.send(":underage: NSFW Command. Please switch to NSFW channel in order to use this command.")
 
     var subreddits = [
@@ -24,4 +24,8 @@ exports.run = (client, message, args) => {
                 fs.unlink(`./pussy.jpg`)
             })
         })
+}
+
+module.exports.help = {
+    name: "pussy"
 }
