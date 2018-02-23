@@ -22,7 +22,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     },
     {
       name: ":musical_note: Music:",
-      value: `\`\`\`ini\nplay = "Play a song/youtube link!"\nskip = "Skip the song."\ndisconnect = "Disconnect the bot from the voice channel."\nvolume = "Change the volume of the bot."\nresume = "Resume the playback."\nshuffle = "Shuffle the songs in the queue."\nclean = "Cleans some of the bot's messages."\nsearch = "Search for a song, and choose whether to play it or not."\nclear = "Clear the queue."`
+      value: `\`\`\`ini\nplay = "Play a song/youtube link!"\nskip = "Skip the song."\ndisconnect = "Disconnect the bot from the voice channel."\nvolume = "Change the volume of the bot."\nresume = "Resume the playback."\nshuffle = "Shuffle the songs in the queue."\nclean = "Cleans some of the bot's messages."\nsearch = "Search for a song, and choose whether to play it or not."\nclear = "Clear the queue."\`\`\``
     },
     {
       name: "Need More Help?",
@@ -32,7 +32,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     if (au == oid) {
       fields.push({
         name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\nmshutdown = "Shutdown the music portion of the bot."\nmrestart = "Restart the music portion of the bot."\nmsetavatar = "Set the bot's avatar"\nsetnick = "Set the nickname of the bot."\`\`\``,
         inline: false
       });
     } else {
