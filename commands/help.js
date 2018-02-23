@@ -21,6 +21,10 @@ module.exports.run = (bot, message, args, suffix, discord) => {
       value: `\`\`\`ini\navatar = "Fetches an HD Image of a user!"\nbork = "Bork someone for fun!"\ncoinflip = "Heads or Tails!"\nsay = "Want me to say something?"\nmyid = "Need your own ID?"\nserverid = "Need the Server's ID?"\nyomomma = "YOMOMMA!"\nknockknock = "I'll get you a knock knock joke."\nadvice = "I'll get you some good advice, so apply it to your life boi."\nchucknorris = "I'll get you a random chuck norris joke."\`\`\``,
     },
     {
+      name: ":musical_note: Music:",
+      value: `\`\`\`ini\nplay = "Play a song/youtube link!"\nskip = "Skip the song."\ndisconnect = "Disconnect the bot from the voice channel."\nvolume = "Change the volume of the bot."\nresume = "Resume the playback."\nshuffle = "Shuffle the songs in the queue."\nclean = "Cleans some of the bot's messages."\nsearch = "Search for a song, and choose whether to play it or not."\nclear = "Clear the queue."`
+    },
+    {
       name: "Need More Help?",
       value: `[Click Here!](https://bot.hulkbot.ml/commands)`,
     }
