@@ -35,7 +35,6 @@ module.exports = (bot, guild, member) => {
       if (!log, alt1, alt2) {
         alt3.send({ embed })
       }
-    }
   }
   
 }
