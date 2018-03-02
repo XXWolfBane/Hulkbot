@@ -55,7 +55,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: ""
+      text: "Please note: Music commands are down for maintenance; they will be back later, please be patient."
     }
   }
 })
