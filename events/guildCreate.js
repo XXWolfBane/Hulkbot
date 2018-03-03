@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const date = [new Date().getHours(), new Date().getMinutes()],
+const date = [new Date().getHours() +":"+ new Date().getMinutes()],
 options = {
   hour: 'numeric',
   minute: 'numeric',
