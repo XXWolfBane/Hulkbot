@@ -84,7 +84,7 @@ bot.on("message", message => {
 });
 
 bot.on("message", (message) => {
-  
+  require('./util/filter.js')(bot, message, discord)
   if (message.content == prefix) {
     let channel = message.channel;
     
