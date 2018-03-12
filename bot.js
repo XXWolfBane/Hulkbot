@@ -44,10 +44,10 @@ bot.on("ready", () => {
   });
 });
 
-bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
-bot.on("guildMemberRemove", (member) => require('./events/guildMemberRemove.js')(bot, member))
-bot.on("guildBanAdd", (guild, member) => require('./events/BanAdd.js')(bot, guild, member))
-bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
+//bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
+//bot.on("guildMemberRemove", (member) => require('./events/guildMemberRemove.js')(bot, member))
+//bot.on("guildBanAdd", (guild, member) => require('./events/BanAdd.js')(bot, guild, member))
+//bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
  
 bot.on("message", message => {
   if (filteron == "true") {
