@@ -1,6 +1,6 @@
 /** jshint -W038z8  */
 
-// Discord init 
+// Discord init  
 
 const time = new Date().toString(),
 pak = require('./package.json'),
