@@ -2,7 +2,7 @@
 
 // Discord init  
 
-const time = new Date().toString(),
+const time = new Date().toString(), 
 pak = require('./package.json'),
 discord = require('discord.js'),
 config = require('./config.json'),
