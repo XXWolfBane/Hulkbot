@@ -20,7 +20,7 @@ module.exports.run = (bot, message, args) => {
     message.channel.send(`Results found on google for ${args.join(' ')}:\n${googleData.q}`).then(m => m.delete(5500))
 
   }).catch((err) => {
-    message.channel.send(`No results found on google for ${args.join(' ')}...`).then(m => m.delete(2500))
+    message.channel.send(`No results found on google for ${args.join(' ')}...`)
   });
 }
 
