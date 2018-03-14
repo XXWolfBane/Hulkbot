@@ -17,7 +17,7 @@ module.exports.run = (bot, message, args) => {
     let googleData = $('.r').first().find('a').first().attr('href');
 
     googleData = querystring.parse(googleData.replace('/url?', ''));
-    message.channel.send(`Results found on google for ${args.join(' ')}:\n${googleData.q}`).then(m => m.delete(5500))
+    message.channel.send(`Results found on google for ${args.join(' ')}:\n${googleData.q}`)
 
   }).catch((err) => {
     message.channel.send(`No results found on google for ${args.join(' ')}...`)
