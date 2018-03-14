@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
     return;
   }
 
-  let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(message.content)}`;
+  let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(args.join(' '))}`;
   message.channel.send(`Searching google for ${args.join(' ')}...`).then(m => m.delete(2500))
   return snekfetch.get(searchUrl).then((result) => {
 
