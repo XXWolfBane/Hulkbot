@@ -35,7 +35,7 @@ bot.on("ready", () => {
   require('./util/consoles.js')(bot, config)
   bot.user.setActivity("Loading Hulkbot...", {type: "STREAMING", url: "https://twitch.tv/freakinghulk"})
   
-  setInterval(() => {
+  setTimeout(() => {
     bot.user.setActivity(`for h!help | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
   }, 20000)
 
@@ -70,7 +70,7 @@ bot.on("message", message => {
 
   if (cmd) {
     if (!message.channel.type == "dm") {
-    cmd.run(bot, message, args, discord);
+    cmd.run(bot, message, args, discord);  
     console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
     baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
   } else { 
