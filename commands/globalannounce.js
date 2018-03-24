@@ -4,7 +4,7 @@ const config = require(`../config.json`);
 
 function sendAnnounce(bot, message, args, guild) {
   var sendChannel = "";
-  if (config.default.donotAnnounce.includes(guild.id)) return message.channel.send(`ðŸ—³ Faild to send announcement to ${guild.name} (In DNA list)`).then(m => m.delete(20000));
+  if (config.donotAnnounce.includes(guild.id)) return message.channel.send(`ðŸ—³ Faild to send announcement to ${guild.name} (In DNA list)`).then(m => m.delete(20000));
   
   if (guild.channels.find("name", "general")) {
     sendChannel = guild.channels.find("name", "general");
