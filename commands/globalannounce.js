@@ -1,5 +1,5 @@
 module.exports.run = (bot, message, args, discord) => {
-if (!message.author.id == process.env.oid) return;
+if (message.author.id == process.env.oid) {
   let msg = args.join(" ")
   let bl = ["264445053596991498", "110373943822540800"] 
   
@@ -26,6 +26,9 @@ if (!message.author.id == process.env.oid) return;
       }
     }
   })
+  } else {
+    message.channel.send("Nope!")
+  }
 }
 
 module.exports.help = {
