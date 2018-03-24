@@ -38,7 +38,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     } else {
       fields.pop({
       	name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\nmshutdown = "Shutdown the music portion of the bot."\nmrestart = "Restart the music portion of the bot."\nsetavatar = "Set the bot's avatar"\nsetnick = "Set the nickname of the bot."\`\`\``,
 	inline: false
       });
     };
