@@ -18,7 +18,7 @@ function sendAnnounce(bot, message, args, guild) {
 
   let announce = new discord.RichEmbed()
     .setColor("7289DA")
-    .setAuthor(`ðŸ“¢ ${bot.user.username} Announcement ðŸ“¢`)
+    .setAuthor(`${bot.user.username} Announcement`)
     .setDescription(`**Hello FHGDev here, creator of Hulkbot just wanting you to know, **\n${args.join(' ')}\n\n**This message was sent to *${guild.name}* on purpose from the creator.**\n*This announcement system wil also not be spammed alot.*`)
     .setFooter(`An official announcement from FHGDev. (FreakingHulk Gaming#6545)`, bot.user.avatarURL)
     .setTimestamp();
@@ -26,13 +26,13 @@ function sendAnnounce(bot, message, args, guild) {
   if (sendChannel !== "") {
     sendChannel.send({ embed: announce })
       .then(() => {
-        message.channel.send(`â˜‘ Sent announcement to ${guild.name}`).then(m => m.delete(20000));
+        message.channel.send(`Sent announcement to ${guild.name}`).then(m => m.delete(20000));
       })
       .catch(err => {
-        message.channel.send(`ðŸ—³ Failed to send announcement to ${guild.name} (Send Error)`).then(m => m.delete(20000));
+        message.channel.send(`Failed to send announcement to ${guild.name} (Send Error)`).then(m => m.delete(20000));
       });
   } else {
-    message.channel.send(`ðŸ—³ Failed to send announcement to ${guild.name} (No channel)`).then(m => m.delete(20000));
+    message.channel.send(`Failed to send announcement to ${guild.name} (No channel)`).then(m => m.delete(20000));
   }
 }
 module.exports.run = (bot, message, args) => {
@@ -40,7 +40,7 @@ module.exports.run = (bot, message, args) => {
   let announceTest = new discord.RichEmbed()
     .setColor("7289DA")
     .setAuthor(`Test Announcement`, bot.user.avatarURL)
-    .setDescription(`**Hello FHGDev here, creator of Hulkbot just wanting you to know,**\n${args.join(' ')}\n\n**This message was sent to *${message.guild.name}* on purpose from the creator.**\n*This announcement system wil also not be spammed alot.*`)
+    .setDescription(`**Hello FHGDev here, just sending an announcement...**\n${args.join(' ')}\n\n**This message was sent to *${message.guild.name}* on purpose from the creator.**\n*This announcement system wil also not be spammed alot.*`)
     .setFooter(`Test Example reply with yes to send to every server!`)
     .setTimestamp();
 
