@@ -1,4 +1,5 @@
 module.exports.run = (bot, message, args, discord) => {
+  if (message.author.id == process.env.oid) {
   let newname = args.join(' ')
   bot.user.setUsername(newname)
   
@@ -6,6 +7,9 @@ module.exports.run = (bot, message, args, discord) => {
     message.delete(100)
     m.delete(100)
   })
+  } else {
+    message.channel.send("Nope!")
+  }
 }
 
 module.exports.help = {
