@@ -3,7 +3,7 @@ if (!message.author.id == process.env.oid) return;
   let msg = args.join(" ")
   let bl = ["264445053596991498", "110373943822540800"] 
   
-  bot.chann.forEach(async ca => {
+  bot.channels.forEach(async ca => {
     let gen = ca.find('name', 'general')
     if (ca.id == bl[0], bl[1]) return;
     if (gen) {
