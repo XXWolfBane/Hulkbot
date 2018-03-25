@@ -58,13 +58,14 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`) 
   });
 });
-
-//bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
 //bot.on("guildMemberRemove", (member) => require('./events/guildMemberRemove.js')(bot, member))
 //bot.on("guildBanAdd", (guild, member) => require('./events/BanAdd.js')(bot, guild, member))
 //bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
  
 bot.on("message", message => {
+  if (bot.guilds.get('360608749741670400') {
+bot.on("guildMemberAdd", (guild, member) => require('./events/chickenguildadd.js')(bot, member, guild, message))
+} 
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
