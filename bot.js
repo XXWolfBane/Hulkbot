@@ -63,9 +63,6 @@ bot.on("ready", () => {
 //bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
  
 bot.on("message", message => {
-  if (bot.guilds.get('360608749741670400')) {
-bot.on("guildMemberAdd", (member) => require('./events/chickenguildadd.js')(bot, member, message))
-} 
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
       if (message.cleanContent.toLowerCase().includes(profanities[x].toLowerCase())) {
