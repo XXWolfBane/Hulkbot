@@ -1,4 +1,6 @@
-module.exports = (bot, member, guild, message) => {
+module.exports = (bot, member, message) => {
+  let guild = bot.guilds.get('360608749741670400')
+  
   member.addRole(guild.roles.get('427587785461858305')).then(r => {
     console.log(`${member.name} just joined ${guild.name}!`)
     message.channel.send(`<@${member.id}>, welcome to ${guild.name}! You have been assigned the ${r.name} role! Wait 20 minutes to get the 'Embryo' role, and then you can chat!`)
