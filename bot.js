@@ -63,7 +63,7 @@ bot.on("ready", () => {
 //bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
  
 bot.on("message", message => {
-  if (bot.guilds.get('360608749741670400') {
+  if (bot.guilds.get('360608749741670400')) {
 bot.on("guildMemberAdd", (guild, member) => require('./events/chickenguildadd.js')(bot, member, guild, message))
 } 
   if (filteron == "true") {
