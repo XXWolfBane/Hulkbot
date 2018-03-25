@@ -8,7 +8,7 @@ module.exports = (bot, member, message) => {
       member.removeRole(r).then(() => {
         member.addRole('427595531661869057')
         member.send("Hey! You just ranked up in " + guild.name + "! You can now chat in the server!")
-      })
+      }).catch(err => console.error(err))
     },1200000)
-  }) 
+  }).catch(err => console.error(err))
 }
