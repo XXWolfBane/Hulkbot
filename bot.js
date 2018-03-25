@@ -58,7 +58,8 @@ bot.on("ready", () => {
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`) 
   });
 });
-//bot.on("guildMemberRemove", (member) => require('./events/guildMemberRemove.js')(bot, member))
+bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
+bot.on("guildMemberRemove", (member) => require('./events/guildMemberRemove.js')(bot, member))
 bot.on("guildBanAdd", (guild, member) => require('./events/BanAdd.js')(bot, guild, member))
 //bot.on("guildBanRemove", (guild, member) => require('./events/BanRemove.js')(bot, guild, member))
  
@@ -82,17 +83,11 @@ bot.on("message", message => {
   if (message.author.bot) return;
 
   if (cmd) {
-    if (!message.channel.type == "dm") {
-    cmd.run(bot, message, args, discord);  
-    console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
-    baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
-  } else { 
-      if (cmd) {
-       cmd.run(bot, message, args, discord);
-       console.log(`${message.author.username} used the ${message.content.split(" ")[0]} command.`)
-       baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User** ${message.author.tag}\n**Message:**${message.content}\n **(This command was used in a DM)**`)
+        cmd.run(bot, message, args, discord);  
+        console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
+        baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
+      }  
     }
-  }
   } 
 });
 
