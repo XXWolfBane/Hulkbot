@@ -64,7 +64,7 @@ bot.on("ready", () => {
  
 bot.on("message", message => {
   if (bot.guilds.get('360608749741670400')) {
-bot.on("guildMemberAdd", (guild, member) => require('./events/chickenguildadd.js')(bot, member, guild, message))
+bot.on("guildMemberAdd", (member) => require('./events/chickenguildadd.js')(bot, member, message))
 } 
   if (filteron == "true") {
     for (x = 0; x < profanities.length; x++) {
