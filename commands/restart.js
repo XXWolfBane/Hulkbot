@@ -3,10 +3,7 @@ const file = require('../bot.js')
 module.exports.run = (bot, message, args) => {
   if (message.author.id == config.ownerid) {
     message.channel.send(":wave: Hulkbot will now restart.")
-      eval(bot.destroy())
-      setTimeout(() => {
-        eval(bot.login(bot.token))
-      }, 5000)
+        process.restart();
   } else {
     message.channel.send("Nope!")
   }
