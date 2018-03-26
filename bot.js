@@ -2,7 +2,6 @@
 
 // Discord init  
 const keyhowareya = "heyhowareya",
-guilds = [],
 time = new Date().toString(),
 stitch = require("mongodb-stitch"),
 pak = require('./package.json'),
@@ -42,9 +41,18 @@ bot.on("ready", () => {
   }, 20000)
 
   bot.guilds.forEach((guild, id) => {
-    guilds.push(guild.name, id)
+  let guildnames = {
+    name: guild.name
+  }
+  let guildids = {
+    id: id
+  }
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`)
-    console.log("Guild Array:" + guilds.join(' '))
+    let json = JSON.stringify(guildnames)
+    function func() {
+      console.log(`Wrote to file 'database.json' with the data '${json}.`)
+    }
+    require('fs').writeFile('./database.json', json, func)
   });
 });
 bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
