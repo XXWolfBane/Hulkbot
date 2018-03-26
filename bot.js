@@ -1,24 +1,11 @@
 /** jshint -W038z8  */
 
 // Discord init  
-
-const time = new Date().toString()
-const stitch = require("mongodb-stitch")
-const clientPromise = stitch.StitchClientFactory.create('hulkbotdb-lrvmd');
-clientPromise.then(client => {
-  const db = client.service('mongodb', 'mongodb1').db('<DATABASE>');
-  client.login().then(() =>
-    db.collection('<COLLECTION>').updateOne({owner_id: client.authedId()}, {$set:{number:42}}, {upsert:true})
-  ).then(() =>
-    db.collection('<COLLECTION>').find({owner_id: client.authedId()}).limit(100).execute()
-  ).then(docs => {
-    console.log("Found docs", docs)
-    console.log("[MongoDB Stitch] Connected to Stitch")
-  }).catch(err => {
-    console.error(err)
-  });
-});
-const pak = require('./package.json'),
+const keyhowareya = "heyhowareya",
+guilds = [],
+time = new Date().toString(),
+stitch = require("mongodb-stitch"),
+pak = require('./package.json'),
 discord = require('discord.js'),
 config = require('./config.json'),
 profanities = require("./profanities.json"),
@@ -26,7 +13,7 @@ bot = new discord.Client(),
 prefix = process.env.prefix,
 {baselogger} = require('./logger.js'),
 result = Math.round(Math.random()),
-updates = ["Makin the database!."]
+updates = ["Makin the database!"]
 var filteron = "false",
 cleverbot = require('cleverbot.io'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
@@ -38,6 +25,7 @@ bot.invite = "https://discord.gg/qEFNkxB"
 bot.commands = new discord.Collection();
 
 require('fs').readdir("./commands/", (err, files) => {
+  console.log(`Guild Array: ${guilds.join(' ')}`)
   console.log("Loading commands...");
   if (err) return console.log(`Command loading failed!`);
   files.filter(f => f.split(".").pop() === "js").forEach((f, i) => {
@@ -90,7 +78,6 @@ bot.on("message", message => {
 });
 
 bot.on("message", (message) => {
-  require('./util/filter.js')(bot, message, discord)
   if (message.content == prefix) {
     let channel = message.channel;
     
@@ -125,23 +112,26 @@ bot.on("message", (message) => {
   if (message.content.toLowerCase().includes("i love you hulkbot")) {
     message.channel.send("ERMAHGERD");
   }
-  if (message.content == `<@${bot.id}>`) {
+  if (message.content.startsWith == `<@294194506113220608>`) {
       let embed = new discord.RichEmbed()
       .setTitle("Hulkbot for Beginners")
       .setDescription("YUP! It's me, Hulkbot! To see more info on me, use the info command. (h!info)")
       .setColor("PURPLE")
-      .setThumbnail(bot.user.avatarURL) 
+      .setThumbnail(bot.user.avatarURL)
+      .setTimestamp()
    message.channel.send({ embed })
   }
   
  });
       
 bot.on("guildCreate", (guild) => {
+  guilds.push(guild.name, guild.id)
   require('./events/guildCreate.js')(bot, guild, discord)
   baselogger(bot, `**Guild Join**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
 bot.on("guildDelete", (guild) => {
+  guilds.pop(guild.name, guild.id)
   require('./events/guildDelete.js')(bot, guild, discord)
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
