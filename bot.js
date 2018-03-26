@@ -41,21 +41,8 @@ bot.on("ready", () => {
   }, 20000)
 
   bot.guilds.forEach((guild, id) => {
-  let guildnames = {
-    name: guild.name
-  }
-  let guildids = {
-    id: id
-  }
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`)
-    let json = JSON.stringify(guildids+":{\n"+guildnames+"\n}")
-    require('fs').writeFile('./database.json', json, (err) => {
-        if(err) {
-          console.error(err)
-        } else {
-          console.log(`Wrote to file 'database.json'.`)
-        }
-    })
+
   });
 });
 bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
