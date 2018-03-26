@@ -113,7 +113,7 @@ bot.on("message", (message) => {
   if (message.content.toLowerCase().includes("i love you hulkbot")) {
     message.channel.send("ERMAHGERD");
   }
-  if (message.content.startsWith == `<@294194506113220608>`) {
+  if (message.content.startsWith == `@Hulkbot`) {
       let embed = new discord.RichEmbed()
       .setTitle("Hulkbot for Beginners")
       .setDescription("YUP! It's me, Hulkbot! To see more info on me, use the info command. (h!info)")
