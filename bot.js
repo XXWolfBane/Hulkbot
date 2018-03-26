@@ -43,6 +43,7 @@ bot.on("ready", () => {
   }, 20000)
 
   bot.guilds.forEach((guild, id) => {
+    guilds.push(guild.name, id)
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`) 
   });
 });
