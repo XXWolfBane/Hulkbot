@@ -49,10 +49,13 @@ bot.on("ready", () => {
   }
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`)
     let json = JSON.stringify(guildnames, guildids)
-    function func() {
-      console.log(`Wrote to file 'database.json' with the data '${json}.`)
-    }
-    require('fs').writeFile('./database.json', json, func)
+    require('fs').writeFile('./database.json', json, (err) => {
+        if(err) {
+          console.error(err)
+        } else {
+          console.log(`Wrote to file 'database.json'.`)
+        }
+    })
   });
 });
 bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
