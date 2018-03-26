@@ -24,17 +24,6 @@ module.exports = (bot, guild, member) => {
   embed.setColor("RED")
   embed.setFooter(`${member.username} was banned at ${new Date()}`)
   if (!log) {
-    alt1.send({ embed })
-  } else {
-    if (!alt1) {
-        log.send({ embed })
-    }
-      if (!log, alt1) {
-        alt2.send({ embed })
-      }
-      if (!log, alt1, alt2) {
-        alt3.send({ embed })
-      }
-  }
-  
+    return; 
+  } 
 }
