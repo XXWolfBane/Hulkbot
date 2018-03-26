@@ -1,149 +1,189 @@
 {
   "name":"Bot Test",
-  "id":"416356384133611531"
+  "id":"416356384133611531",
+  "filter": "true"
 },
 {
   "name":"lol",
-  "id":"397823099824766988"
+  "id":"397823099824766988",
+  "filter": "true"
 },
 {
   "name":"GhostL0cks Awful Group",
-  "id":"361539192192368641"
+  "id":"361539192192368641",
+  "filter": "true"
 },
 {"name":"Hulkbot Base (and more)",
- "id":"356178662837452800"
+ "id":"356178662837452800",
+ "filter": "false"
 },
 {
   "name":"FreakingHulk Gaming Fan Discord",
  "id":"358279862324166659"
+  "filter": "true"
 },
 {
   "name":"REDSTONE HEROBRINE YOUTUBE",
-  "id":"332588739262152705"
+  "id":"332588739262152705",
+  "filter": "true"
 },
 {
   "name":"The Walking Dead",
- "id":"397823144502493190"
+ "id":"397823144502493190",
+  "filter": "true"
 },
 {
   "name":"The Koala Server",
-  "id":"384052359216627722"
+  "id":"384052359216627722",
+  "filter": "true"
 },
 {
-  "name":"Tribaltzah Fan Club","id":"425559452650045440"
+  "name":"Tribaltzah Fan Club",
+  "id":"425559452650045440",
+  "filter": "true"
 },
 {
-  "name":"DSE Global Communications","id":"303196639399772160"
+  "name":"DSE Global Communications",
+  "id":"303196639399772160",
+  "filter": "true"
 },
 {
   "name":"Discord Bot List",
-  "id":"264445053596991498"
+  "id":"264445053596991498",
+  "filter": "false"
 },
 {
   "name":"Gaming_World",
- "id":"408363746751283211"
+ "id":"408363746751283211",
+  "filter": "true"
 },
 {
   "name":"The Cave",
-  "id":"425855866487701504"
+  "id":"425855866487701504",
+  "filter": "true"
 },
 {
   "name":"Giveaway Nation",
-  "id":"417051641678790657"
+  "id":"417051641678790657",
+  "filter": "true"
 },
 {
   "name":"Little Town SMP Server",
-  "id":"412305335278370817"
+  "id":"412305335278370817",
+  "filter": "true"
 },
 {
   "name":"i like turtles, and hulkbot",
-  "id":"427846834225020928"
+  "id":"427846834225020928",
+  "filter": "true"
 },
 {
   "name":"The Chicken's place",
-  "id":"360608749741670400"
+  "id":"360608749741670400",
+  "filter": "true"
 },
 {
   "name":"Ghostl0cks' Friendly Dungeon",
-  "id":"381653952405700638"
+  "id":"381653952405700638",
+  "filter": "true"
 },
 {
   "name":"[Bot Testing Server]",
-  "id":"304402108059484161"
+  "id":"304402108059484161",
+  "filter": "true"
 },
 {
   "name":"FalidosCraft",
-  "id":"408369653350662146"
+  "id":"408369653350662146",
+  "filter": "true"
 },
 {
   "name":"Creativerse and More II",
-  "id":"349661783612719119"
+  "id":"349661783612719119",
+  "filter": "true"
 },
 {
   "name":"Beagle Kingdom",
-  "id":"377258149477875714"
+  "id":"377258149477875714",
+  "filter": "true"
 },
 {
   "name":"[DEV] Little R Hangout",
-  "id":"387211675239186445"
+  "id":"387211675239186445",
+  "filter": "true"
 },
 {
   "name":"Recordings and live streams",
-  "id":"361565521533075457"
+  "id":"361565521533075457",
+  "filter": "true"
 },
 {
   "name":"ROBLOX Developers",
-  "id":"419160188541599744"
+  "id":"419160188541599744",
+  "filter": "true"
 },
 {
   "name":"Shmabby's Discord",
-  "id":"361191910486048768"
+  "id":"361191910486048768",
+  "filter": "true"
 },
 {
   "name":"oh yes daddy",
-  "id":"411953771279548416"
+  "id":"411953771279548416",
+  "filter": "true"
 },
 {
   "name":"Wrath of the Corgi",
-  "id":"336944728010522624"
+  "id":"336944728010522624",
+  "filter": "true"
 },
 {
   "name":"GANG IN DIS BITCH",
-  "id":"402977258471424020"
+  "id":"402977258471424020",
+  "filter": "false"
 },
 {
   "name":"The OutLiars",
-  "id":"388427488419774465"
+  "id":"388427488419774465",
+  "filter": "true"
 },
 {
   "name":"Marvel",
-  "id":"417056374267183125"
+  "id":"417056374267183125",
+  "filter": "true"
 },
 {
   "name":"ROBLOX Battlegrounds Dev Team",
-  "id":"365166851702915074"
+  "id":"365166851702915074",
+  "filter": "true"
 },
 {
   "name":"MegaGaming's CreativeFam",
-  "id":"404140199656947713"
+  "id":"404140199656947713",
+  "filter": "true"
 },
 {
   "name":"Ютуберам сюда",
-  "id":"401805443980197890"
+  "id":"401805443980197890",
+  "filter": "true"
 },
 {
   "name":"pokemon shit",
-  "id":"411952727615209484"
+  "id":"411952727615209484",
+  "filter": "true"
 },
 {
   "name":"Hulk's Group Clothing",
-  "id":"385831784711061504"
+  "id":"385831784711061504",
+  "filter": "true"
 },
 {
   "name":"I love hulkbot",
-  "id":"411950503388250112"
+  "id":"411950503388250112",
+  "filter": "true"
 },
 {
   "name":"you been hacked bois",
-  "id":"411953708759252993"
+  "id":"411953708759252993",
+  "filter": "true"
 }
