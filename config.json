@@ -13,5 +13,6 @@
   "banreason": "",
   "kickreason": "",
   "premiumState": "false",
-  "donotAnnounce": ["264445053596991498", "110373943822540800"]
+  "donotAnnounce": ["264445053596991498", "110373943822540800"],
+  "updates": ["Added a command restriction!"]
 }
