@@ -25,7 +25,6 @@ bot.invite = "https://discord.gg/qEFNkxB"
 bot.commands = new discord.Collection();
 
 require('fs').readdir("./commands/", (err, files) => {
-  console.log(`Guild Array: ${guilds.join(' ')}`)
   console.log("Loading commands...");
   if (err) return console.log(`Command loading failed!`);
   files.filter(f => f.split(".").pop() === "js").forEach((f, i) => {
@@ -44,7 +43,8 @@ bot.on("ready", () => {
 
   bot.guilds.forEach((guild, id) => {
     guilds.push(guild.name, id)
-    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`) 
+    console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`)
+    console.log("Guild Array:" + guilds.join(' '))
   });
 });
 bot.on("guildMemberAdd", (member) => require('./events/guildMemberAdd.js')(bot, member))
