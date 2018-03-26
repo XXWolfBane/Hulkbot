@@ -48,7 +48,7 @@ bot.on("ready", () => {
     id: id
   }
     console.log(`[SERVER] [${guild.memberCount}] ${guild.name} (${guild.id}) | Joined: ${guild.joinedAt.toString()}\n`)
-    let json = JSON.stringify(guildnames, guildids)
+    let json = JSON.stringify(`guildids: guildnames`)
     require('fs').writeFile('./database.json', json, (err) => {
         if(err) {
           console.error(err)
