@@ -9,8 +9,8 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     },
     {
       name: ":hammer_pick: Moderation:",
-      value: `mute, unmute, kick, ban, auth, purge, perms, filteroff, and filteron.`,
-      value: `\`\`\`ini\nauth = "Authorize Yourself!"\nban = "Need to ban someone?"\nfilteron = "Turns on the language filter!"\nfilteroff = "Turns off the language filter!"\nkick = "Need to kick someone?"\nmute = "Mute someone in chat!"\nunmute = "Unmute someone from chat!"\npurge = "Delete Messages from Chat!"\`\`\``,
+      value: `mute, unmute, kick, ban, auth, purge, perms, filteroff, filteron, hackban, and unhackban.`,
+      value: `\`\`\`ini\nauth = "Authorize Yourself!"\nban = "Need to ban someone?"\nfilteron = "Turns on the language filter!"\nfilteroff = "Turns off the language filter!"\nkick = "Need to kick someone?"\nmute = "Mute someone in chat!"\nunmute = "Unmute someone from chat!"\npurge = "Delete Messages from Chat!"\nhackban = "Need to ban someone that's not in your guild? Ban them by their ID!"\nunhackban = "Need to unhackban someone?"\`\`\``,
     },
     {
       name: ":robot: Bot:",
@@ -32,13 +32,13 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     if (au == oid) {
       fields.push({
         name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\nmshutdown = "Shutdown the music portion of the bot."\nmrestart = "Restart the music portion of the bot."\nsetavatar = "Set the bot's avatar"\nsetnick = "Set the nickname of the bot."\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\nmshutdown = "Shutdown the music portion of the bot."\nmrestart = "Restart the music portion of the bot."\nsetavatar = "Set the bot's avatar"\nsetnick = "Set the nickname of the bot."\ngeninvite = "Generate an invite for any server the bot is in."\`\`\``,
         inline: false
       });
     } else {
       fields.pop({
       	name: ":medal: Owner:",
-	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\nmshutdown = "Shutdown the music portion of the bot."\nmrestart = "Restart the music portion of the bot."\nsetavatar = "Set the bot's avatar"\nsetnick = "Set the nickname of the bot."\`\`\``,
+	value: `\`\`\`ini\nshutdown = "Shutdown the Bot!"\nchangegame = "Change the bot's playing status."\neval = "Execute some JavaScript from inside Discord!"\nonbot = "Change the bots status to Online!"\nidlebot = "Change the bots status to Idle!"\ndnd = "Change the bots status to Do Not Disturb."\ninvbot = "Change the bots status to Invisible!"\ndebug = "See some advanced info about the bot."\nmshutdown = "Shutdown the music portion of the bot."\nmrestart = "Restart the music portion of the bot."\nsetavatar = "Set the bot's avatar"\nsetnick = "Set the nickname of the bot."\ngeninvite = "Generate an invite for any server the bot is in."\`\`\``,
 	inline: false
       });
     };
@@ -55,7 +55,7 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "Please note: Music commands are back up for now. Enjoy!"
+      text: "Music Commands are back down... Sorry guys! To make up for it, I've made h!hackban, and h!unhackban! Enjoy!-FHGDev"
     }
   }
 })
