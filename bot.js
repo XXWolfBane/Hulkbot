@@ -2,7 +2,7 @@
 
 // Discord init  
 const keyhowareya = "heyhowareya",
-time = new Date().toString(),
+time = Date(),
 stitch = require("mongodb-stitch"),
 pak = require('./package.json'),
 discord = require('discord.js'),
