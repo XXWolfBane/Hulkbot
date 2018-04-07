@@ -1,6 +1,6 @@
 const r = "true"
 
-module.exports = (bot => {
+module.exports = (bot) => {
     bot.on("message", message => {
         if (message.author.id == process.env.oid) {
             if (message.content == "h!toggle off") {
