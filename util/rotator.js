@@ -18,7 +18,7 @@ module.exports = (bot => {
     if (r == "true") {
         let status = ["You wouldn't like me when I'm angry.", `bot.guilds.array().length`, "https://bot.hulkbot.ml/home"]
         setInterval(() => {
-            gameval = 0;
+        let gameval = 0;
         if (gameval == status.length) {
             gameval = 0;
             }
