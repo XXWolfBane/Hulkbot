@@ -34,6 +34,7 @@ require('fs').readdir("./commands/", (err, files) => {
 bot.on("ready", () => {
   require('./util/poststats.js')(bot)
   require('./util/consoles.js')(bot, config)
+  require('./util/rotator.js')(bot)
   bot.user.setActivity("Loading Hulkbot...", {type: "STREAMING", url: "https://twitch.tv/freakinghulk"})
   
   setTimeout(() => {
