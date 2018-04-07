@@ -1,4 +1,4 @@
-const r = "true"
+var r = "true"
 
 module.exports = (bot) => {
     bot.on("message", message => {
@@ -24,7 +24,7 @@ module.exports = (bot) => {
             }
         var game = status[gameval]
         bot.user.setActivity(`for h!help | ${game}`, {type: "WATCHING"})
-        }, 45000)
+        }, 25000)
     } else {
         return;
     }
