@@ -1,4 +1,4 @@
-var r = "true"
+/* var r = "true"
 
 module.exports = (bot) => {
    let status = ["You wouldn't like me when I'm angry.", `${bot.guilds.size} servers`, "https://bot.hulkbot.ml/home"]
@@ -11,3 +11,4 @@ module.exports = (bot) => {
    bot.user.setActivity(`for h!help | ${game}`, {type: "WATCHING"})
    }, 25000)
 }
+*/
