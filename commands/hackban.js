@@ -1,13 +1,14 @@
 module.exports.run = (bot, message, args, discord) => {
-  let id = args.join(' ');
-  if (!id == typeof("number")) {
+  let mid = args.join(' ');
+  if (!mid == typeof("number")) {
     message.channel.send('I need a number, not anything else.')
+  } else {
+    bot.fetchUser(mid).then((member, id) => {
+      message.guild.ban(id)
+    }).catch(() => {
+      message.channel.send(`There's no user with the ID of ${mid}, please try again. :face_palm:`)
+    })
   }
-  bot.fetchUser(id).then(member => {
-    member.ban()
-  }).catch(() => {
-    message.channel.send(`There's no user with the ID of ${id}, please try again. :face_palm:`)
-  })
 }
 
 module.exports.help = {
