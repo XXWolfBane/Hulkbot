@@ -13,7 +13,7 @@ prefix = process.env.prefix,
 {baselogger} = require('./logger.js'),
 result = Math.round(Math.random()),
 updates = ["Turned the status rotator back on."]
-config.updates.push(updates[0])
+config.updates = updates.join(' ')
 var filteron = "false",
 cleverbot = require('cleverbot.io'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
