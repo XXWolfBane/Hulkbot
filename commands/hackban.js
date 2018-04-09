@@ -1,6 +1,6 @@
 module.exports.run = (bot, message, args, discord) => {
   let mid = args.join(' ');
-  if (!mid == typeof("number")) {
+  if (!typeof mid == "string") {
     message.channel.send('I need a number, not anything else.')
   } else {
     bot.fetchUser(mid).then((member, id) => {
