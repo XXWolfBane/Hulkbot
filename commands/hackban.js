@@ -9,7 +9,6 @@ module.exports.run = (bot, message, args, discord) => {
     }).catch(() => {
       message.channel.send(`There's no user with the ID of ${mid}, please try again. :face_palm:`)
     })
-  }
 }
 
 module.exports.help = {
