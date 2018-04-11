@@ -3,10 +3,12 @@ module.exports.run = (bot, message, args, discord) => {
   let reason = args.join(' ');
   if (member.displayName) {
     member.ban(reason)
-    message.channel.send(`Alright, I banned ${member.displayName}!`).then(m => m.delete(1000))
+    message.channel.send(`Alright, I softbanned ${member.displayName}!`).then(m => m.delete(1000))
+    message.guild.unban(member.id)
   } else {
     member.ban(reason)
-    message.channel.send(`Alright, I just banned ${member.username}!`).then(m => m.delete(1000))
+    message.channel.send(`Alright, I just softbanned ${member.username}!`).then(m => m.delete(1000))
+    message.guild.unban(member.id)
   }
 }
 
