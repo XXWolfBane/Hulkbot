@@ -71,7 +71,7 @@ bot.on("message", message => {
   if (message.author.bot) return;
 
   if (cmd) {
-    if (message.guild.id !== "427846834225020928") {
+    if (!message.guild.id == "427846834225020928") {
         return;
     } else {
         cmd.run(bot, message, args, discord);  
@@ -116,14 +116,14 @@ bot.on("message", (message) => {
   if (message.content.toLowerCase().includes("i love you hulkbot")) {
     message.channel.send("ERMAHGERD");
   }
-  if (message.content==`<@${bot.id}>`) {
+  if (message.content.includes(`<@294194506113220608>`)) {
       let embed = new discord.RichEmbed()
       .setTitle("Hulkbot for Beginners")
       .setDescription("YUP! It's me, Hulkbot! To see more info on me, use the info command. (h!info)")
       .setColor("PURPLE")
       .setThumbnail(bot.user.avatarURL)
       .setTimestamp()
-   message.channel.send({ embed })
+   message.channel.send({embed: embed})
   }
   
  });
