@@ -9,7 +9,7 @@ module.exports.run = (bot, message, args, discord) => {
         
             let em = new discord.RichEmbed()
             .setTitle("Hulkbot Premium")
-            .setAuthor(":money_mouth:")
+            .setAuthor(`:money_mouth:`)
             .setDescription(`:moneybag: Your premium status is active! Thanks for donating! :moneybag:`)
             .setThumbnail(bot.user.avatarURL)
             .setColor("GREEN")
@@ -17,7 +17,7 @@ module.exports.run = (bot, message, args, discord) => {
     } else {
         let em = new discord.RichEmbed()
         .setTitle("Hulkbot Premium")
-        .setAuthor(":money_mouth:")
+        .setAuthor(`:money_mouth:`)
         .setDescription(`:thumbsdown: Your premium status is unactive. Buy premium [here!](https://www.patreon.com/bePatron?c=1365207 "buy premium") :thumbsdown:`)
         .setThumbnail(bot.user.avatarURL)
         .setColor("RED")
@@ -27,7 +27,7 @@ module.exports.run = (bot, message, args, discord) => {
       let em = new discord.RichEmbed()
       .setTitle("Failure! :face_palm:")
       .setDescription("You need to be the owner of this guild to use this command.")
-      .setAuthor(bot.user.username)
+      .setAuthor(`:money_mouth:`)
       .setThumbnail(bot.user.avatarURL)
       .setColor("RED")
       
