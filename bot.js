@@ -71,9 +71,13 @@ bot.on("message", message => {
   if (message.author.bot) return;
 
   if (cmd) {
+    if (message.guild.id !== "427846834225020928") {
+        return;
+    } else {
         cmd.run(bot, message, args, discord);  
         console.log(message.author.username + " used the " + message.content.split(" ")[0] + " command.");
         baselogger(bot, `**Command Run**\n\n**Command:** ${message.content.split(" ")[0]}\n**User:** ${message.author.tag}\n**Message:** ${message.content}\n**Guild:** ${message.guild.name}\n**Channel:** ${message.channel.name}`);
+    }
   } 
 });
 
