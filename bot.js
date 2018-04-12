@@ -63,6 +63,7 @@ bot.on("message", message => {
     }
   }
   if (!message.content.startsWith(prefix)) return;
+  if (message.channel.type == "dm") return;
 
   let mArray = message.content.split(" ");
   let args = mArray.slice(1);
@@ -81,7 +82,7 @@ bot.on("message", message => {
   } 
 });
 
-bot.on("message", (message) => {
+bot.on("message", (message, err) => {
   if (message.content == prefix) {
     let channel = message.channel;
     
