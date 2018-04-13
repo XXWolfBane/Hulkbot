@@ -9,6 +9,7 @@
      "start": "node bot.js"
 },
      "dependencies": {
+          "mysql": "^2.15.0",
           "mongodb": "^3.0.6",
           "ffmpeg": "^0.0.4",
           "opusscript": "^0.0.6",
