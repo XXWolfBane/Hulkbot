@@ -9,7 +9,7 @@ module.exports = (bot, guild) => {
   })
 
   connection.connect(err => {
-    if (err) console.error('error connecting:'+err.stack)
+    if (err) console.error('error connecting: '+err.stack)
       console.log("Connected!")
   })
 
