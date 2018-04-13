@@ -2,7 +2,7 @@ module.exports = (bot, guild) => {
   const mysql = require('mysql')
 
   const connection = mysql.createConnection({
-     host: 127.0.0.1,
+     host: "127.0.0.1",
      user: "FHGDev",
      password: process.env.mysqlpass,
      port: 3306
@@ -17,7 +17,7 @@ module.exports = (bot, guild) => {
     console.log(results)
   })
   
-  connection.query(`insert ${guild.id} into ${guild.name}`, (err, results) => {
+  connection.query(`insert ${guild.id}, ${guild.membercount} into ${guild.name}`, (err, results) => {
     console.log(results)
   })
 }
