@@ -130,19 +130,13 @@ bot.on("message", (message, err) => {
  });
       
 bot.on("guildCreate", (guild) => {
-  let guildname = {
-    name: guild.name
-  }
-  let guildid = {
-    id: guild.id
-  }
-  let json = JSON.stringify(guildname, guildid)
-  require('fs').writeFile('./database.json', json) 
+  require('./mysql.js')(bot, guild)
   require('./events/guildCreate.js')(bot, guild, discord)
   baselogger(bot, `**Guild Join**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
 bot.on("guildDelete", (guild) => {
+  require('./mysql.js')(bot, guild)
   require('./events/guildDelete.js')(bot, guild, discord)
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.tag}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
