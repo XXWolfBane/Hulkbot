@@ -12,8 +12,8 @@ My Discord Bot.
 [![GitHub borks](https://img.shields.io/github/forks/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/network)
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
 [![Homepage](https://img.shields.io/badge/bot-homepage-F96854.svg?style=flat-square)](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
-<link href=readmestyle.css>
-
+<link href=readmestyle.css rel=stylesheet type=text/css>
+[![Heroku Logs](https://i.imgur.com/FoaWaU8.png)](https://dashboard.heroku.com/apps/jshulkbot/logs "Logs")
 <a href=https://dashboard.heroku.com/apps/jshulkbot/logs>Heroku Logs</a>
 
 # Todo
