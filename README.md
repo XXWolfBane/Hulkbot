@@ -13,8 +13,7 @@ My Discord Bot.
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
 [![Homepage](https://img.shields.io/badge/bot-homepage-F96854.svg?style=flat-square)](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
 <link href=readmestyle.css rel=stylesheet type=text/css>
-[![Heroku Logs](https://i.imgur.com/FoaWaU8.png)](https://dashboard.heroku.com/apps/jshulkbot/logs "Logs")
-<a href=https://dashboard.heroku.com/apps/jshulkbot/logs>Heroku Logs</a>
+<img src=https://i.imgur.com/FoaWaU8.png><a href=https://dashboard.heroku.com/apps/jshulkbot/logs>Heroku Logs</a></img>
 
 # Todo
 
