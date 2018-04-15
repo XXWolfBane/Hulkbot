@@ -1,5 +1,6 @@
 module.exports = (bot, member) => {
    let guildids = ["318532861638737931", "264445053596991498",  "110373943822540800"],
+   donowelcome = ["318532861638737931"],
    autoroles = {
       "robloxlovers": "428953426840256513",
       "learning": "434070145397161986",
@@ -11,6 +12,9 @@ module.exports = (bot, member) => {
      "fhg": "358279862324166659"
    }
    
+   if(donowelcome.includes(member.guild.id)) {
+      return
+   } else {     
    if (guildids.includes(member.guild.id)) {
       return;
    } else {
@@ -32,4 +36,5 @@ module.exports = (bot, member) => {
          }
       }
    }
+  } 
 }
