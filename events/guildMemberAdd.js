@@ -22,10 +22,15 @@ module.exports = (bot, member) => {
    // SOON: member.send(`Welcome to ${member.guild.name}, ${member.displayName}!`);
    const channel = member.guild.channels.find('name', 'welcome');
    if (!channel) return;
+      if (!member.displayName) {
+         channel.send(`Welcome to ${member.guild.name}, ${member.username}!`)
+      } else {
          channel.send(`Welcome to ${member.guild.name}, ${member.displayName}!`);
+      }
    }
    
    if (member.guild.id == autoroleguilds.rl) {
+      if (!member.user.bot)
       member.addRole(autoroles.robloxlovers)
    } else {
       if (member.guild.id == autoroleguilds.rd) {
