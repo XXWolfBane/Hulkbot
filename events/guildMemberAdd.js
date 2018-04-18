@@ -5,6 +5,9 @@ module.exports = (bot, member) => {
       "robloxlovers": "428953426840256513",
       "learning": "434070145397161986",
       "fhgrole": "360975611638054922"
+      "fhgbotrole": "360976747111645194",
+      "rdbotrole": "419167874033123338",
+      "rlbotrole": "431520359494189057"
    },
    autoroleguilds = {
      "rl": "426909155832365066",
@@ -13,7 +16,7 @@ module.exports = (bot, member) => {
    }
    
    if(donowelcome.includes(member.guild.id)) {
-      return
+      return;
    } else {     
    if (guildids.includes(member.guild.id)) {
       return;
@@ -30,13 +33,21 @@ module.exports = (bot, member) => {
    }
    
    if (member.guild.id == autoroleguilds.rl) {
-      if (!member.user.bot)
-      member.addRole(autoroles.robloxlovers)
+      if (!member.user.bot) {
+         member.addRole(autoroles.rlbotrole)
+      }
+         member.addRole(autoroles.robloxlovers)
    } else {
       if (member.guild.id == autoroleguilds.rd) {
+         if (member.user.bot) {
+            member.addRole(autoroles.rdbotrole)
+         }
          member.addRole(autoroles.learning)
       } else {
          if (member.guild.id == autoroleguilds.fhg) {
+            if (!member.user.bot) {
+               member.addRole(autoroles.fhgbotrole)
+            }
             member.addRole(autoroles.fhgrole)
          }
       }
