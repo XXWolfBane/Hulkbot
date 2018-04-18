@@ -28,7 +28,7 @@ module.exports = (bot, member) => {
       if (!member.displayName) {
          channel.send(`Welcome to ${member.guild.name}, ${member.username}!`)
       } else {
-         channel.send(`Welcome to ${member.guild.name}, ${member.displayName}!`);
+         channel.send(`Welcome to ${member.guild.name}, ${member.displayName}!`); 
       }
    }
    
