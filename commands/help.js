@@ -27,6 +27,10 @@ module.exports.run = (bot, message, args, suffix, discord) => {
     {
       name: "Need More Help?",
       value: `[Click Here!](https://bot.hulkbot.ml/commands)`,
+    }, 
+    {
+       name: "Other Languages",
+       value: "Para meus usuários espanhóis e portugueses: Para ver um menu de ajuda em seu idioma, use h!althelp."
     }
   ];
     if (au == oid) {
