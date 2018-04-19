@@ -8,7 +8,7 @@
   "logid": "356181785899565077",
   "BCO": "140487710727995392",
   "BMA": "359069241963446273",
-  "comment": "BCO = Bot Co Owner BMA = Bot Main Admin", 
+  // BCO (bot co owner) RHG, BMA (bot main admin) NovalFuzzy
   "statues": ["https://bot.hulkbot.ml/home", "You wouldn't like me when I'm angry", "`${bot.guilds.array().length} servers`"],
   "banreason": "",
   "kickreason": "",
