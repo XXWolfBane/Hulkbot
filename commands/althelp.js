@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, discord) => {
+module.exports.run = (bot, message, args, discord) => {
   let embed = new discord.RichEmbed()
   .setTitle("Menu de Ajuda Alternativo")
   .setDescription("`Prefixo: h!`")
