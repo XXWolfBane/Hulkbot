@@ -9,6 +9,7 @@ module.exports.run = (bot, message, discord) => {
   .setTimestamp()
   .setAuthor("Hulkbot")
   
+  message.channel.send({ embed })
 }
  
 module.exports.help = {
