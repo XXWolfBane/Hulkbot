@@ -4,7 +4,7 @@ module.exports = (bot, member) => {
    autoroles = {
       "robloxlovers": "428953426840256513",
       "learning": "434070145397161986",
-      "fhgrole": "360975611638054922"
+      "fhgrole": "360975611638054922",
       "fhgbotrole": "360976747111645194",
       "rdbotrole": "419167874033123338",
       "rlbotrole": "431520359494189057"
