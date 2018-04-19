@@ -25,7 +25,7 @@ module.exports = (bot, member) => {
    // SOON: member.send(`Welcome to ${member.guild.name}, ${member.displayName}!`);
    const channel = member.guild.channels.find('name', 'welcome');
    if (!channel) return;
-      if (!member.displayName) {
+      if (member.displayName) {
          channel.send(`Welcome to ${member.guild.name}, ${member.username}!`)
       } else {
          channel.send(`Welcome to ${member.guild.name}, ${member.displayName}!`); 
@@ -33,7 +33,7 @@ module.exports = (bot, member) => {
    }
    
    if (member.guild.id == autoroleguilds.rl) {
-      if (!member.user.bot) {
+      if (member.user.bot) {
          member.addRole(autoroles.rlbotrole)
       }
          member.addRole(autoroles.robloxlovers)
@@ -45,7 +45,7 @@ module.exports = (bot, member) => {
          member.addRole(autoroles.learning)
       } else {
          if (member.guild.id == autoroleguilds.fhg) {
-            if (!member.user.bot) {
+            if (member.user.bot) {
                member.addRole(autoroles.fhgbotrole)
             }
             member.addRole(autoroles.fhgrole)
