@@ -7,3 +7,7 @@ module.exports.run = (bot, message, args, discord) => {
     console.log(results)
   })
 }
+
+module.exports.help = {
+  name: "phsearch"
+}
