@@ -1,4 +1,3 @@
-const config = require("./config.json");
 const discord = require('discord.js');
 let logchannel = "356181785899565077";
 
