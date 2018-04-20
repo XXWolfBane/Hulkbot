@@ -1,13 +1,12 @@
 module.exports.run = (bot, message, args, discord) => {
   let id = args.join(' ');
-  let member = bot.fetchUser(id)
-  if (member) {
-    message.guild.unban(member)
-    message.channel.send(`Alright, I just unhackbanned ${member.name}, with the id ${member.id}.`)
-  } else {
-    message.channel.send(id + " is not a valid Discord UserID.")
-  }
-}
+  let member = bot.fetchUser(id).then(user => {
+    message.guild.unban(user.id).catch(err => {
+      message.channel.send(`Failed to unban ${user.username}`)
+    })
+    message.channel.send(`Alright, I unbanned ${user.username}.`)
+  }).catch(() => message.channel.send("Sorry, I can't find a user with that ID..."))
+  
 
 module.exports.help = {
   name: "unhackban"
