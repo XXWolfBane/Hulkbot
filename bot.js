@@ -72,7 +72,7 @@ bot.on("message", message => {
   if (message.author.bot) return;
 
   if (cmd) {
-    if (!message.guild.id == "427846834225020928") {
+    if (message.guild.id == "427846834225020928") {
         return;
     } else {
       if (config.userblacklist.includes(message.author.id)) return;
