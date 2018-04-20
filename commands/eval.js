@@ -8,9 +8,6 @@ module.exports.run = (bot, message, args) => {
   return result.then(output => {
     if (typeof output !== 'string') output = require('util').inspect(output, { depth: 0 });
     if (output.includes(bot.token)) output = output.replace(bot.token, 'Not for your eyes');
-    if (output.length > 1990) console.log(output)
-    output = 'Too long to be printed (content got console logged)';
-
     return message.channel.send(output, { code: 'js' }).then(m => m.delete(5000))
   }).catch(err => {
     console.error(err);
