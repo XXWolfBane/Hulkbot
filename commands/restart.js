@@ -10,7 +10,7 @@ let em = new discord.RichEmbed()
   function restart(channel) {
     channel.send({embed: em})
     .then(() => bot.destroy())
-    .then(() => bot.login(process.env.token))
+    .then(() => bot.login(process.env.botToken))
   }
   
   restart(message.channel)
