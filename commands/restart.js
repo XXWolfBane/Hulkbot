@@ -17,3 +17,7 @@ module.exports.run = (bot, message, args, discord) => {
     message.channel.send("Nope!")
   }
 }
+
+module.exports.help = {
+  name: "restart"
+}
