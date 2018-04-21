@@ -5,7 +5,8 @@ module.exports.run = (bot, message, args, discord) => {
   .setTitle(`Hulkbot KnockKnock Jokes`)
   .setDescription(`${k()}`)
   .setColor("RANDOM")
-  .setFooter(new Date())
+  .setFooter(`${bot.user.username} Knock Knock Jokes`)
+  .setTimestamp()
   message.channel.send({ embed })
 }
 
