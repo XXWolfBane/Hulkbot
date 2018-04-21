@@ -3,9 +3,9 @@ const discord = require(`discord.js`);
 
 
 module.exports.run = (bot, message, args) => {
-	loc = message.content.substring(10)
+	let loc = message.content.substring(10)
 	if (!loc) {
-		message.channel.sendMessage("You need to supply a City!")
+		message.channel.send("You need to supply a location or Zip code.")
 		return;
 	}
 	try {
@@ -28,7 +28,7 @@ module.exports.run = (bot, message, args) => {
    	message.channel.send({ embed });
   });
 	} catch(err) {
-	msg.channel.createMessage("Idk why this is broken tbh 😭");
+		message.channel.send("Idk why this is broken tbh 😭");
 	}
 };
 
