@@ -8,5 +8,5 @@ module.exports = (bot, member) => {
     let channel = member.guild.channels.find('name', 'welcome')
     if (!channel) return;
         channel.send(`:dizzy_face: ${member.displayName} just left ${member.guild.name}.`)
-    })
+    }
 }
