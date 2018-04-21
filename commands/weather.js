@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
 	try {
 	w.find({search: loc, degreeType: 'F'}, function(err, result) {
 	if (err) {
-		message.channel.sendMessage(err)
+		message.channel.send(err)
      };
      let area = result[0];
 
