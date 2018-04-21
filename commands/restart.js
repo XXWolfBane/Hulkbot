@@ -1,8 +1,9 @@
 module.exports.run = (bot, message, args, discord) => {
 let em = new discord.RichEmbed()
-.setTitle("Hulkbot Restarting...")
+.setTitle("Himiachi Restarting...")
 .setDescription(":wave: Restarting...")
 .setThumbnail(bot.user.avatarURL)
+.setImage("https://media1.giphy.com/media/WKJpCXfvBHyla/giphy.gif")
 .setTimestamp()
 .setColor("GOLD")
 
