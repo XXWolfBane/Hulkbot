@@ -5,11 +5,12 @@ module.exports.run = (bot, message, args, discord) => {
   .setTitle('Hulkbot Status')
   .setColor(`RANDOM`)
   .setDescription(`Bot Status: Online
+  Bot Version: ${pak.version}
   Bot Servercount: ${bot.guilds.size}
   Bot Usercount: ${bot.users.size}
   Bot Channelcount: ${bot.channels.size}
   Memory Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
-  Discord.js Version ${pak.dependencies.discord.js}
+  Discord.js Version 11.3.1
   Node Version 8.9.4
   Source Code: [GitHub](https://github.com/FHGDev/JSHulkbot)
   Hulkbot Website: [Website](https://bot.hulkbot.ml/home)`)
