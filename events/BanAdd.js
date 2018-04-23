@@ -9,10 +9,7 @@ module.exports = (bot, guild, member) => {
     console.log(`${member.username}, you are now banned from ${guild.name}`)
     member.send(`${member.username}, you are now banned from ${guild.name}!`)
   }
-  let log = guild.channels.find('name', 'guild-maintenance')
-  let alt1 = guild.channels.find('name', 'mod-log')
-  let alt2 = guild.channels.find('name', 'hulkbot-log')
-  let alt3 = guild.channels.find('name', 'bot-hell')
+  let log = guild.channels.find('name', 'guild-bot-log')
   let embed = new discord.RichEmbed()
   .setTitle("Log")
   if (reason) {
@@ -22,8 +19,6 @@ module.exports = (bot, guild, member) => {
   }
   embed.setThumbnail(member.avatarURL)
   embed.setColor("RED")
-  embed.setFooter(`${member.username} was banned at ${new Date()}`)
-  if (!log) {
-    return; 
-  } 
+  embed.setFooter(`${member.username} was banned`)
+  embed.setTimestamp() 
 }
