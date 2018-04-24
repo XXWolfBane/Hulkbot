@@ -4,7 +4,7 @@ My Discord Bot.
 ## You need [NodeJS](https://nodejs.org/en/ "Get NodeJS") and [Discord.js](https://discord.js.org/ "Get Discord.js") to be able to run dis bot.
 
 [![Discord Bots](https://discordbots.org/api/widget/294194506113220608.svg)](https://discordbots.org/bot/294194506113220608)
- 
+[![Patreon](https://img.shields.io/badge/donate-patreon-F96854.svg?style=flat-square)](https://patreon.com/fhg)
 [![Version](https://img.shields.io/badge/Version-0.1.0-green.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/releases)
 [![Status](https://img.shields.io/badge/Status-Ready-green.svg?style=flat-square)]()
 [![GitHub stars](https://img.shields.io/github/stars/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/stargazers)
@@ -12,8 +12,8 @@ My Discord Bot.
 [![GitHub borks](https://img.shields.io/github/forks/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/network)
 [![GitHub issues](https://img.shields.io/github/issues/FHGDev/JSHulkbot.svg?style=flat-square)](https://github.com/FHGDev/JSHulkbot/issues)
 [![Homepage](https://img.shields.io/badge/bot-homepage-F96854.svg?style=flat-square)](https://bot.hulkbot.ml/home "Go to Hulkbot Homepage")
-<link href=readmestyle.css rel=stylesheet type=text/css>
 <a href=https://dashboard.heroku.com/apps/jshulkbot/logs target=_blank>
+<a href="https://www.patreon.com/bePatron?u=9656814" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 <img src=https://i.imgur.com/FoaWaU8.png />
  </a>
 
